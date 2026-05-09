@@ -1,0 +1,132 @@
+[
+  {
+    "id": 1,
+    "src": "/frames/1.jpeg",
+    "alt": "Memory Frame 1",
+    "rotate": -6,
+    "speed": 0.7,
+    "scale": 0.9,
+    "position": {
+      "top": "10%",
+      "left": "3%"
+    },
+    "objectPosition": "left"
+  },
+  {
+    "id": 2,
+    "src": "/frames/2.jpeg",
+    "alt": "Memory Frame 2",
+    "rotate": 8,
+    "speed": 1.4,
+    "scale": 1.1,
+    "position": {
+      "top": "20%",
+      "right": "2%"
+    },
+    "objectPosition": "center"
+  },
+  {
+    "id": 3,
+    "src": "/frames/3.jpeg",
+    "alt": "Memory Frame 3",
+    "rotate": -4,
+    "speed": 1.1,
+    "scale": 0.85,
+    "position": {
+      "top": "30%",
+      "left": "4%"
+    },
+    "objectPosition": "left"
+  },
+  {
+    "id": 4,
+    "src": "/frames/4.jpg",
+    "alt": "Memory Frame 4",
+    "rotate": 5,
+    "speed": 0.6,
+    "scale": 1,
+    "position": {
+      "top": "40%",
+      "right": "3%"
+    },
+    "objectPosition": "center"
+  },
+  {
+    "id": 5,
+    "src": "/frames/5.jpeg",
+    "alt": "Memory Frame 5",
+    "rotate": -8,
+    "speed": 1.6,
+    "scale": 0.95,
+    "position": {
+      "top": "50%",
+      "left": "2%"
+    },
+    "objectPosition": "center"
+  },
+  {
+    "id": 6,
+    "src": "/frames/6.jpeg",
+    "alt": "Memory Frame 6",
+    "rotate": 7,
+    "speed": 0.9,
+    "scale": 1.05,
+    "position": {
+      "top": "60%",
+      "right": "4%"
+    },
+    "objectPosition": "50% 80%"
+  },
+  {
+    "id": 7,
+    "src": "/frames/7.jpeg",
+    "alt": "Memory Frame 7",
+    "rotate": -5,
+    "speed": 1.3,
+    "scale": 0.9,
+    "position": {
+      "top": "70%",
+      "left": "5%"
+    },
+    "objectPosition": "center"
+  },
+  {
+    "id": 8,
+    "src": "/frames/8.jpeg",
+    "alt": "Memory Frame 8",
+    "rotate": 4,
+    "speed": 0.8,
+    "scale": 1.1,
+    "position": {
+      "top": "80%",
+      "right": "5%"
+    },
+    "objectPosition": "center"
+  },
+  {
+    "id": 9,
+    "src": "/frames/9.jpeg",
+    "alt": "Memory Frame 9",
+    "rotate": -7,
+    "speed": 1.5,
+    "scale": 0.95,
+    "position": {
+      "top": "88%",
+      "left": "3%"
+    },
+    "objectPosition": "center"
+  },
+  {
+    "id": 10,
+    "src": "/frames/10.jpeg",
+    "alt": "Memory Frame 10",
+    "rotate": 6,
+    "speed": 1,
+    "scale": 1,
+    "position": {
+      "top": "96%",
+      "right": "2%"
+    },
+    "objectPosition": "center"
+  }
+]

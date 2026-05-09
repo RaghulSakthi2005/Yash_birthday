@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "src": "/gallery/photos/1.JPG",
+    "alt": "badminton memories",
+    "type": "polaroid",
+    "rotate": -2,
+    "span": "row-span-2 col-span-1",
+    "objectPosition": "center"
+  },
+  {
+    "id": 2,
+    "src": "/gallery/photos/2.jpg",
+    "alt": "Memory 2",
+    "type": "tape",
+    "rotate": 1,
+    "span": "row-span-1 col-span-1",
+    "objectPosition": "center"
+  },
+  {
+    "id": 3,
+    "src": "/gallery/photos/3.jpg",
+    "alt": "Memory 3",
+    "type": "film",
+    "rotate": 3,
+    "span": "row-span-1 col-span-1",
+    "objectPosition": "center"
+  },
+  {
+    "id": 4,
+    "src": "/gallery/photos/4.jpg",
+    "alt": "border stories",
+    "type": "polaroid",
+    "rotate": -1,
+    "span": "row-span-2 col-span-1",
+    "objectPosition": "center"
+  },
+  {
+    "id": 5,
+    "src": "/gallery/photos/5.jpg",
+    "alt": "chaimama",
+    "type": "polaroid",
+    "rotate": 3,
+    "span": "row-span-1 col-span-1",
+    "objectPosition": "center"
+  },
+  {
+    "id": 6,
+    "src": "/gallery/photos/6.jpeg",
+    "alt": "Add a picture here...",
+    "type": "tape",
+    "rotate": -3,
+    "span": "row-span-2 col-span-1",
+    "objectPosition": "center"
+  },
+  {
+    "id": 7,
+    "src": "/gallery/photos/7.jpg",
+    "alt": "J R Bakes",
+    "type": "polaroid",
+    "rotate": -2,
+    "span": "row-span-1 col-span-1",
+    "objectPosition": "center"
+  },
+  {
+    "id": 8,
+    "src": "/gallery/photos/8.jpg",
+    "alt": "bullet gurl",
+    "type": "film",
+    "rotate": 1,
+    "span": "row-span-2 col-span-1",
+    "objectPosition": "center"
+  },
+  {
+    "id": 9,
+    "src": "/gallery/photos/9.jpg",
+    "alt": "Add a picture here...",
+    "type": "tape",
+    "rotate": 4,
+    "span": "row-span-1 col-span-1",
+    "objectPosition": "center"
+  },
+  {
+    "id": 10,
+    "src": "/gallery/photos/10.jpg",
+    "alt": "forever sisters",
+    "type": "polaroid",
+    "rotate": -4,
+    "span": "row-span-2 col-span-1",
+    "objectPosition": "center"
+  },
+  {
+    "id": 11,
+    "src": "/gallery/photos/11.jpg",
+    "alt": "Add a picture here...",
+    "type": "film",
+    "rotate": 2,
+    "span": "row-span-1 col-span-1",
+    "objectPosition": "center"
+  },
+  {
+    "id": 12,
+    "src": "/gallery/photos/12.jpg",
+    "alt": "bulleter",
+    "type": "polaroid",
+    "rotate": 1,
+    "span": "row-span-1 col-span-1",
+    "objectPosition": "center"
+  },
+  {
+    "id": 13,
+    "src": "/gallery/photos/13.JPG",
+    "alt": "Add a picture here...",
+    "type": "tape",
+    "rotate": -1,
+    "span": "row-span-2 col-span-1",
+    "objectPosition": "center"
+  },
+  {
+    "id": 14,
+    "src": "/gallery/photos/14.jpg",
+    "alt": "aura ++",
+    "type": "polaroid",
+    "rotate": 3,
+    "span": "row-span-1 col-span-1",
+    "objectPosition": "center"
+  },
+  {
+    "id": 15,
+    "src": "/gallery/photos/15.jpg",
+    "alt": "Add a picture here...",
+    "type": "film",
+    "rotate": -3,
+    "span": "row-span-2 col-span-1",
+    "objectPosition": "bottom"
+  },
+  {
+    "id": 16,
+    "src": "/gallery/photos/16.jpg",
+    "alt": "Add a picture here...",
+    "type": "tape",
+    "rotate": 2,
+    "span": "row-span-1 col-span-1",
+    "objectPosition": "bottom"
+  },
+  {
+    "id": 17,
+    "src": "/gallery/photos/17.jpeg",
+    "alt": "the first sight",
+    "type": "polaroid",
+    "rotate": -2,
+    "span": "row-span-2 col-span-1",
+    "objectPosition": "left"
+  }
+]
