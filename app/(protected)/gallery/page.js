@@ -191,10 +191,10 @@ export default function GalleryPage() {
   };
 
   return (
-    <div style={{ background: "var(--bg)", minHeight: "100vh", position: "relative" }}>
+    <div style={{ background: "var(--bg)", minHeight: "100dvh", position: "relative" }}>
       <div style={{ position: "absolute", inset: 0, opacity: 0.15, backgroundImage: "radial-gradient(#ffffff 1px, transparent 1px)", backgroundSize: "24px 24px", pointerEvents: "none", zIndex: 0 }} />
 
-      <div style={{ position: "relative", zIndex: 10, maxWidth: selectedSeries ? 1400 : 1200, margin: "0 auto", padding: selectedSeries ? "0" : "120px clamp(24px, 6vw, 80px) 100px" }}>
+      <div style={{ position: "relative", zIndex: 10, maxWidth: selectedSeries ? 1400 : 1200, margin: "0 auto", padding: selectedSeries ? "0" : "120px clamp(24px, 6vw, 80px) 60px" }}>
 
         {/* Header (Hide if we are inside a series view) */}
         {!selectedSeries && (

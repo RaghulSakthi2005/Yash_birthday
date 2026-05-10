@@ -70,10 +70,9 @@ function Chapter({ ch, i }) {
         width: "50%",
         marginLeft: isRight ? "50%" : "0",
         padding: isRight ? "0 0 0 60px" : "0 60px 0 0",
-        position: "relative",
         opacity,
         y,
-        marginBottom: 180,
+        marginBottom: i === CHAPTERS.length - 1 ? 0 : 180,
       }}>
       
       {/* Spine node */}
