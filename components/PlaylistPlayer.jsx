@@ -100,7 +100,7 @@ export default function PlaylistPlayer({ playlistData }) {
             <img src={currentTrack.coverArt || "/images/placeholder.jpg"} alt={currentTrack.title} className="w-full h-full object-cover" />
             <div className="absolute inset-0 border border-white/10 rounded-[40px] pointer-events-none" />
           </div>
-          <div className="w-full text-left">
+          <div className="w-full text-center px-10">
              <h2 className="text-5xl font-black text-white tracking-tighter mb-4 leading-tight">{currentTrack.title}</h2>
              <p className="text-xl text-white/40 font-medium uppercase tracking-[0.2em]">{currentTrack.artist}</p>
           </div>
@@ -112,9 +112,9 @@ export default function PlaylistPlayer({ playlistData }) {
         </div>
 
         {/* ── BOTTOM CONTROL PANEL (MOBILE) ── */}
-        <div className="lg:hidden w-full p-6 pb-10 bg-black/40 backdrop-blur-3xl border-t border-white/5 relative z-30">
+        <div className="lg:hidden w-full p-6 pb-12 bg-black/60 backdrop-blur-3xl border-t border-white/5 relative z-30">
           {/* Progress / Seek Slider */}
-          <div className="mb-6 px-1">
+          <div className="mb-8 px-1">
              <input 
                type="range"
                min={0}
@@ -123,60 +123,62 @@ export default function PlaylistPlayer({ playlistData }) {
                onChange={handleSeek}
                className="w-full h-1.5 bg-white/10 rounded-full appearance-none cursor-pointer accent-white hover:accent-pink-400 transition-all"
              />
-             <div className="flex justify-between text-[10px] text-white/30 mt-3 font-bold tracking-widest">
+             <div className="flex justify-between text-[10px] text-white/30 mt-4 font-bold tracking-widest uppercase">
                <span>{formatTime(currentTime)}</span>
                <span>{formatTime(duration)}</span>
              </div>
           </div>
 
-          <div className="flex items-center justify-between gap-4">
+          <div className="flex items-center justify-between gap-4 px-4">
              <button onClick={prevTrack} className="p-3 text-white/40 hover:text-white transition-colors">
-               <BackwardIcon className="w-8 h-8" />
+               <BackwardIcon className="w-9 h-9" />
              </button>
              <button 
                onClick={togglePlayPause} 
-               className="w-16 h-16 rounded-full bg-white text-black flex items-center justify-center shadow-2xl active:scale-90 transition-transform"
+               className="w-20 h-20 rounded-full bg-white text-black flex items-center justify-center shadow-[0_0_50px_rgba(255,255,255,0.15)] active:scale-90 transition-transform"
              >
-               {isPlaying ? <PauseIcon className="w-8 h-8" /> : <PlayIcon className="w-8 h-8 ml-1" />}
+               {isPlaying ? <PauseIcon className="w-10 h-10" /> : <PlayIcon className="w-10 h-10 ml-1.5" />}
              </button>
              <button onClick={nextTrack} className="p-3 text-white/40 hover:text-white transition-colors">
-               <ForwardIcon className="w-8 h-8" />
+               <ForwardIcon className="w-9 h-9" />
              </button>
           </div>
         </div>
 
         {/* ── DESKTOP CONTROLS (BOTTOM FLOATING) ── */}
         <div className="hidden lg:block fixed bottom-12 left-1/2 -translate-x-1/2 z-50">
-           <div className="bg-black/40 backdrop-blur-3xl border border-white/10 rounded-full px-8 py-4 flex items-center gap-10 shadow-2xl">
-              <button onClick={prevTrack} className="text-white/40 hover:text-white transition-colors">
-                <BackwardIcon className="w-6 h-6" />
+           <div className="bg-black/60 backdrop-blur-3xl border border-white/10 rounded-full px-10 py-5 flex items-center gap-12 shadow-[0_30px_100px_rgba(0,0,0,0.8)]">
+              <button onClick={prevTrack} className="text-white/40 hover:text-white transition-all hover:scale-110 active:scale-95">
+                <BackwardIcon className="w-7 h-7" />
               </button>
-              <button onClick={togglePlayPause} className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center hover:scale-105 transition-transform">
-                {isPlaying ? <PauseIcon className="w-6 h-6" /> : <PlayIcon className="w-6 h-6 ml-1" />}
+              <button onClick={togglePlayPause} className="w-14 h-14 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 active:scale-95 transition-all shadow-xl">
+                {isPlaying ? <PauseIcon className="w-7 h-7" /> : <PlayIcon className="w-7 h-7 ml-1" />}
               </button>
-              <button onClick={nextTrack} className="text-white/40 hover:text-white transition-colors">
-                <ForwardIcon className="w-6 h-6" />
+              <button onClick={nextTrack} className="text-white/40 hover:text-white transition-all hover:scale-110 active:scale-95">
+                <ForwardIcon className="w-7 h-7" />
               </button>
               
-              <div className="w-[1px] h-8 bg-white/10 mx-2" />
+              <div className="w-[1px] h-10 bg-white/10 mx-2" />
               
-              <div className="w-60">
+              <div className="w-72">
                  <input 
                    type="range"
                    min={0}
                    max={duration || 0}
                    value={currentTime}
                    onChange={handleSeek}
-                   className="w-full h-1 bg-white/20 rounded-full appearance-none cursor-pointer accent-white"
+                   className="w-full h-1.5 bg-white/20 rounded-full appearance-none cursor-pointer accent-white hover:accent-pink-400"
                  />
-                 <div className="flex justify-between text-[10px] text-white/30 mt-2 font-medium">
+                 <div className="flex justify-between text-[11px] text-white/30 mt-3 font-bold tracking-wider">
                    <span>{formatTime(currentTime)}</span>
                    <span>{formatTime(duration)}</span>
                  </div>
               </div>
 
-              <button onClick={() => setIsPlaylistOpen(true)} className="text-white/40 hover:text-white transition-colors ml-4">
-                <ListBulletIcon className="w-6 h-6" />
+              <div className="w-[1px] h-10 bg-white/10 mx-2" />
+
+              <button onClick={() => setIsPlaylistOpen(true)} className="text-white/40 hover:text-white transition-all hover:scale-110 active:scale-95">
+                <ListBulletIcon className="w-7 h-7" />
               </button>
            </div>
         </div>

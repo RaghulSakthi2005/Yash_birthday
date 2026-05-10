@@ -5,21 +5,21 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
 const NAV_ITEMS = [
-  { num: "01", label: "Story",      href: "/home",      emoji: "✦" },
-  { num: "02", label: "Letter",     href: "/letter",    emoji: "💌" },
-  { num: "03", label: "Lands",  href: "/lands",     emoji: "🌍" },
-  { num: "04", label: "Playlist",   href: "/playlist",  emoji: "🎵" },
-  { num: "05", label: "Chat",       href: "/chat",      emoji: "💬" },
-  { num: "06", label: "Memories",   href: "/gallery",   emoji: "🖼" },
-  { num: "07", label: "The Tree",   href: "/tree",      emoji: "🌳" },
+  { num: "01", label: "Story", href: "/home", emoji: "✦" },
+  { num: "02", label: "Letter", href: "/letter", emoji: "💌" },
+  { num: "03", label: "Lands", href: "/lands", emoji: "🌍" },
+  { num: "04", label: "Playlist", href: "/playlist", emoji: "🎵" },
+  { num: "05", label: "Chat", href: "/chat", emoji: "💬" },
+  { num: "06", label: "Memories", href: "/gallery", emoji: "🖼" },
+  { num: "07", label: "The Tree", href: "/tree", emoji: "🌳" },
 ];
 
 const SPEED_LINES = [8, 22, 38, 54, 68, 82];
 
 export default function Navigation() {
-  const [open, setOpen]       = useState(false);
+  const [open, setOpen] = useState(false);
   const [hovered, setHovered] = useState(null);
-  const pathname              = usePathname();
+  const pathname = usePathname();
 
   // Close on route change
   useEffect(() => { setOpen(false); }, [pathname]);
@@ -52,10 +52,10 @@ export default function Navigation() {
           <motion.span
             key={i}
             animate={{
-              rotate:      i === 0 ? (open ? 45  : 0) : i === 2 ? (open ? -45 : 0) : 0,
-              translateY:  i === 0 ? (open ? 12  : 0) : i === 2 ? (open ? -12 : 0) : 0,
-              opacity:     i === 1 ? (open ? 0   : 1) : 1,
-              width:       i === 1 ? (open ? 0   : 22) : 22,
+              rotate: i === 0 ? (open ? 45 : 0) : i === 2 ? (open ? -45 : 0) : 0,
+              translateY: i === 0 ? (open ? 12 : 0) : i === 2 ? (open ? -12 : 0) : 0,
+              opacity: i === 1 ? (open ? 0 : 1) : 1,
+              width: i === 1 ? (open ? 0 : 22) : 22,
             }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             style={{
@@ -74,7 +74,7 @@ export default function Navigation() {
             key="nav-overlay"
             initial={{ clipPath: "circle(0% at calc(100% - 58px) 54px)" }}
             animate={{ clipPath: "circle(150% at calc(100% - 58px) 54px)" }}
-            exit={{    clipPath: "circle(0% at calc(100% - 58px) 54px)" }}
+            exit={{ clipPath: "circle(0% at calc(100% - 58px) 54px)" }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             style={{
               position: "fixed", inset: 0, zIndex: 900,
@@ -112,7 +112,7 @@ export default function Navigation() {
               {/* Label */}
               <motion.p
                 initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0  }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2 }}
                 className="label"
                 style={{ color: "rgba(232,197,71,0.5)", marginBottom: 48 }}
@@ -128,8 +128,8 @@ export default function Navigation() {
                     <motion.div
                       key={item.href}
                       initial={{ opacity: 0, x: 60 }}
-                      animate={{ opacity: 1, x: 0  }}
-                      exit={{    opacity: 0, x: 40 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: 40 }}
                       transition={{ delay: 0.18 + i * 0.055, ease: [0.22, 1, 0.36, 1] }}
                       onHoverStart={() => setHovered(i)}
                       onHoverEnd={() => setHovered(null)}
@@ -172,7 +172,7 @@ export default function Navigation() {
                               <motion.div
                                 initial={{ scaleX: 0, opacity: 0 }}
                                 animate={{ scaleX: 1, opacity: 1 }}
-                                exit={{    scaleX: 0, opacity: 0 }}
+                                exit={{ scaleX: 0, opacity: 0 }}
                                 transition={{ duration: 0.25 }}
                                 style={{
                                   flex: 1, height: 1,
@@ -207,7 +207,7 @@ export default function Navigation() {
                 style={{ marginTop: 80, textAlign: "center" }}
               >
                 <p style={{ color: "rgba(255,255,255,0.2)", fontSize: 11, fontStyle: "italic", letterSpacing: "0.1em" }}>
-                  ""
+                  "Proud to say that i know Yash in my Life"
                 </p>
               </motion.div>
             </div>
