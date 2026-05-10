@@ -191,41 +191,6 @@ export default function PasswordGate() {
         />
       ))}
 
-      {/* ── Dog — bottom left ── */}
-      <motion.div
-        className="pet-wrap left"
-        variants={petLeftVariants}
-        animate={currentPetState}
-        initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.8, duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-        style={{ width: 240, marginBottom: -40 }}
-      >
-        <div className="pet-glow" />
-        <Player
-          ref={dogRef}
-          src={DOG_SRC}
-          autoplay
-          loop
-          style={{ width: "100%", height: "auto", filter: "drop-shadow(0 10px 20px rgba(0,0,0,0.5))" }}
-        />
-
-        {/* Shy eyes overlay */}
-        <AnimatePresence>
-          {isTyping && (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              className="shy-eyes-overlay"
-            >
-              <div className="eye">◡</div>
-              <div className="eye">◡</div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.div>
-
       {/* ── Main Premium Card ── */}
       <motion.div
         className="premium-glass-card"
@@ -233,6 +198,40 @@ export default function PasswordGate() {
         animate={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
       >
+        {/* ── Pet moved to be inside card near input ── */}
+        <motion.div
+          className="pet-near-input"
+          variants={petLeftVariants}
+          animate={currentPetState}
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.8, duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+          style={{ width: 120, position: "absolute", top: -80, left: "50%", transform: "translateX(-50%)" }}
+        >
+          <div className="pet-glow" />
+          <Player
+            ref={dogRef}
+            src={DOG_SRC}
+            autoplay
+            loop
+            style={{ width: "100%", height: "auto", filter: "drop-shadow(0 10px 20px rgba(0,0,0,0.5))" }}
+          />
+
+          {/* Shy eyes overlay */}
+          <AnimatePresence>
+            {isTyping && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                className="shy-eyes-overlay"
+              >
+                <div className="eye">◡</div>
+                <div className="eye">◡</div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
         <motion.p
           className="eyebrow"
           initial={{ opacity: 0, y: -10 }}
@@ -291,7 +290,7 @@ export default function PasswordGate() {
                       exit={{ scale: 0, opacity: 0 }}
                       className="pin-char"
                     >
-                      ❤️
+                      •
                     </motion.div>
                   )}
                 </AnimatePresence>

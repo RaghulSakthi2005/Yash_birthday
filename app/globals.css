@@ -793,3 +793,22 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   text-shadow: 0 0 10px rgba(255, 100, 150, 0.8);
 }
+/* ══════════════════════════════
+   PET NEAR INPUT
+   ══════════════════════════════ */
+.pet-near-input {
+  position: absolute;
+  z-index: 30;
+  pointer-events: none;
+  /* Centered above the card */
+  top: calc(50% - 240px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 480px) {
+  .pet-near-input {
+    top: calc(50% - 200px);
+    width: 100px !important;
+  }
+}
