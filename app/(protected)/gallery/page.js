@@ -22,11 +22,11 @@ const SeriesCard = ({ series, onClick }) => {
       }}>
       <Image src={series.thumbnail} alt={series.title} fill unoptimized={true} className="object-cover transition-transform duration-700 ease-out group-hover:scale-110 group-hover:opacity-60" />
       <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%)", pointerEvents: "none" }} />
-      
+
       {/* Play Icon Overlay */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-all duration-300 scale-90 group-hover:scale-100">
         <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center shadow-[0_0_30px_rgba(0,0,0,0.8)] text-white">
-           <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
         </div>
       </div>
 
@@ -72,8 +72,8 @@ const EpisodeCard = ({ ep, i }) => {
     <motion.div
       className="group"
       initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }}
-      onHoverStart={() => videoRef.current?.play().catch(() => {})}
-      onHoverEnd={() => { if(videoRef.current && (!document.fullscreenElement && !document.webkitFullscreenElement)) { videoRef.current.pause(); videoRef.current.currentTime = 0; } }}
+      onHoverStart={() => videoRef.current?.play().catch(() => { })}
+      onHoverEnd={() => { if (videoRef.current && (!document.fullscreenElement && !document.webkitFullscreenElement)) { videoRef.current.pause(); videoRef.current.currentTime = 0; } }}
       onClick={handlePlayFullscreen}
       style={{ display: "flex", gap: 20, padding: "20px", background: "rgba(255,255,255,0.02)", borderRadius: 12, alignItems: "center", cursor: "pointer", border: "1px solid rgba(255,255,255,0.05)" }}
       whileHover={{ background: "rgba(255,255,255,0.05)", scale: 1.01, boxShadow: "0 10px 30px rgba(0,0,0,0.3)" }}
@@ -82,7 +82,7 @@ const EpisodeCard = ({ ep, i }) => {
         <video ref={videoRef} src={ep.src} muted loop playsInline className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
         <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none opacity-100 group-hover:opacity-0 transition-opacity duration-300 bg-black/20">
           <div className="w-8 h-8 rounded-full bg-black/60 backdrop-blur-sm border border-white/20 flex items-center justify-center">
-            <svg className="w-4 h-4 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <svg className="w-4 h-4 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@ const FrameResolver = ({ photo }) => {
 
   const imageContent = isEmpty ? (
     <div style={{
-      width: "100%", height: "100%", background: "rgba(255,255,255,0.03)", 
+      width: "100%", height: "100%", background: "rgba(255,255,255,0.03)",
       display: "flex", alignItems: "center", justifyContent: "center",
       border: "2px dashed rgba(255,255,255,0.15)", borderRadius: photo.type !== "polaroid" ? 8 : 0
     }}>
@@ -150,7 +150,7 @@ const FrameResolver = ({ photo }) => {
 };
 
 export default function GalleryPage() {
-  const [view, setView] = useState("choose"); 
+  const [view, setView] = useState("choose");
   const [selectedSeries, setSelectedSeries] = useState(null);
   const [photos, setPhotos] = useState(initialGalleryPhotos);
   const [isEditMode, setIsEditMode] = useState(false);
@@ -161,7 +161,7 @@ export default function GalleryPage() {
     const formData = new FormData();
     formData.append("id", id);
     formData.append("file", file);
-    
+
     const res = await fetch("/api/gallery", { method: "POST", body: formData });
     if (res.ok) {
       const data = await res.json();
@@ -172,7 +172,7 @@ export default function GalleryPage() {
   const handlePositionChange = async (e, id) => {
     const objectPosition = e.target.value;
     setPhotos(prev => prev.map(p => p.id === id ? { ...p, objectPosition } : p));
-    
+
     const formData = new FormData();
     formData.append("id", id);
     formData.append("objectPosition", objectPosition);
@@ -195,7 +195,7 @@ export default function GalleryPage() {
       <div style={{ position: "absolute", inset: 0, opacity: 0.15, backgroundImage: "radial-gradient(#ffffff 1px, transparent 1px)", backgroundSize: "24px 24px", pointerEvents: "none", zIndex: 0 }} />
 
       <div style={{ position: "relative", zIndex: 10, maxWidth: selectedSeries ? 1400 : 1200, margin: "0 auto", padding: selectedSeries ? "0" : "120px clamp(24px, 6vw, 80px) 100px" }}>
-        
+
         {/* Header (Hide if we are inside a series view) */}
         {!selectedSeries && (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} style={{ marginBottom: 64 }}>
@@ -227,7 +227,7 @@ export default function GalleryPage() {
                 {photos.map((photo, i) => (
                   <motion.div key={photo.id} className={`group ${photo.span}`} initial={{ opacity: 0, y: 40, rotate: photo.rotate * 2 }} animate={{ opacity: 1, y: 0, rotate: photo.rotate }} transition={{ delay: i * 0.08, type: "spring", stiffness: 100, damping: 12 }} whileHover={{ scale: 1.05, zIndex: 50, rotate: 0, boxShadow: "0 20px 50px rgba(232,197,71,0.2)" }} style={{ position: "relative", height: "100%", transformOrigin: "center" }}>
                     <FrameResolver photo={photo} />
-                    
+
                     {/* Edit Mode Controls */}
                     {isEditMode && (
                       <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.75)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 10, borderRadius: 8, zIndex: 60, backdropFilter: "blur(4px)", padding: "10px" }}>
@@ -235,8 +235,8 @@ export default function GalleryPage() {
                           Upload New
                           <input type="file" accept="image/*" style={{ display: "none" }} onChange={(e) => handleUpload(e, photo.id)} />
                         </label>
-                        <select 
-                          value={photo.objectPosition || "center"} 
+                        <select
+                          value={photo.objectPosition || "center"}
                           onChange={(e) => handlePositionChange(e, photo.id)}
                           style={{ background: "rgba(0,0,0,0.8)", color: "#fff", border: "1px solid rgba(255,255,255,0.2)", borderRadius: 4, padding: "6px 10px", fontSize: 11, outline: "none", cursor: "pointer" }}
                         >
@@ -305,10 +305,10 @@ export default function GalleryPage() {
                     {selectedSeries.description}
                   </p>
                   <div style={{ display: "flex", gap: 16, marginTop: 32 }}>
-                    <button 
+                    <button
                       onClick={() => {
                         const firstVid = document.querySelector('video');
-                        if(firstVid) {
+                        if (firstVid) {
                           if (firstVid.requestFullscreen) firstVid.requestFullscreen();
                           else if (firstVid.webkitRequestFullscreen) firstVid.webkitRequestFullscreen();
                           firstVid.muted = false;
@@ -350,23 +350,23 @@ export default function GalleryPage() {
 
         {(!selectedSeries) && (
           <div style={{ marginTop: 80, paddingTop: 40, borderTop: "1px solid rgba(255,255,255,0.06)", display: "flex", gap: 16, flexWrap: "wrap", position: "relative", zIndex: 20 }}>
-            <Link href="/tree"     className="btn-gold" style={{ padding: "16px 32px" }}>The Tree 🌳</Link>
-            <Link href="/letter"   className="btn-ghost">Letter 💌</Link>
-            <Link href="/home"     className="btn-ghost">← Story</Link>
+            <Link href="/tree" className="btn-gold" style={{ padding: "16px 32px" }}>The Tree 🌳</Link>
+            <Link href="/letter" className="btn-ghost">Letter 💌</Link>
+            <Link href="/home" className="btn-ghost">← Story</Link>
           </div>
         )}
       </div>
 
       {/* Edit Toggle for Photos View */}
       {view === "photos" && (
-        <button 
+        <button
           onClick={() => setIsEditMode(!isEditMode)}
-          style={{ 
-            position: "fixed", bottom: 24, right: 24, zIndex: 100, 
-            background: isEditMode ? "#e8c547" : "rgba(255,255,255,0.05)", 
-            color: isEditMode ? "#000" : "#fff", 
-            border: "1px solid", borderColor: isEditMode ? "#e8c547" : "rgba(255,255,255,0.1)", 
-            borderRadius: "100px", padding: "10px 24px", cursor: "pointer", 
+          style={{
+            position: "fixed", bottom: 24, right: 24, zIndex: 100,
+            background: isEditMode ? "#e8c547" : "rgba(255,255,255,0.05)",
+            color: isEditMode ? "#000" : "#fff",
+            border: "1px solid", borderColor: isEditMode ? "#e8c547" : "rgba(255,255,255,0.1)",
+            borderRadius: "100px", padding: "10px 24px", cursor: "pointer",
             backdropFilter: "blur(10px)", fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600,
             boxShadow: isEditMode ? "0 0 20px rgba(232,197,71,0.5)" : "none",
             transition: "all 0.3s ease"

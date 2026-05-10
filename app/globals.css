@@ -608,11 +608,24 @@ h1, h2, h3, h4, h5, h6 {
 /* Tablet & below (≤ 768px) */
 @media (max-width: 768px) {
 
-  /* Make parallax frames smaller and semi-transparent on mobile instead of hiding them */
+  /* Only show parallax frames after the hero section (100vh) */
+  .parallax-frames-container {
+    top: 100vh !important;
+    height: calc(100% - 100vh) !important;
+  }
+
   .parallax-frame {
-    opacity: 0.35 !important;
-    width: clamp(100px, 30vw, 150px) !important;
-    filter: brightness(0.8) !important;
+    opacity: 0.4 !important; /* Softer opacity for better text contrast */
+    width: clamp(80px, 22vw, 120px) !important;
+    filter: brightness(0.8) grayscale(0.2) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important;
+    margin-left: -6vw !important; /* Push left-aligned frames further to the edge */
+  }
+
+  .parallax-frame[style*="right"] {
+    margin-left: 0 !important;
+    margin-right: -6vw !important; /* Push right-aligned frames further to the edge */
   }
 
   /* Hide floating glass shapes */
@@ -677,8 +690,10 @@ h1, h2, h3, h4, h5, h6 {
 
   .chapter-watermark {
     font-size: clamp(40px, 18vw, 80px) !important;
-    top: -10px !important;
-    opacity: 0.6 !important;
+    top: -20px !important;
+    opacity: 0.2 !important; 
+    WebkitTextStroke: 1px rgba(255, 183, 197, 0.15) !important;
+    z-index: -1 !important;
   }
 
   .chapters-section {

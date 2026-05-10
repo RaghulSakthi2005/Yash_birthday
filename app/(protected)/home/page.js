@@ -107,12 +107,12 @@ function Chapter({ ch, i }) {
         }}>
 
         {/* Giant transparent watermark word */}
-        <div className="chapter-watermark hidden md:block" style={{
+        <div className="chapter-watermark" style={{
           position: "absolute", top: -30,
           [isRight ? "right" : "left"]: -20,
           fontSize: "clamp(90px, 13vw, 180px)", fontWeight: 900,
           letterSpacing: "-0.07em", color: "transparent",
-          WebkitTextStroke: "1px rgba(255,255,255,0.035)",
+          WebkitTextStroke: "1.5px rgba(255, 183, 197, 0.08)", // Rose Gold contrast
           lineHeight: 1, pointerEvents: "none", userSelect: "none",
           zIndex: 0, whiteSpace: "nowrap",
           transform: `rotate(${isRight ? 3 : -2}deg)`
@@ -122,7 +122,7 @@ function Chapter({ ch, i }) {
 
         <div style={{
           fontSize: 10, letterSpacing: "0.35em", textTransform: "uppercase",
-          color: "rgba(232,197,71,0.45)", marginBottom: 12, fontWeight: 500
+          color: "rgba(255, 183, 197, 0.6)", marginBottom: 12, fontWeight: 500
         }}>
           № {String(i + 1).padStart(2, "0")}
         </div>
@@ -139,7 +139,7 @@ function Chapter({ ch, i }) {
         <div style={{
           width: accentWidths[i % 5], height: 1.5,
           background: i % 2 === 0
-            ? "linear-gradient(90deg, #e8c547 40%, transparent)"
+            ? "linear-gradient(90deg, #ffb7c5 40%, transparent)" // Rose Gold
             : "linear-gradient(90deg, #ff6b81 40%, transparent)",
           marginBottom: 18, borderRadius: 1,
           marginLeft: [0, 2, 0, 6, 1][i % 5],
@@ -195,7 +195,7 @@ function ParallaxFrames({ scrollYProgress, frames, setFrames, isEditMode }) {
   };
 
   return (
-    <div className="hidden md:block" style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, pointerEvents: "none", zIndex: 5, overflow: "hidden" }}>
+    <div className="parallax-frames-container" style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, pointerEvents: "none", zIndex: 5, overflow: "hidden" }}>
       {frames.map((frame, index) => {
         const yRange = useTransform(scrollYProgress, [0, 1], [0, -1200 * frame.speed]);
         
@@ -439,7 +439,7 @@ export default function StoryPage() {
             {/* Spine track */}
             <div className="timeline-spine" style={{ position: "absolute", left: "50%", top: 0, bottom: 0, width: 2, transform: "translateX(-50%)", background: "rgba(255,255,255,0.05)" }} />
             {/* Animated filled spine */}
-            <motion.div className="timeline-spine-fill" style={{ position: "absolute", left: "50%", top: 0, width: 2, height: spineHeight, transform: "translateX(-50%)", background: "linear-gradient(to bottom, #e8c547, #ffb7c5, #22d3ee)", boxShadow: "0 0 20px rgba(232,197,71,0.5)" }} />
+            <motion.div className="timeline-spine-fill" style={{ position: "absolute", left: "50%", top: 0, width: 2, height: spineHeight, transform: "translateX(-50%)", background: "linear-gradient(to bottom, #ffb7c5, #ff6b81, #22d3ee)", boxShadow: "0 0 20px rgba(255,183,197,0.5)" }} />
 
             {CHAPTERS.map((ch, i) => <Chapter key={i} ch={ch} i={i} />)}
           </div>
