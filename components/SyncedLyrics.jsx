@@ -38,7 +38,7 @@ export default function SyncedLyrics({ lyrics, currentTime }) {
 
   return (
     <div
-      className="h-full overflow-y-auto w-full px-6 lg:px-16 py-[40vh] scrollbar-hide flex flex-col space-y-8"
+      className="h-full overflow-y-auto w-full px-6 lg:px-16 py-[30vh] lg:py-[40vh] scrollbar-hide flex flex-col space-y-8"
       ref={containerRef}
       style={{
         scrollbarWidth: "none",
@@ -54,7 +54,7 @@ export default function SyncedLyrics({ lyrics, currentTime }) {
         return (
           <div
             key={i}
-            className={`text-2xl md:text-4xl lg:text-[44px] leading-[1.2] font-extrabold tracking-[-0.03em] transition-all duration-500 ease-out ${
+            className={`text-xl md:text-3xl lg:text-[44px] leading-[1.2] font-extrabold tracking-[-0.03em] transition-all duration-500 ease-out ${
               isActiveLine
                 ? "text-white opacity-100 drop-shadow-lg scale-[1.02] origin-left"
                 : isPastLine

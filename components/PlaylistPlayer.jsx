@@ -58,8 +58,6 @@ export default function PlaylistPlayer({ playlistData }) {
     }
   };
 
-  if (!currentTrack) return <div className="text-white text-center py-20">No tracks found.</div>;
-
   return (
     <div className="fixed inset-0 w-full bg-[#0a0a0a] flex flex-col overflow-hidden font-sans selection:bg-white/20">
       
@@ -77,95 +75,110 @@ export default function PlaylistPlayer({ playlistData }) {
             <div className="absolute bottom-[-20%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-purple-600/20 blur-[100px] mix-blend-screen animate-pulse" style={{ animationDelay: '2s' }} />
           </>
         )}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-[#0a0a0a]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-[#0a0a0a]" />
       </div>
 
-      <div className="relative z-10 w-full h-full flex flex-col lg:flex-row max-w-[1400px] mx-auto">
+      <div className="relative z-10 w-full h-full flex flex-col lg:flex-row max-w-[1600px] mx-auto overflow-hidden">
         
-        {/* ── LEFT SIDE: PLAYER CONTROLS ── */}
-        <div className="w-full lg:w-5/12 h-[40dvh] lg:h-full flex flex-col items-center justify-center px-6 lg:px-16 pt-12 lg:pt-0 shrink-0 relative z-10">
-          
-          {/* Album Art */}
-          <div className={`relative w-[28vh] h-[28vh] lg:w-[42vh] lg:h-[42vh] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-700 ease-out mb-8 lg:mb-12 ${isPlaying ? 'scale-100 shadow-[0_30px_60px_rgba(255,255,255,0.05)]' : 'scale-95 opacity-80'}`}>
-            {currentTrack.coverArt ? (
-              <img 
-                src={currentTrack.coverArt} 
-                alt={currentTrack.title} 
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <div className="w-full h-full bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center border border-white/10">
-                <span className="text-white/20 text-6xl">🎵</span>
-              </div>
-            )}
-            <div className="absolute inset-0 rounded-3xl border border-white/10 pointer-events-none" />
+        {/* ── MOBILE HEADER (Track Info) ── */}
+        <div className="lg:hidden flex items-center gap-4 p-6 pt-10 relative z-20 bg-gradient-to-b from-black/40 to-transparent">
+          <div className="w-14 h-14 rounded-xl overflow-hidden shadow-2xl flex-shrink-0">
+            <img src={currentTrack.coverArt || "/images/placeholder.jpg"} alt="" className="w-full h-full object-cover" />
           </div>
-
-          {/* Track Info */}
-          <div className="w-full text-center px-4 mb-8">
-            <h2 className="text-2xl lg:text-4xl font-extrabold text-white tracking-tight mb-2 line-clamp-1">{currentTrack.title}</h2>
-            <p className="text-sm lg:text-lg text-white/50 font-medium tracking-wide">{currentTrack.artist}</p>
+          <div className="flex-1 min-w-0">
+            <h2 className="text-lg font-bold text-white truncate">{currentTrack.title}</h2>
+            <p className="text-xs text-white/50 font-medium truncate uppercase tracking-widest">{currentTrack.artist}</p>
           </div>
-
-          {/* Progress Bar */}
-          <div className="w-full max-w-[320px] lg:max-w-md px-2 mb-8 group">
-            <div className="relative flex items-center h-4 cursor-pointer" onClick={(e) => {
-              const rect = e.currentTarget.getBoundingClientRect();
-              const percent = (e.clientX - rect.left) / rect.width;
-              handleSeek({ target: { value: percent * duration } });
-            }}>
-              {/* Background Track */}
-              <div className="absolute w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
-                {/* Filled Track */}
-                <div 
-                  className="h-full bg-white transition-all duration-100 ease-linear"
-                  style={{ width: `${duration ? (currentTime / duration) * 100 : 0}%` }}
-                />
-              </div>
-              {/* Scrubber Knob */}
-              <div 
-                className="absolute w-3 h-3 bg-white rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity"
-                style={{ left: `calc(${duration ? (currentTime / duration) * 100 : 0}% - 6px)` }}
-              />
-            </div>
-            <div className="flex justify-between text-[11px] text-white/40 mt-3 font-medium tracking-wider">
-              <span>{formatTime(currentTime)}</span>
-              <span>{formatTime(duration)}</span>
-            </div>
-          </div>
-
-          {/* Controls */}
-          <div className="flex items-center justify-center gap-6 lg:gap-10 w-full relative">
-            <button onClick={prevTrack} className="text-white/50 hover:text-white hover:scale-110 transition-all">
-              <BackwardIcon className="w-7 h-7 lg:w-9 lg:h-9" />
-            </button>
-            <button 
-              onClick={togglePlayPause} 
-              className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-white text-black flex items-center justify-center hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)]"
-            >
-              {isPlaying ? <PauseIcon className="w-8 h-8 lg:w-10 lg:h-10" /> : <PlayIcon className="w-8 h-8 lg:w-10 lg:h-10 ml-1" />}
-            </button>
-            <button onClick={nextTrack} className="text-white/50 hover:text-white hover:scale-110 transition-all">
-              <ForwardIcon className="w-7 h-7 lg:w-9 lg:h-9" />
-            </button>
-
-            {/* Playlist Menu Button */}
-            <button 
-              onClick={() => setIsPlaylistOpen(true)}
-              className="absolute right-0 lg:right-4 text-white/50 hover:text-white transition-colors"
-            >
-              <ListBulletIcon className="w-6 h-6 lg:w-8 lg:h-8" />
-            </button>
-          </div>
-
-
+          <button onClick={() => setIsPlaylistOpen(true)} className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+            <ListBulletIcon className="w-5 h-5 text-white" />
+          </button>
         </div>
 
-        {/* ── RIGHT SIDE: LYRICS ── */}
-        <div className="w-full lg:w-7/12 flex-1 lg:h-full relative flex flex-col z-10">
-          <div className="flex-1 overflow-hidden">
-            <SyncedLyrics lyrics={currentTrack.lyrics} currentTime={currentTime} />
+        {/* ── LEFT SIDE: ALBUM ART (DESKTOP) ── */}
+        <div className="hidden lg:flex w-5/12 h-full flex-col items-center justify-center px-16 shrink-0">
+          <div className={`relative w-[45vh] h-[45vh] rounded-[40px] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.6)] transition-all duration-1000 ease-out mb-16 ${isPlaying ? 'scale-100' : 'scale-90 opacity-40 blur-sm'}`}>
+            <img src={currentTrack.coverArt || "/images/placeholder.jpg"} alt={currentTrack.title} className="w-full h-full object-cover" />
+            <div className="absolute inset-0 border border-white/10 rounded-[40px] pointer-events-none" />
           </div>
+          <div className="w-full text-left">
+             <h2 className="text-5xl font-black text-white tracking-tighter mb-4 leading-tight">{currentTrack.title}</h2>
+             <p className="text-xl text-white/40 font-medium uppercase tracking-[0.2em]">{currentTrack.artist}</p>
+          </div>
+        </div>
+
+        {/* ── MIDDLE: LYRICS (MAIN FOCUS) ── */}
+        <div className="flex-1 h-full relative flex flex-col min-h-0">
+          <SyncedLyrics lyrics={currentTrack.lyrics} currentTime={currentTime} />
+        </div>
+
+        {/* ── BOTTOM CONTROL PANEL (MOBILE) ── */}
+        <div className="lg:hidden w-full p-6 pb-10 bg-black/40 backdrop-blur-3xl border-t border-white/5 relative z-30">
+          {/* Progress / Seek Slider */}
+          <div className="mb-6 px-1">
+             <input 
+               type="range"
+               min={0}
+               max={duration || 0}
+               value={currentTime}
+               onChange={handleSeek}
+               className="w-full h-1.5 bg-white/10 rounded-full appearance-none cursor-pointer accent-white hover:accent-pink-400 transition-all"
+             />
+             <div className="flex justify-between text-[10px] text-white/30 mt-3 font-bold tracking-widest">
+               <span>{formatTime(currentTime)}</span>
+               <span>{formatTime(duration)}</span>
+             </div>
+          </div>
+
+          <div className="flex items-center justify-between gap-4">
+             <button onClick={prevTrack} className="p-3 text-white/40 hover:text-white transition-colors">
+               <BackwardIcon className="w-8 h-8" />
+             </button>
+             <button 
+               onClick={togglePlayPause} 
+               className="w-16 h-16 rounded-full bg-white text-black flex items-center justify-center shadow-2xl active:scale-90 transition-transform"
+             >
+               {isPlaying ? <PauseIcon className="w-8 h-8" /> : <PlayIcon className="w-8 h-8 ml-1" />}
+             </button>
+             <button onClick={nextTrack} className="p-3 text-white/40 hover:text-white transition-colors">
+               <ForwardIcon className="w-8 h-8" />
+             </button>
+          </div>
+        </div>
+
+        {/* ── DESKTOP CONTROLS (BOTTOM FLOATING) ── */}
+        <div className="hidden lg:block fixed bottom-12 left-1/2 -translate-x-1/2 z-50">
+           <div className="bg-black/40 backdrop-blur-3xl border border-white/10 rounded-full px-8 py-4 flex items-center gap-10 shadow-2xl">
+              <button onClick={prevTrack} className="text-white/40 hover:text-white transition-colors">
+                <BackwardIcon className="w-6 h-6" />
+              </button>
+              <button onClick={togglePlayPause} className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center hover:scale-105 transition-transform">
+                {isPlaying ? <PauseIcon className="w-6 h-6" /> : <PlayIcon className="w-6 h-6 ml-1" />}
+              </button>
+              <button onClick={nextTrack} className="text-white/40 hover:text-white transition-colors">
+                <ForwardIcon className="w-6 h-6" />
+              </button>
+              
+              <div className="w-[1px] h-8 bg-white/10 mx-2" />
+              
+              <div className="w-60">
+                 <input 
+                   type="range"
+                   min={0}
+                   max={duration || 0}
+                   value={currentTime}
+                   onChange={handleSeek}
+                   className="w-full h-1 bg-white/20 rounded-full appearance-none cursor-pointer accent-white"
+                 />
+                 <div className="flex justify-between text-[10px] text-white/30 mt-2 font-medium">
+                   <span>{formatTime(currentTime)}</span>
+                   <span>{formatTime(duration)}</span>
+                 </div>
+              </div>
+
+              <button onClick={() => setIsPlaylistOpen(true)} className="text-white/40 hover:text-white transition-colors ml-4">
+                <ListBulletIcon className="w-6 h-6" />
+              </button>
+           </div>
         </div>
         
       </div>

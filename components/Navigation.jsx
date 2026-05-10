@@ -207,7 +207,7 @@ export default function Navigation() {
                 style={{ marginTop: 80, textAlign: "center" }}
               >
                 <p style={{ color: "rgba(255,255,255,0.2)", fontSize: 11, fontStyle: "italic", letterSpacing: "0.1em" }}>
-                  "என்னை முழுமையாக்கியவள்..."
+                  ""
                 </p>
               </motion.div>
             </div>
