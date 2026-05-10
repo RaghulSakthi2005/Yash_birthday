@@ -180,7 +180,7 @@ export default function PlaylistPlayer({ playlistData }) {
               <div className="w-[1px] h-8 bg-white/10" />
 
               <button onClick={() => setIsPlaylistOpen(true)} className="w-10 h-10 flex items-center justify-center text-white/40 hover:text-white transition-all hover:scale-110 active:scale-95">
-                <ListBulletIcon className="w-6 h-6" />
+                <ListBulletIcon className="w-6 h-6 translate-y-[0.5px]" />
               </button>
            </div>
         </div>
