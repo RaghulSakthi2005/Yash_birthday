@@ -20,6 +20,36 @@ const ORB_SEEDS = [
   [95, 25, 2.5, 17, 10]
 ];
 
+const HandwrittenName = () => (
+  <motion.svg
+    viewBox="0 0 300 120"
+    className="handwriting-svg"
+    style={{ width: 220, height: "auto", marginBottom: 10 }}
+  >
+    <defs>
+      <linearGradient id="handwriting-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#ffffff" />
+        <stop offset="50%" stopColor="#ffb7c5" />
+        <stop offset="100%" stopColor="#e8c547" />
+      </linearGradient>
+    </defs>
+    <motion.path
+      d="M40,80 Q20,80 20,50 Q20,20 45,20 Q70,20 70,50 L70,100 Q70,120 45,120 Q20,120 20,100 M85,85 Q70,85 70,68 Q70,50 88,50 Q105,50 105,68 L105,85 Q105,90 115,85 M125,85 Q145,85 145,72 Q145,60 132,60 Q120,60 120,48 Q120,35 140,35 M160,15 L160,85 Q160,65 180,65 Q200,65 200,85 M215,50 L215,85 M215,32 A2,2 0 1,1 216,32 M230,15 L230,85 M230,65 L255,45 M230,70 L255,90 M275,85 Q260,85 260,68 Q260,50 278,50 Q295,50 295,68 L295,85 Q295,90 305,85"
+      fill="none"
+      strokeWidth="3.5"
+      strokeLinecap="round"
+      className="handwriting-path"
+      initial={{ pathLength: 0, opacity: 0 }}
+      animate={{ pathLength: 1, opacity: 1 }}
+      transition={{
+        duration: 3.5,
+        ease: [0.45, 0, 0.55, 1],
+        delay: 1.0
+      }}
+    />
+  </motion.svg>
+);
+
 // Confetti burst - made elegant and soft
 function burst(x, y) {
   const colors = ["#ffb7c5", "#ffd98a", "#fde8d8", "#ffffff", "#ff8fab"];
@@ -28,10 +58,10 @@ function burst(x, y) {
     const el = document.createElement("div");
     el.className = "confetti-piece";
     const angle = (Math.PI * 2 / 40) * i + (Math.random() - 0.5) * 0.4;
-    const dist  = Math.random() * 200 + 50;
+    const dist = Math.random() * 200 + 50;
     const color = colors[Math.floor(Math.random() * colors.length)];
-    const dur   = (Math.random() * 0.8 + 1.2).toFixed(2);
-    const size  = Math.floor(Math.random() * 6 + 4);
+    const dur = (Math.random() * 0.8 + 1.2).toFixed(2);
+    const size = Math.floor(Math.random() * 6 + 4);
     el.style.cssText = `
       left:${x}px; top:${y}px;
       background:${color};
@@ -39,7 +69,7 @@ function burst(x, y) {
       border-radius: 50%;
       box-shadow: 0 0 10px ${color};
       animation-duration:${dur}s;
-      transform:translate(${Math.cos(angle)*dist}px,${Math.sin(angle)*dist}px) scale(${Math.random() * 1.5});
+      transform:translate(${Math.cos(angle) * dist}px,${Math.sin(angle) * dist}px) scale(${Math.random() * 1.5});
       opacity:0;
       transition: transform ${dur}s cubic-bezier(0.25, 1, 0.5, 1), opacity ${dur}s ease-out;
     `;
@@ -52,17 +82,19 @@ function burst(x, y) {
 }
 
 export default function PasswordGate() {
-  const [password,    setPassword]    = useState("");
+  const [password, setPassword] = useState("");
   const [status,      setStatus]      = useState("idle");   // idle | wrong | correct | leaving
   const [message,     setMessage]     = useState("");
   const [isShaking,   setIsShaking]   = useState(false);
   const [petState,    setPetState]    = useState("idle");   // idle | sad | happy
+  const [mounted,     setMounted]     = useState(false);
 
   const inputRef   = useRef(null);
   const dogRef     = useRef(null);
   const btnRef     = useRef(null);
 
   useEffect(() => {
+    setMounted(true);
     inputRef.current?.focus();
   }, []);
 
@@ -110,15 +142,15 @@ export default function PasswordGate() {
 
   // ── Pet movement variants
   const petLeftVariants = {
-    idle:    { y: 0,   rotate: 0,   scale: 1,    transition: { type: "spring", stiffness: 60, damping: 20 } },
-    sad:     { y: 15,  rotate: -5,  scale: 0.95, transition: { type: "spring", stiffness: 100, damping: 15 } },
-    happy:   { y: -30, rotate: 5,   scale: 1.05, transition: { type: "spring", stiffness: 150, damping: 15 } },
-    leaving: { y: -80, opacity: 0,  transition: { duration: 1.2, ease: "easeInOut" } },
+    idle: { y: 0, rotate: 0, scale: 1, transition: { type: "spring", stiffness: 60, damping: 20 } },
+    sad: { y: 15, rotate: -5, scale: 0.95, transition: { type: "spring", stiffness: 100, damping: 15 } },
+    happy: { y: -30, rotate: 5, scale: 1.05, transition: { type: "spring", stiffness: 150, damping: 15 } },
+    leaving: { y: -80, opacity: 0, transition: { duration: 1.2, ease: "easeInOut" } },
   };
   const petRightVariants = {
-    idle:    { y: 0,   rotate: 0,  scale: 1,    transition: { type: "spring", stiffness: 60, damping: 20 } },
-    sad:     { y: 15,  rotate: 5,  scale: 0.95, transition: { type: "spring", stiffness: 100, damping: 15 } },
-    happy:   { y: -30, rotate: -5, scale: 1.05, transition: { type: "spring", stiffness: 150, damping: 15 } },
+    idle: { y: 0, rotate: 0, scale: 1, transition: { type: "spring", stiffness: 60, damping: 20 } },
+    sad: { y: 15, rotate: 5, scale: 0.95, transition: { type: "spring", stiffness: 100, damping: 15 } },
+    happy: { y: -30, rotate: -5, scale: 1.05, transition: { type: "spring", stiffness: 150, damping: 15 } },
     leaving: { y: -80, opacity: 0, transition: { duration: 1.2, ease: "easeInOut" } },
   };
 
@@ -126,27 +158,27 @@ export default function PasswordGate() {
 
   return (
     <div className={`scene ${status === "leaving" ? "leaving" : ""}`}>
-      
+
       {/* ── Aurora Background ── */}
       <div className="aurora-bg" />
 
       {/* ── Floating Orbs ── */}
       {ORB_SEEDS.map(([left, top, scale, delay, dur], i) => (
-        <motion.div 
-          key={i} 
+        <motion.div
+          key={i}
           className="drifting-orb"
           initial={{ y: top + "vh", x: left + "vw", opacity: 0, scale: 0 }}
-          animate={{ 
+          animate={{
             y: [top + "vh", (top - 30) + "vh"],
             x: [left + "vw", (left + (Math.random() * 10 - 5)) + "vw"],
             opacity: [0, 0.4, 0],
             scale: [0, scale, 0]
           }}
-          transition={{ 
-            duration: dur, 
-            repeat: Infinity, 
+          transition={{
+            duration: dur,
+            repeat: Infinity,
             delay: delay,
-            ease: "easeInOut" 
+            ease: "easeInOut"
           }}
           style={{ width: 100, height: 100, marginLeft: -50, marginTop: -50 }}
         />
@@ -188,14 +220,7 @@ export default function PasswordGate() {
           For Your Eyes Only
         </motion.p>
 
-        <motion.h1
-          className="heading-premium"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.0, duration: 0.8 }}
-        >
-          Hey you ❤️
-        </motion.h1>
+        {mounted && <HandwrittenName />}
 
         <motion.p
           className="subtext-premium"
@@ -261,18 +286,18 @@ export default function PasswordGate() {
           animate={{ opacity: 1 }}
           transition={{ delay: 2.0, duration: 1 }}
         >
-          hint: it's something we both love
+          hint: it's something we both know
         </motion.p>
       </motion.div>
 
       {/* Signature */}
-      <motion.p 
+      <motion.p
         className="signature"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.5, duration: 1.5 }}
       >
-        made with ♡ by yash
+        made with ♡ for yash
       </motion.p>
     </div>
   );

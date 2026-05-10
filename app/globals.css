@@ -691,3 +691,16 @@ h1, h2, h3, h4, h5, h6 {
     width: 90vw !important;
   }
 }
+/* ══════════════════════════════
+   HANDWRITING ANIMATION
+   ══════════════════════════════ */
+.handwriting-svg {
+  filter: drop-shadow(0 0 8px rgba(255,183,197,0.4));
+  overflow: visible;
+}
+
+.handwriting-path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: url(#handwriting-gradient);
+}
