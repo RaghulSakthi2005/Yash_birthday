@@ -22,9 +22,19 @@ const ORB_SEEDS = [
 
 const HandwrittenName = () => (
   <motion.svg
-    viewBox="0 0 300 120"
+    viewBox="0 0 350 150"
     className="handwriting-svg"
-    style={{ width: 220, height: "auto", marginBottom: 10 }}
+    style={{ 
+      position: "absolute", 
+      top: "45%", 
+      left: "50%", 
+      transform: "translate(-50%, -50%)",
+      width: "min(800px, 90vw)", 
+      height: "auto", 
+      zIndex: 5,
+      opacity: 0.15,
+      pointerEvents: "none"
+    }}
   >
     <defs>
       <linearGradient id="handwriting-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -34,17 +44,17 @@ const HandwrittenName = () => (
       </linearGradient>
     </defs>
     <motion.path
-      d="M40,80 Q20,80 20,50 Q20,20 45,20 Q70,20 70,50 L70,100 Q70,120 45,120 Q20,120 20,100 M85,85 Q70,85 70,68 Q70,50 88,50 Q105,50 105,68 L105,85 Q105,90 115,85 M125,85 Q145,85 145,72 Q145,60 132,60 Q120,60 120,48 Q120,35 140,35 M160,15 L160,85 Q160,65 180,65 Q200,65 200,85 M215,50 L215,85 M215,32 A2,2 0 1,1 216,32 M230,15 L230,85 M230,65 L255,45 M230,70 L255,90 M275,85 Q260,85 260,68 Q260,50 278,50 Q295,50 295,68 L295,85 Q295,90 305,85"
+      d="M40,20 C40,20 40,60 70,60 C100,60 100,20 100,20 L100,100 C100,130 70,130 70,100 M115,85 Q100,85 100,68 Q100,50 118,50 Q135,50 135,68 L135,85 Q135,90 145,85 M155,85 Q175,85 175,72 Q175,60 162,60 Q150,60 150,48 Q150,35 170,35 M190,15 L190,85 Q190,65 210,65 Q230,65 230,85 M245,50 L245,85 M245,32 A2,2 0 1,1 246,32 M260,15 L260,85 M260,65 L285,45 M260,70 L285,90 M305,85 Q290,85 290,68 Q290,50 308,50 Q325,50 325,68 L325,85 Q325,90 335,85"
       fill="none"
-      strokeWidth="3.5"
+      strokeWidth="2.5"
       strokeLinecap="round"
       className="handwriting-path"
       initial={{ pathLength: 0, opacity: 0 }}
       animate={{ pathLength: 1, opacity: 1 }}
-      transition={{
-        duration: 3.5,
+      transition={{ 
+        duration: 4.5, 
         ease: [0.45, 0, 0.55, 1],
-        delay: 1.0
+        delay: 0.5 
       }}
     />
   </motion.svg>
@@ -162,6 +172,9 @@ export default function PasswordGate() {
       {/* ── Aurora Background ── */}
       <div className="aurora-bg" />
 
+      {/* ── Background Handwriting ── */}
+      {mounted && <HandwrittenName />}
+
       {/* ── Floating Orbs ── */}
       {ORB_SEEDS.map(([left, top, scale, delay, dur], i) => (
         <motion.div
@@ -220,7 +233,14 @@ export default function PasswordGate() {
           For Your Eyes Only
         </motion.p>
 
-        {mounted && <HandwrittenName />}
+        <motion.h1
+          className="heading-premium"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.0, duration: 0.8 }}
+        >
+          Hey you ❤️
+        </motion.h1>
 
         <motion.p
           className="subtext-premium"
