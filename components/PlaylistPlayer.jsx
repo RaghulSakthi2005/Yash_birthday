@@ -130,16 +130,16 @@ export default function PlaylistPlayer({ playlistData }) {
           </div>
 
           <div className="flex items-center justify-between gap-4 px-4">
-             <button onClick={prevTrack} className="p-3 text-white/40 hover:text-white transition-colors">
+             <button onClick={prevTrack} className="w-14 h-14 flex items-center justify-center text-white/40 hover:text-white transition-all hover:scale-110 active:scale-95">
                <BackwardIcon className="w-9 h-9" />
              </button>
              <button 
                onClick={togglePlayPause} 
-               className="w-20 h-20 rounded-full bg-white text-black flex items-center justify-center shadow-[0_0_50px_rgba(255,255,255,0.15)] active:scale-90 transition-transform"
+               className="w-20 h-20 rounded-full bg-white text-black flex items-center justify-center shadow-[0_0_50px_rgba(255,255,255,0.15)] active:scale-90 transition-transform flex-shrink-0"
              >
                {isPlaying ? <PauseIcon className="w-10 h-10" /> : <PlayIcon className="w-10 h-10 ml-1.5" />}
              </button>
-             <button onClick={nextTrack} className="p-3 text-white/40 hover:text-white transition-colors">
+             <button onClick={nextTrack} className="w-14 h-14 flex items-center justify-center text-white/40 hover:text-white transition-all hover:scale-110 active:scale-95">
                <ForwardIcon className="w-9 h-9" />
              </button>
           </div>
@@ -147,14 +147,14 @@ export default function PlaylistPlayer({ playlistData }) {
 
         {/* ── DESKTOP CONTROLS (BOTTOM FLOATING) ── */}
         <div className="hidden lg:block fixed bottom-12 left-1/2 -translate-x-1/2 z-50">
-           <div className="bg-black/60 backdrop-blur-3xl border border-white/10 rounded-full px-10 py-5 flex items-center gap-12 shadow-[0_30px_100px_rgba(0,0,0,0.8)]">
-              <button onClick={prevTrack} className="text-white/40 hover:text-white transition-all hover:scale-110 active:scale-95">
+           <div className="bg-black/60 backdrop-blur-3xl border border-white/10 rounded-full px-12 py-5 flex items-center gap-14 shadow-[0_30px_100px_rgba(0,0,0,0.8)]">
+              <button onClick={prevTrack} className="w-12 h-12 flex items-center justify-center text-white/40 hover:text-white transition-all hover:scale-110 active:scale-95">
                 <BackwardIcon className="w-7 h-7" />
               </button>
-              <button onClick={togglePlayPause} className="w-14 h-14 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 active:scale-95 transition-all shadow-xl">
+              <button onClick={togglePlayPause} className="w-16 h-16 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 active:scale-95 transition-all shadow-xl flex-shrink-0">
                 {isPlaying ? <PauseIcon className="w-7 h-7" /> : <PlayIcon className="w-7 h-7 ml-1" />}
               </button>
-              <button onClick={nextTrack} className="text-white/40 hover:text-white transition-all hover:scale-110 active:scale-95">
+              <button onClick={nextTrack} className="w-12 h-12 flex items-center justify-center text-white/40 hover:text-white transition-all hover:scale-110 active:scale-95">
                 <ForwardIcon className="w-7 h-7" />
               </button>
               
