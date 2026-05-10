@@ -25,15 +25,10 @@ const HandwrittenName = () => (
     viewBox="0 0 350 150"
     className="handwriting-svg"
     style={{ 
-      position: "absolute", 
-      top: "45%", 
-      left: "50%", 
-      transform: "translate(-50%, -50%)",
-      width: "min(800px, 90vw)", 
+      width: 280, 
       height: "auto", 
-      zIndex: 5,
-      opacity: 0.15,
-      pointerEvents: "none"
+      marginBottom: 20,
+      filter: "drop-shadow(0 0 12px rgba(255,183,197,0.3))"
     }}
   >
     <defs>
@@ -46,15 +41,15 @@ const HandwrittenName = () => (
     <motion.path
       d="M40,20 C40,20 40,60 70,60 C100,60 100,20 100,20 L100,100 C100,130 70,130 70,100 M115,85 Q100,85 100,68 Q100,50 118,50 Q135,50 135,68 L135,85 Q135,90 145,85 M155,85 Q175,85 175,72 Q175,60 162,60 Q150,60 150,48 Q150,35 170,35 M190,15 L190,85 Q190,65 210,65 Q230,65 230,85 M245,50 L245,85 M245,32 A2,2 0 1,1 246,32 M260,15 L260,85 M260,65 L285,45 M260,70 L285,90 M305,85 Q290,85 290,68 Q290,50 308,50 Q325,50 325,68 L325,85 Q325,90 335,85"
       fill="none"
-      strokeWidth="2.5"
+      strokeWidth="2.8"
       strokeLinecap="round"
       className="handwriting-path"
       initial={{ pathLength: 0, opacity: 0 }}
       animate={{ pathLength: 1, opacity: 1 }}
       transition={{ 
-        duration: 4.5, 
-        ease: [0.45, 0, 0.55, 1],
-        delay: 0.5 
+        duration: 9.0, // Ultra-slow river-like flow
+        ease: [0.4, 0, 0.2, 1], 
+        delay: 0.8 
       }}
     />
   </motion.svg>
@@ -152,10 +147,11 @@ export default function PasswordGate() {
 
   // ── Pet movement variants
   const petLeftVariants = {
-    idle: { y: 0, rotate: 0, scale: 1, transition: { type: "spring", stiffness: 60, damping: 20 } },
-    sad: { y: 15, rotate: -5, scale: 0.95, transition: { type: "spring", stiffness: 100, damping: 15 } },
-    happy: { y: -30, rotate: 5, scale: 1.05, transition: { type: "spring", stiffness: 150, damping: 15 } },
-    leaving: { y: -80, opacity: 0, transition: { duration: 1.2, ease: "easeInOut" } },
+    idle:    { y: 0,   rotate: 0,   scale: 1,    transition: { type: "spring", stiffness: 60, damping: 20 } },
+    sad:     { y: 15,  rotate: -5,  scale: 0.95, transition: { type: "spring", stiffness: 100, damping: 15 } },
+    happy:   { y: -30, rotate: 5,   scale: 1.05, transition: { type: "spring", stiffness: 150, damping: 15 } },
+    shy:     { y: -10, rotate: 10,  scale: 1.02, transition: { type: "spring", stiffness: 120, damping: 20 } },
+    leaving: { y: -80, opacity: 0,  transition: { duration: 1.2, ease: "easeInOut" } },
   };
   const petRightVariants = {
     idle: { y: 0, rotate: 0, scale: 1, transition: { type: "spring", stiffness: 60, damping: 20 } },
@@ -164,16 +160,14 @@ export default function PasswordGate() {
     leaving: { y: -80, opacity: 0, transition: { duration: 1.2, ease: "easeInOut" } },
   };
 
-  const currentPetState = status === "leaving" ? "leaving" : petState;
+  const isTyping = password.length > 0 && status === "idle";
+  const currentPetState = status === "leaving" ? "leaving" : (isTyping ? "shy" : petState);
 
   return (
     <div className={`scene ${status === "leaving" ? "leaving" : ""}`}>
 
       {/* ── Aurora Background ── */}
       <div className="aurora-bg" />
-
-      {/* ── Background Handwriting ── */}
-      {mounted && <HandwrittenName />}
 
       {/* ── Floating Orbs ── */}
       {ORB_SEEDS.map(([left, top, scale, delay, dur], i) => (
@@ -215,6 +209,21 @@ export default function PasswordGate() {
           loop
           style={{ width: "100%", height: "auto", filter: "drop-shadow(0 10px 20px rgba(0,0,0,0.5))" }}
         />
+
+        {/* Shy eyes overlay */}
+        <AnimatePresence>
+          {isTyping && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              className="shy-eyes-overlay"
+            >
+              <div className="eye">◡</div>
+              <div className="eye">◡</div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.div>
 
       {/* ── Main Premium Card ── */}
@@ -233,14 +242,7 @@ export default function PasswordGate() {
           For Your Eyes Only
         </motion.p>
 
-        <motion.h1
-          className="heading-premium"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.0, duration: 0.8 }}
-        >
-          Hey you ❤️
-        </motion.h1>
+        {mounted && <HandwrittenName />}
 
         <motion.p
           className="subtext-premium"
@@ -252,23 +254,51 @@ export default function PasswordGate() {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, width: 0 }}
-          animate={{ opacity: 1, width: "100%" }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.4, duration: 0.8 }}
-          className={`password-container ${isShaking ? "shake" : ""}`}
-          style={{ width: "100%", position: "relative" }}
+          className={`password-wrapper ${isShaking ? "shake" : ""}`}
+          onClick={() => inputRef.current?.focus()}
         >
+          {/* Hidden real input */}
           <input
             ref={inputRef}
-            type="password"
+            type="tel"
+            maxLength={8}
             value={password}
-            onChange={e => setPassword(e.target.value)}
+            onChange={e => {
+              const val = e.target.value.replace(/[^0-9]/g, "");
+              if (val.length <= 8) setPassword(val);
+            }}
             onKeyDown={handleKey}
-            placeholder="enter the secret"
-            className="elegant-input"
-            autoComplete="off"
-            spellCheck="false"
+            className="hidden-real-input"
+            autoFocus
           />
+
+          {/* Visual slots */}
+          <div className="pin-slots">
+            {[...Array(8)].map((_, i) => (
+              <motion.div
+                key={i}
+                className={`pin-slot ${password.length > i ? "filled" : ""} ${password.length === i ? "active" : ""}`}
+                animate={password.length > i ? { scale: [1, 1.1, 1], rotate: [0, 5, 0] } : {}}
+              >
+                <AnimatePresence>
+                  {password.length > i && (
+                    <motion.div
+                      initial={{ scale: 0, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      exit={{ scale: 0, opacity: 0 }}
+                      className="pin-char"
+                    >
+                      ❤️
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+                {password.length === i && <motion.div className="pin-cursor" animate={{ opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 0.8 }} />}
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
         <AnimatePresence mode="wait">

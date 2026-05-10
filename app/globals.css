@@ -704,3 +704,92 @@ h1, h2, h3, h4, h5, h6 {
   stroke-linejoin: round;
   stroke: url(#handwriting-gradient);
 }
+
+/* ══════════════════════════════
+   PIN CODE INPUT
+   ══════════════════════════════ */
+.password-wrapper {
+  width: 100%;
+  margin-bottom: 24px;
+  cursor: text;
+  position: relative;
+}
+
+.hidden-real-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0; height: 0;
+}
+
+.pin-slots {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+.pin-slot {
+  width: 42px;
+  height: 54px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  position: relative;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.pin-slot.active {
+  border-color: rgba(255, 183, 197, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 183, 197, 0.2);
+}
+
+.pin-slot.filled {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.pin-char {
+  font-size: 16px;
+  filter: drop-shadow(0 0 5px rgba(255, 100, 150, 0.5));
+}
+
+.pin-cursor {
+  width: 2px;
+  height: 20px;
+  background: rgba(255, 183, 197, 0.8);
+  border-radius: 2px;
+}
+
+@media (max-width: 480px) {
+  .pin-slots { gap: 6px; }
+  .pin-slot { width: 34px; height: 46px; border-radius: 8px; }
+  .pin-char { font-size: 12px; }
+}
+
+/* ══════════════════════════════
+   SHY EYES OVERLAY
+   ══════════════════════════════ */
+.shy-eyes-overlay {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.shy-eyes-overlay .eye {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 100, 150, 0.8);
+}
