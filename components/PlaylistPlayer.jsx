@@ -147,20 +147,22 @@ export default function PlaylistPlayer({ playlistData }) {
 
         {/* ── DESKTOP CONTROLS (BOTTOM FLOATING) ── */}
         <div className="hidden lg:block fixed bottom-12 left-1/2 -translate-x-1/2 z-50">
-           <div className="bg-black/60 backdrop-blur-3xl border border-white/10 rounded-full px-10 py-5 flex items-center gap-10 shadow-[0_30px_100px_rgba(0,0,0,0.8)]">
-              <button onClick={prevTrack} className="w-10 h-10 flex items-center justify-center text-white/40 hover:text-white transition-all hover:scale-110 active:scale-95">
-                <BackwardIcon className="w-6 h-6" />
-              </button>
-              <button onClick={togglePlayPause} className="w-14 h-14 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 active:scale-95 transition-all shadow-xl flex-shrink-0">
-                {isPlaying ? <PauseIcon className="w-6 h-6" /> : <PlayIcon className="w-6 h-6 ml-0.5" />}
-              </button>
-              <button onClick={nextTrack} className="w-10 h-10 flex items-center justify-center text-white/40 hover:text-white transition-all hover:scale-110 active:scale-95">
-                <ForwardIcon className="w-6 h-6" />
-              </button>
+           <div className="bg-black/80 backdrop-blur-3xl border border-white/10 rounded-full px-8 py-4 flex items-center gap-6 shadow-[0_30px_100px_rgba(0,0,0,0.8)]">
+              <div className="flex items-center gap-3">
+                <button onClick={prevTrack} className="w-10 h-10 flex items-center justify-center text-white/40 hover:text-white transition-all hover:scale-110 active:scale-95">
+                  <BackwardIcon className="w-6 h-6" />
+                </button>
+                <button onClick={togglePlayPause} className="w-14 h-14 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 active:scale-95 transition-all shadow-xl flex-shrink-0">
+                  {isPlaying ? <PauseIcon className="w-6 h-6" /> : <PlayIcon className="w-6 h-6 ml-0.5" />}
+                </button>
+                <button onClick={nextTrack} className="w-10 h-10 flex items-center justify-center text-white/40 hover:text-white transition-all hover:scale-110 active:scale-95">
+                  <ForwardIcon className="w-6 h-6" />
+                </button>
+              </div>
               
-              <div className="w-[1px] h-8 bg-white/10 mx-2" />
+              <div className="w-[1px] h-8 bg-white/10" />
               
-              <div className="w-64">
+              <div className="w-60 flex flex-col justify-center">
                  <input 
                    type="range"
                    min={0}
@@ -169,13 +171,13 @@ export default function PlaylistPlayer({ playlistData }) {
                    onChange={handleSeek}
                    className="w-full h-1 bg-white/20 rounded-full appearance-none cursor-pointer accent-white hover:accent-pink-400"
                  />
-                 <div className="flex justify-between text-[10px] text-white/30 mt-2 font-bold tracking-wider uppercase">
+                 <div className="flex justify-between text-[9px] text-white/30 mt-2 font-bold tracking-widest uppercase">
                    <span>{formatTime(currentTime)}</span>
                    <span>{formatTime(duration)}</span>
                  </div>
               </div>
 
-              <div className="w-[1px] h-8 bg-white/10 mx-2" />
+              <div className="w-[1px] h-8 bg-white/10" />
 
               <button onClick={() => setIsPlaylistOpen(true)} className="w-10 h-10 flex items-center justify-center text-white/40 hover:text-white transition-all hover:scale-110 active:scale-95">
                 <ListBulletIcon className="w-6 h-6" />
