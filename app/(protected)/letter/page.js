@@ -23,6 +23,7 @@ const PARAGRAPHS = [
   "I genuinely admire who you are, Yashh!!.",
   "Not who you're becoming — who you already are, right now.",
   "She likes flowers, but she doesn't know she's a garden herself.",
+  "can lose anything but not you and i afraid of losing u",
   "நீ என் வாழ்க்கையில் வந்த பிறகு தான், நானாகவே வாழ ஆரம்பித்தேன். என் வாழ்வின் அழகிய மாற்றம் நீ!",
   "Happy Birthday.",
   "— Raghul",

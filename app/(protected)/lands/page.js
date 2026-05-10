@@ -146,6 +146,12 @@ export default function LandsPage() {
           )}
         </AnimatePresence>
 
+        <div style={{ marginTop: 40, textAlign: "center" }}>
+           <p style={{ fontSize: 13, fontStyle: "italic", color: "rgba(232,197,71,0.4)", letterSpacing: "0.05em", maxWidth: 700, margin: "0 auto" }}>
+             "if ur happy smiling around me without the self consiousness of the thirdd person around then seeing it makes me happy"
+           </p>
+        </div>
+
         <div style={{ marginTop: 60, paddingTop: 40, borderTop: "1px solid rgba(255,255,255,0.06)", display: "flex", gap: 16, flexWrap: "wrap" }}>
           <Link href="/gallery" className="btn-gold">Memories 🖼</Link>
           <Link href="/home" className="btn-ghost">← Back to Story</Link>

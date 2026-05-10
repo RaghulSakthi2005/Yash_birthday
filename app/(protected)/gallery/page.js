@@ -203,6 +203,9 @@ export default function GalleryPage() {
             <h1 style={{ fontSize: "clamp(36px, 6vw, 72px)", fontWeight: 800, color: "#fff", letterSpacing: "-0.04em", marginBottom: 20 }}>
               Our <span style={{ fontStyle: "italic", background: "linear-gradient(135deg, #ff6b81, #e8c547)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Memories</span>
             </h1>
+            <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "clamp(13px, 2vw, 15px)", fontWeight: 300, fontStyle: "italic", maxWidth: 600 }}>
+              "And in the most selfish way possible i hope nobody admires you the way i do"
+            </p>
           </motion.div>
         )}
 
@@ -349,7 +352,7 @@ export default function GalleryPage() {
         </AnimatePresence>
 
         {(!selectedSeries) && (
-          <div style={{ marginTop: 80, paddingTop: 40, borderTop: "1px solid rgba(255,255,255,0.06)", display: "flex", gap: 16, flexWrap: "wrap", position: "relative", zIndex: 20 }}>
+          <div style={{ marginTop: 60, paddingTop: 40, borderTop: "1px solid rgba(255,255,255,0.06)", display: "flex", gap: 16, flexWrap: "wrap", position: "relative", zIndex: 20 }}>
             <Link href="/tree" className="btn-gold" style={{ padding: "16px 32px" }}>The Tree 🌳</Link>
             <Link href="/letter" className="btn-ghost">Letter 💌</Link>
             <Link href="/home" className="btn-ghost">← Story</Link>

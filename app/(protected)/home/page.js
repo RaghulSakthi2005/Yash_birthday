@@ -54,9 +54,9 @@ function Chapter({ ch, i }) {
   const tilt = ["-0.8deg", "0.5deg", "-0.4deg", "1deg", "-0.6deg"][i % 5];
   const accentWidths = [42, 28, 60, 36, 50];
   const pullQuotes = [
-    "strength isn't always loud.",
-    "she carries whole worlds.",
-    "she knows when to walk forward.",
+    "and when nobody notices your small wins, I do and I'm so proud of u",
+    "And in the most selfish way possible i hope nobody admires you the way i do",
+    "if ur happy smiling around me without the self consiousness of the thirdd person around then seeing it makes me happy",
     "some battles are fought in silence.",
     "twenty years of being herself.",
   ];
