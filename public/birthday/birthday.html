@@ -149,7 +149,7 @@
             x = (pageX - offset.left) / currentTreeScale;
             y = (pageY - offset.top) / currentTreeScale;
             
-            if (seed.hover(x, y)) {
+            if (seed.hover(x, y) || (window.innerWidth < 768)) {
                 playAudio();
                 hold = 0; 
                 canvas.unbind("click touchstart mousemove");

@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore files too large for GitHub (>100MB)
+public/gallery/videos/bullets/GX017879.MP4

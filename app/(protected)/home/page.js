@@ -107,7 +107,7 @@ function Chapter({ ch, i }) {
         }}>
 
         {/* Giant transparent watermark word */}
-        <div className="chapter-watermark" style={{
+        <div className="chapter-watermark hidden md:block" style={{
           position: "absolute", top: -30,
           [isRight ? "right" : "left"]: -20,
           fontSize: "clamp(90px, 13vw, 180px)", fontWeight: 900,
@@ -195,7 +195,7 @@ function ParallaxFrames({ scrollYProgress, frames, setFrames, isEditMode }) {
   };
 
   return (
-    <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, pointerEvents: "none", zIndex: 5, overflow: "hidden" }}>
+    <div className="hidden md:block" style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, pointerEvents: "none", zIndex: 5, overflow: "hidden" }}>
       {frames.map((frame, index) => {
         const yRange = useTransform(scrollYProgress, [0, 1], [0, -1200 * frame.speed]);
         
