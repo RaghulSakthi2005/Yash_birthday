@@ -93,39 +93,33 @@ export default function LetterPage() {
     const audio = audioRef.current;
     if (!audio) return;
 
-    // 1. Initial play attempt (muted)
+    // Set initial volume
     audio.volume = 0.45;
-    audio.muted = true;
-    
-    const attemptPlay = () => {
-      audio.play().catch(() => {
-        // If even muted play fails, we wait for interaction
-      });
-    };
 
-    attemptPlay();
-
-    // 2. Handler to unmute and sync state
-    const handleUnmute = () => {
-      if (audio.muted) {
-        audio.muted = false;
-        setIsMuted(false);
-        audio.play().catch(() => {});
+    const startMusic = () => {
+      if (audio.paused) {
+        audio.play()
+          .then(() => {
+            setIsMuted(false);
+            audio.muted = false;
+          })
+          .catch(() => {
+            // Still blocked, wait for next interaction
+          });
       }
     };
 
-    // 3. Global listeners for first interaction
-    window.addEventListener("click", handleUnmute, { once: true });
-    window.addEventListener("scroll", handleUnmute, { once: true });
-    window.addEventListener("touchstart", handleUnmute, { once: true });
-    window.addEventListener("mousemove", handleUnmute, { once: true }); // Adding mousemove as a trigger
+    // Add listeners for any interaction to trigger play
+    const interactionEvents = ["click", "scroll", "touchstart", "mousemove"];
+    interactionEvents.forEach(event => {
+      window.addEventListener(event, startMusic, { once: true });
+    });
 
-    // 4. Cleanup
     return () => {
       audio.pause();
-      window.removeEventListener("click", handleUnmute);
-      window.removeEventListener("scroll", handleUnmute);
-      window.removeEventListener("touchstart", handleUnmute);
+      interactionEvents.forEach(event => {
+        window.removeEventListener(event, startMusic);
+      });
     };
   }, []);
 
@@ -133,13 +127,12 @@ export default function LetterPage() {
     const audio = audioRef.current;
     if (!audio) return;
     
-    // Toggle state and DOM together
-    const newMuteState = !isMuted;
-    setIsMuted(newMuteState);
-    audio.muted = newMuteState;
-    
-    if (!newMuteState) {
-      audio.play().catch(() => {});
+    if (audio.paused || audio.muted) {
+      audio.muted = false;
+      audio.play().then(() => setIsMuted(false)).catch(() => {});
+    } else {
+      audio.pause();
+      setIsMuted(true);
     }
   };
 
