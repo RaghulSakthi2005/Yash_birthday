@@ -302,9 +302,44 @@ export default function GalleryPage() {
           )}
 
           {view === "photos" && (
-            <motion.div key="photos" initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -40 }}>
-              <button onClick={() => setView("choose")} className="btn-ghost" style={{ marginBottom: 40, display: "inline-flex" }}>← Back</button>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gridAutoRows: "250px", gap: 40, alignItems: "center" }}>
+            <motion.div key="photos" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+              
+              {/* Cinematic Intro Animation */}
+              <motion.div
+                initial={{ opacity: 1 }}
+                animate={{ opacity: 0 }}
+                transition={{ delay: 1.5, duration: 0.8 }}
+                style={{
+                  position: "fixed", inset: 0, zIndex: 100,
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  background: "var(--bg)", pointerEvents: "none"
+                }}
+              >
+                <motion.h1
+                  initial={{ opacity: 0, scale: 0.5, filter: "blur(20px)" }}
+                  animate={{ opacity: [0, 1, 1, 0], scale: [0.8, 1, 1.2], filter: ["blur(20px)", "blur(0px)", "blur(10px)"] }}
+                  transition={{ duration: 2, times: [0, 0.3, 0.7, 1] }}
+                  style={{
+                    fontSize: "clamp(40px, 15vw, 180px)",
+                    fontWeight: 900,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.05em",
+                    color: "transparent",
+                    WebkitTextStroke: "1px rgba(255,255,255,0.3)",
+                    fontStyle: "italic"
+                  }}
+                >
+                  Photographic
+                </motion.h1>
+              </motion.div>
+
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }} 
+                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }} 
+                transition={{ delay: 1.2, duration: 0.8 }}
+              >
+                <button onClick={() => setView("choose")} className="btn-ghost" style={{ marginBottom: 40, display: "inline-flex" }}>← Back</button>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gridAutoRows: "250px", gap: 40, alignItems: "center" }}>
                 {photos.map((photo, i) => (
                   <motion.div key={photo.id} className={`group ${photo.span}`} initial={{ opacity: 0, y: 40, rotate: photo.rotate * 2 }} animate={{ opacity: 1, y: 0, rotate: photo.rotate }} transition={{ delay: i * 0.08, type: "spring", stiffness: 100, damping: 12 }} whileHover={{ scale: 1.05, zIndex: 50, rotate: 0, boxShadow: "0 20px 50px rgba(232,197,71,0.2)" }} style={{ position: "relative", height: "100%", transformOrigin: "center" }}>
                     <FrameResolver photo={photo} />
@@ -356,10 +391,45 @@ export default function GalleryPage() {
           )}
 
           {view === "videos" && !selectedSeries && (
-            <motion.div key="videos" initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0 }}>
-              <button onClick={() => setView("choose")} className="btn-ghost" style={{ marginBottom: 40, display: "inline-flex" }}>← Back</button>
-              <h2 style={{ color: "#fff", fontSize: 24, fontWeight: 700, marginBottom: 24 }}>Featured Shows</h2>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: 40, paddingBottom: 60 }}>
+            <motion.div key="videos" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+              
+              {/* Cinematic Intro Animation */}
+              <motion.div
+                initial={{ opacity: 1 }}
+                animate={{ opacity: 0 }}
+                transition={{ delay: 1.5, duration: 0.8 }}
+                style={{
+                  position: "fixed", inset: 0, zIndex: 100,
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  background: "var(--bg)", pointerEvents: "none"
+                }}
+              >
+                <motion.h1
+                  initial={{ opacity: 0, scale: 0.5, filter: "blur(20px)" }}
+                  animate={{ opacity: [0, 1, 1, 0], scale: [0.8, 1, 1.2], filter: ["blur(20px)", "blur(0px)", "blur(10px)"] }}
+                  transition={{ duration: 2, times: [0, 0.3, 0.7, 1] }}
+                  style={{
+                    fontSize: "clamp(40px, 15vw, 180px)",
+                    fontWeight: 900,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.05em",
+                    color: "transparent",
+                    WebkitTextStroke: "1px rgba(255,255,255,0.3)",
+                    fontStyle: "italic"
+                  }}
+                >
+                  Cinematic
+                </motion.h1>
+              </motion.div>
+
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }} 
+                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }} 
+                transition={{ delay: 1.2, duration: 0.8 }}
+              >
+                <button onClick={() => setView("choose")} className="btn-ghost" style={{ marginBottom: 40, display: "inline-flex" }}>← Back</button>
+                <h2 style={{ color: "#fff", fontSize: 24, fontWeight: 700, marginBottom: 24 }}>Featured Shows</h2>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: 40, paddingBottom: 60 }}>
                 {galleryConfig.videoSeries.map((series, i) => (
                   <SeriesCard key={series.id} series={series} onClick={() => setSelectedSeries(series)} />
                 ))}
