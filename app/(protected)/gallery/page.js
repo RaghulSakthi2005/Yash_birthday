@@ -324,10 +324,24 @@ export default function GalleryPage() {
                     fontWeight: 900,
                     textTransform: "uppercase",
                     letterSpacing: "0.05em",
-                    color: "transparent",
-                    WebkitTextStroke: "1px rgba(255,255,255,0.3)",
-                    textStroke: "1px rgba(255,255,255,0.3)",
+                    background: "linear-gradient(90deg, #ff6b81, #e8c547, #4ade80, #22d3ee, #ff6b81)",
+                    backgroundSize: "200% auto",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                    WebkitTextStroke: "1px rgba(255,255,255,0.1)",
                     fontStyle: "italic"
+                  }}
+                  animate={{ 
+                    opacity: [0, 1, 1, 0], 
+                    scale: [0.8, 1, 1.2], 
+                    filter: ["blur(20px)", "blur(0px)", "blur(10px)"],
+                    backgroundPosition: ["0% 50%", "100% 50%"]
+                  }}
+                  transition={{ 
+                    duration: 2.2, 
+                    times: [0, 0.3, 0.7, 1],
+                    backgroundPosition: { duration: 2.2, ease: "linear" }
                   }}
                 >
                   Photographic
@@ -415,10 +429,24 @@ export default function GalleryPage() {
                     fontWeight: 900,
                     textTransform: "uppercase",
                     letterSpacing: "0.05em",
-                    color: "transparent",
-                    WebkitTextStroke: "1px rgba(255,255,255,0.3)",
-                    textStroke: "1px rgba(255,255,255,0.3)",
+                    background: "linear-gradient(90deg, #22d3ee, #4ade80, #e8c547, #ff6b81, #22d3ee)",
+                    backgroundSize: "200% auto",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                    WebkitTextStroke: "1px rgba(255,255,255,0.1)",
                     fontStyle: "italic"
+                  }}
+                  animate={{ 
+                    opacity: [0, 1, 1, 0], 
+                    scale: [0.8, 1, 1.2], 
+                    filter: ["blur(20px)", "blur(0px)", "blur(10px)"],
+                    backgroundPosition: ["0% 50%", "100% 50%"]
+                  }}
+                  transition={{ 
+                    duration: 2.2, 
+                    times: [0, 0.3, 0.7, 1],
+                    backgroundPosition: { duration: 2.2, ease: "linear" }
                   }}
                 >
                   Cinematic
