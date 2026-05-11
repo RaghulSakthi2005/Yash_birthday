@@ -32,10 +32,12 @@ const SeriesCard = ({ series, onClick }) => {
 
       <div style={{ position: "absolute", bottom: 20, left: 20, right: 20, zIndex: 10 }}>
         <h3 className="transform transition-transform duration-300 group-hover:translate-y-[-4px]" style={{ fontSize: 24, fontWeight: 800, color: "#fff", textShadow: "0 2px 10px rgba(0,0,0,1)" }}>{series.title}</h3>
-        <div className="transform transition-all duration-300 group-hover:translate-y-[-2px] group-hover:opacity-100 opacity-90" style={{ display: "flex", gap: 8, marginTop: 8, alignItems: "center" }}>
-          <span style={{ fontSize: 10, fontWeight: 700, padding: "2px 6px", border: "1px solid rgba(255,255,255,0.4)", borderRadius: 3, color: "#fff" }}>HD</span>
-          <span style={{ fontSize: 12, color: "#4ade80", fontWeight: 600 }}>98% Match</span>
-          <span style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", marginLeft: 6 }}>{series.episodes.length} Episodes</span>
+        <div className="transform transition-all duration-300 group-hover:translate-y-[-2px] group-hover:opacity-100 opacity-90" style={{ display: "flex", gap: 10, marginTop: 12, alignItems: "center" }}>
+          <span style={{ fontSize: 10, fontWeight: 900, padding: "2px 6px", border: "1.5px solid #fff", borderRadius: 4, color: "#fff", letterSpacing: "0.05em" }}>HD</span>
+          <span style={{ fontSize: 12, color: "#4ade80", fontWeight: 700, background: "rgba(74, 222, 128, 0.1)", padding: "2px 8px", borderRadius: 4 }}>98% Match</span>
+          <span style={{ fontSize: 12, color: "rgba(255,255,255,0.6)", fontWeight: 500, borderLeft: "1px solid rgba(255,255,255,0.2)", paddingLeft: 10 }}>
+            {series.episodes.length} Episodes
+          </span>
         </div>
       </div>
     </motion.div>
@@ -278,7 +280,20 @@ export default function GalleryPage() {
                     <p style={{ fontSize: 13, color: "rgba(255,255,255,0.4)", fontWeight: 500, textTransform: "uppercase", letterSpacing: "0.1em" }}>{cat.subtitle}</p>
                   </div>
 
-                  <div className="mt-4 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 font-mono text-[10px] text-white/30 uppercase tracking-widest">
+                  <div style={{ 
+                    marginTop: 16, 
+                    padding: "6px 20px", 
+                    borderRadius: 100, 
+                    border: "1px solid rgba(255,255,255,0.15)", 
+                    background: "rgba(255,255,255,0.05)", 
+                    fontFamily: "var(--font-mono, monospace)", 
+                    fontSize: 10, 
+                    color: "rgba(255,255,255,0.5)", 
+                    textTransform: "uppercase", 
+                    letterSpacing: "0.15em",
+                    whiteSpace: "nowrap",
+                    display: "inline-block"
+                  }}>
                      {cat.count}
                   </div>
                 </motion.button>
