@@ -211,15 +211,78 @@ export default function GalleryPage() {
 
         <AnimatePresence mode="wait">
           {view === "choose" && (
-            <motion.div key="choose" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20, maxWidth: 600 }}>
-                {["Photos 📸", "Videos 🎬"].map((label, i) => (
-                  <motion.button key={i} onClick={() => setView(i === 0 ? "photos" : "videos")} whileHover={{ scale: 1.03, y: -4 }} whileTap={{ scale: 0.97 }} style={{ padding: "48px 24px", borderRadius: 20, border: "1px solid rgba(255,255,255,0.08)", background: "rgba(255,255,255,0.03)", cursor: "pointer", fontFamily: "var(--font)", display: "flex", flexDirection: "column", alignItems: "center", gap: 12, backdropFilter: "blur(10px)", transition: "box-shadow 0.3s" }}>
-                    <span style={{ fontSize: 40 }}>{label.split(" ")[1]}</span>
-                    <span style={{ fontSize: 16, fontWeight: 600, color: "#fff" }}>{label.split(" ")[0]}</span>
-                  </motion.button>
-                ))}
-              </div>
+            <motion.div 
+              key="choose" 
+              initial={{ opacity: 0, y: 20 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              exit={{ opacity: 0 }}
+              className="flex flex-col md:flex-row gap-8 max-w-4xl"
+            >
+              {[
+                { 
+                  id: 'photos', 
+                  title: 'Photographic', 
+                  subtitle: 'Captured Moments', 
+                  count: photos.length + ' frames',
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-12 h-12">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15a2.25 2.25 0 002.25-2.25V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
+                    </svg>
+                  )
+                },
+                { 
+                  id: 'videos', 
+                  title: 'Cinematic', 
+                  subtitle: 'Motion Stories', 
+                  count: galleryConfig.videoSeries.length + ' series',
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-12 h-12">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V4.5m0 15a1.125 1.125 0 01-1.125 1.125m0-1.125h-7.5c-.621 0-1.125-.504-1.125-1.125m9.75 0V5.625m0 12.75v-1.5c0-.621-.504-1.125-1.125-1.125m0 1.125h-7.5a1.125 1.125 0 01-1.125-1.125V4.5m0 15h-7.5a1.125 1.125 0 01-1.125-1.125V4.5m0 0h7.5m-7.5 0V3.375c0-.621.504-1.125 1.125-1.125h1.5c.621 0 1.125.504 1.125 1.125V4.5m0 0h7.5m-7.5 0V3.375C10.875 2.754 11.379 2.25 12 2.25h1.5c.621 0 1.125.504 1.125 1.125V4.5m0 0h7.5m-7.5 0V3.375c0-.621.504-1.125 1.125-1.125h1.5c.621 0 1.125.504 1.125 1.125V4.5" />
+                    </svg>
+                  )
+                }
+              ].map((cat) => (
+                <motion.button 
+                  key={cat.id} 
+                  onClick={() => setView(cat.id)} 
+                  whileHover={{ scale: 1.02, y: -8 }} 
+                  whileTap={{ scale: 0.98 }} 
+                  style={{ 
+                    flex: 1,
+                    padding: "60px 40px", 
+                    borderRadius: 32, 
+                    border: "1px solid rgba(255,255,255,0.1)", 
+                    background: "rgba(255,255,255,0.02)", 
+                    cursor: "pointer", 
+                    display: "flex", 
+                    flexDirection: "column", 
+                    alignItems: "center", 
+                    gap: 24, 
+                    backdropFilter: "blur(20px)",
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.4)",
+                    textAlign: "center",
+                    position: "relative",
+                    overflow: "hidden"
+                  }}
+                  className="group"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  
+                  <div className="text-gold group-hover:scale-110 transition-transform duration-500">
+                    {cat.icon}
+                  </div>
+
+                  <div className="space-y-2">
+                    <span style={{ fontSize: 24, fontWeight: 800, color: "#fff", letterSpacing: "-0.02em" }}>{cat.title}</span>
+                    <p style={{ fontSize: 13, color: "rgba(255,255,255,0.4)", fontWeight: 500, textTransform: "uppercase", letterSpacing: "0.1em" }}>{cat.subtitle}</p>
+                  </div>
+
+                  <div className="mt-4 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 font-mono text-[10px] text-white/30 uppercase tracking-widest">
+                     {cat.count}
+                  </div>
+                </motion.button>
+              ))}
             </motion.div>
           )}
 
