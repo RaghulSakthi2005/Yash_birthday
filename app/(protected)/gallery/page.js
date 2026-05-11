@@ -389,7 +389,8 @@ export default function GalleryPage() {
                 ))}
               </div>
             </motion.div>
-          )}
+          </motion.div>
+        )}
 
           {view === "videos" && !selectedSeries && (
             <motion.div key="videos" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
@@ -437,7 +438,8 @@ export default function GalleryPage() {
                 ))}
               </div>
             </motion.div>
-          )}
+          </motion.div>
+        )}
 
           {view === "videos" && selectedSeries && (
             <motion.div key="series-detail" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 40 }} style={{ minHeight: "100vh", background: "#050505" }}>
