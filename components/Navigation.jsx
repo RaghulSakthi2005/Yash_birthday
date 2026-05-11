@@ -12,6 +12,7 @@ const NAV_ITEMS = [
   { num: "05", label: "Chat", href: "/chat", emoji: "💬" },
   { num: "06", label: "Memories", href: "/gallery", emoji: "🖼" },
   { num: "07", label: "The Tree", href: "/tree", emoji: "🌳" },
+  { num: "08", label: "Soul", href: "/soul", emoji: "✨" },
 ];
 
 const SPEED_LINES = [8, 22, 38, 54, 68, 82];

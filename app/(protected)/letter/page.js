@@ -141,8 +141,8 @@ export default function LetterPage() {
   return (
     <div ref={containerRef} style={{ background: "#000", minHeight: "100vh", position: "relative" }}>
       
-      {/* Background Audio — place your song at public/audio/letter-song.mp3 */}
-      <audio ref={audioRef} src="/audio/letter-song.mp3" type="audio/mpeg" loop preload="auto" />
+      {/* Background Audio — place your song at public/audio/letter-music.mp3 */}
+      <audio ref={audioRef} src="/audio/letter-music.mp3" type="audio/mpeg" loop preload="auto" />
 
       {/* Floating Mute Toggle */}
       <motion.button
