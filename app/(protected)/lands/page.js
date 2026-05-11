@@ -128,9 +128,13 @@ export default function LandsPage() {
                     color: lands[active].color, marginBottom: 4, fontWeight: 600 }}>
                     {lands[active].place}
                   </p>
-                  <h3 style={{ fontSize: "clamp(20px, 3vw, 32px)", fontWeight: 700, color: "#fff", letterSpacing: "-0.02em" }}>
+                  <h3 style={{ fontSize: "clamp(20px, 3vw, 32px)", fontWeight: 700, color: "#fff", letterSpacing: "-0.02em", marginBottom: 8 }}>
                     {lands[active].name}
                   </h3>
+                  <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(255,255,255,0.05)", padding: "4px 12px", borderRadius: 100, border: "1px solid rgba(255,255,255,0.1)" }}>
+                     <span style={{ fontSize: 10, color: "rgba(255,255,255,0.4)", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em" }}>Located in:</span>
+                     <span style={{ fontSize: 11, color: "#fff", fontWeight: 700 }}>{lands[active].location}</span>
+                  </div>
                 </div>
               </div>
               <p style={{ fontSize: 17, lineHeight: 1.85, color: "rgba(245,240,232,0.7)", fontWeight: 300, maxWidth: 600 }}>
