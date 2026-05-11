@@ -165,30 +165,39 @@ export default function SoulPage() {
     const audio = audioRef.current;
     if (!audio) return;
 
-    // Attempt immediate play (browsers may block this unless muted)
-    const playAttempt = () => {
-      audio.play().then(() => {
-        setIsPlaying(true);
-      }).catch(() => {
-        // Fallback: wait for interaction
-        const startMusic = () => {
-          audio.play().then(() => {
-            setIsPlaying(true);
-          }).catch(() => {});
-        };
-        window.addEventListener("scroll", startMusic, { once: true });
-        window.addEventListener("click", startMusic, { once: true });
-        window.addEventListener("touchstart", startMusic, { once: true });
-        window.addEventListener("mousemove", startMusic, { once: true });
-      });
+    const startMusic = () => {
+      if (audio.paused) {
+        audio.play()
+          .then(() => setIsPlaying(true))
+          .catch(() => {});
+      }
     };
 
-    playAttempt();
+    // Attempt immediate play
+    startMusic();
+
+    // Interaction triggers for browser compatibility
+    const triggers = ["click", "scroll", "touchstart", "mousemove"];
+    triggers.forEach(t => window.addEventListener(t, startMusic, { once: true }));
 
     return () => {
       audio.pause();
+      triggers.forEach(t => window.removeEventListener(t, startMusic));
     };
   }, []);
+
+  const toggleMusic = () => {
+    if (audioRef.current) {
+      if (audioRef.current.paused) {
+        audioRef.current.play()
+          .then(() => setIsPlaying(true))
+          .catch(() => {});
+      } else {
+        audioRef.current.pause();
+        setIsPlaying(false);
+      }
+    }
+  };
 
   return (
     <div className="bg-[#e5e5e5] min-h-screen selection:bg-black selection:text-white p-4 md:p-8 relative overflow-x-hidden">
@@ -275,13 +284,7 @@ export default function SoulPage() {
       {/* Audio & Toggle */}
       <audio ref={audioRef} src="/audio/WhatsApp Audio 2026-05-11 at 15.32.09.mpeg" loop />
       <button
-        onClick={() => {
-          if (audioRef.current) {
-            if (isPlaying) audioRef.current.pause();
-            else audioRef.current.play();
-            setIsPlaying(!isPlaying);
-          }
-        }}
+        onClick={toggleMusic}
         className="fixed bottom-10 right-10 z-[200] w-24 h-24 bg-white border-4 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] flex flex-col items-center justify-center hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] transition-all"
       >
         <span className="text-[10px] font-black uppercase tracking-tighter mb-1">AUDIO_PLR</span>
