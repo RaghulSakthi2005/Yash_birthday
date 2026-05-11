@@ -304,54 +304,54 @@ export default function GalleryPage() {
           {view === "photos" && (
             <motion.div key="photos" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
               
-              {/* Cinematic Intro Animation */}
+              {/* Cinematic Handwriting Intro */}
               <motion.div
                 initial={{ opacity: 1 }}
                 animate={{ opacity: 0 }}
-                transition={{ delay: 1.5, duration: 0.8 }}
+                transition={{ delay: 2.2, duration: 1 }}
                 style={{
                   position: "fixed", inset: 0, zIndex: 100,
                   display: "flex", alignItems: "center", justifyContent: "center",
                   background: "var(--bg)", pointerEvents: "none"
                 }}
               >
-                <motion.h1
-                  initial={{ opacity: 0, scale: 0.5, filter: "blur(20px)" }}
-                  animate={{ opacity: [0, 1, 1, 0], scale: [0.8, 1, 1.2], filter: ["blur(20px)", "blur(0px)", "blur(10px)"] }}
-                  transition={{ duration: 2, times: [0, 0.3, 0.7, 1] }}
-                  style={{
-                    fontSize: "clamp(40px, 15vw, 180px)",
-                    fontWeight: 900,
-                    textTransform: "uppercase",
-                    letterSpacing: "0.05em",
-                    background: "linear-gradient(90deg, #ff6b81, #e8c547, #4ade80, #22d3ee, #ff6b81)",
-                    backgroundSize: "200% auto",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
-                    WebkitTextStroke: "1px rgba(255,255,255,0.1)",
-                    fontStyle: "italic"
-                  }}
-                  animate={{ 
-                    opacity: [0, 1, 1, 0], 
-                    scale: [0.8, 1, 1.2], 
-                    filter: ["blur(20px)", "blur(0px)", "blur(10px)"],
-                    backgroundPosition: ["0% 50%", "100% 50%"]
-                  }}
-                  transition={{ 
-                    duration: 2.2, 
-                    times: [0, 0.3, 0.7, 1],
-                    backgroundPosition: { duration: 2.2, ease: "linear" }
-                  }}
-                >
-                  Photographic
-                </motion.h1>
+                <div style={{ position: "relative" }}>
+                  <motion.h1
+                    initial={{ clipPath: "inset(0 100% 0 0)" }}
+                    animate={{ clipPath: "inset(0 0% 0 0)" }}
+                    transition={{ duration: 1.5, ease: "easeInOut", delay: 0.2 }}
+                    style={{
+                      fontSize: "clamp(60px, 15vw, 180px)",
+                      fontWeight: 400,
+                      fontFamily: "'Dancing Script', cursive",
+                      background: "linear-gradient(90deg, #ff6b81, #e8c547, #4ade80, #22d3ee)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
+                      padding: "20px"
+                    }}
+                  >
+                    Photographic
+                  </motion.h1>
+                  
+                  {/* Leading Edge Glow (The "Pen") */}
+                  <motion.div
+                    initial={{ left: "0%" }}
+                    animate={{ left: "100%" }}
+                    transition={{ duration: 1.5, ease: "easeInOut", delay: 0.2 }}
+                    style={{
+                      position: "absolute", top: "20%", bottom: "20%", width: "4px",
+                      background: "white", boxShadow: "0 0 20px white, 0 0 40px #ff6b81",
+                      zIndex: 110, opacity: [0, 1, 1, 0]
+                    }}
+                  />
+                </div>
               </motion.div>
 
               <motion.div 
-                initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }} 
-                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }} 
-                transition={{ delay: 1.2, duration: 0.8 }}
+                initial={{ opacity: 0, scale: 0.95 }} 
+                animate={{ opacity: 1, scale: 1 }} 
+                transition={{ delay: 1.8, duration: 0.8 }}
               >
                 <button onClick={() => setView("choose")} className="btn-ghost" style={{ marginBottom: 40, display: "inline-flex" }}>← Back</button>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gridAutoRows: "250px", gap: 40, alignItems: "center" }}>
@@ -409,54 +409,54 @@ export default function GalleryPage() {
           {view === "videos" && !selectedSeries && (
             <motion.div key="videos" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
               
-              {/* Cinematic Intro Animation */}
+              {/* Cinematic Handwriting Intro */}
               <motion.div
                 initial={{ opacity: 1 }}
                 animate={{ opacity: 0 }}
-                transition={{ delay: 1.5, duration: 0.8 }}
+                transition={{ delay: 2.2, duration: 1 }}
                 style={{
                   position: "fixed", inset: 0, zIndex: 100,
                   display: "flex", alignItems: "center", justifyContent: "center",
                   background: "var(--bg)", pointerEvents: "none"
                 }}
               >
-                <motion.h1
-                  initial={{ opacity: 0, scale: 0.5, filter: "blur(20px)" }}
-                  animate={{ opacity: [0, 1, 1, 0], scale: [0.8, 1, 1.2], filter: ["blur(20px)", "blur(0px)", "blur(10px)"] }}
-                  transition={{ duration: 2, times: [0, 0.3, 0.7, 1] }}
-                  style={{
-                    fontSize: "clamp(40px, 15vw, 180px)",
-                    fontWeight: 900,
-                    textTransform: "uppercase",
-                    letterSpacing: "0.05em",
-                    background: "linear-gradient(90deg, #22d3ee, #4ade80, #e8c547, #ff6b81, #22d3ee)",
-                    backgroundSize: "200% auto",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
-                    WebkitTextStroke: "1px rgba(255,255,255,0.1)",
-                    fontStyle: "italic"
-                  }}
-                  animate={{ 
-                    opacity: [0, 1, 1, 0], 
-                    scale: [0.8, 1, 1.2], 
-                    filter: ["blur(20px)", "blur(0px)", "blur(10px)"],
-                    backgroundPosition: ["0% 50%", "100% 50%"]
-                  }}
-                  transition={{ 
-                    duration: 2.2, 
-                    times: [0, 0.3, 0.7, 1],
-                    backgroundPosition: { duration: 2.2, ease: "linear" }
-                  }}
-                >
-                  Cinematic
-                </motion.h1>
+                <div style={{ position: "relative" }}>
+                  <motion.h1
+                    initial={{ clipPath: "inset(0 100% 0 0)" }}
+                    animate={{ clipPath: "inset(0 0% 0 0)" }}
+                    transition={{ duration: 1.5, ease: "easeInOut", delay: 0.2 }}
+                    style={{
+                      fontSize: "clamp(60px, 15vw, 180px)",
+                      fontWeight: 400,
+                      fontFamily: "'Dancing Script', cursive",
+                      background: "linear-gradient(90deg, #22d3ee, #4ade80, #e8c547, #ff6b81)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
+                      padding: "20px"
+                    }}
+                  >
+                    Cinematic
+                  </motion.h1>
+                  
+                  {/* Leading Edge Glow (The "Pen") */}
+                  <motion.div
+                    initial={{ left: "0%" }}
+                    animate={{ left: "100%" }}
+                    transition={{ duration: 1.5, ease: "easeInOut", delay: 0.2 }}
+                    style={{
+                      position: "absolute", top: "20%", bottom: "20%", width: "4px",
+                      background: "white", boxShadow: "0 0 20px white, 0 0 40px #22d3ee",
+                      zIndex: 110, opacity: [0, 1, 1, 0]
+                    }}
+                  />
+                </div>
               </motion.div>
 
               <motion.div 
-                initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }} 
-                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }} 
-                transition={{ delay: 1.2, duration: 0.8 }}
+                initial={{ opacity: 0, scale: 0.95 }} 
+                animate={{ opacity: 1, scale: 1 }} 
+                transition={{ delay: 1.8, duration: 0.8 }}
               >
                 <button onClick={() => setView("choose")} className="btn-ghost" style={{ marginBottom: 40, display: "inline-flex" }}>← Back</button>
                 <h2 style={{ color: "#fff", fontSize: 24, fontWeight: 700, marginBottom: 24 }}>Featured Shows</h2>
