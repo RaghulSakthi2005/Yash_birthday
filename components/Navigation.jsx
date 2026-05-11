@@ -200,16 +200,23 @@ export default function Navigation() {
                 })}
               </nav>
 
-              {/* Bottom Quote */}
+              {/* Bottom Quote & Admin Link */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
-                style={{ marginTop: 80, textAlign: "center" }}
+                style={{ marginTop: 80, textAlign: "center", position: "relative" }}
               >
                 <p style={{ color: "rgba(255,255,255,0.2)", fontSize: 11, fontStyle: "italic", letterSpacing: "0.1em" }}>
                   "Proud to say that i know Yash in my Life"
                 </p>
+                <Link href="/admin/chat" style={{ 
+                  marginTop: 20, display: "inline-block", fontSize: 9, 
+                  color: "rgba(255,255,255,0.05)", textDecoration: "none", 
+                  letterSpacing: "0.2em", textTransform: "uppercase" 
+                }}>
+                  Control Center
+                </Link>
               </motion.div>
             </div>
           </motion.div>
