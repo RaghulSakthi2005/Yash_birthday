@@ -27,6 +27,12 @@ export default function ChatPage() {
     setMsgs(newMsgs);
     setTyping(true);
 
+    // LOG USER MESSAGE
+    fetch("/api/chat/history", {
+      method: "POST",
+      body: JSON.stringify({ message: t, from: "them" })
+    });
+
     try {
       // Send the conversation history so the bot has context
       const apiMessages = newMsgs.map(m => ({
@@ -42,6 +48,12 @@ export default function ChatPage() {
 
       const data = await res.json();
       
+      // LOG AI REPLY
+      fetch("/api/chat/history", {
+        method: "POST",
+        body: JSON.stringify({ message: data.reply, from: "me" })
+      });
+
       setTyping(false);
       setMsgs(m => [...m, { from: "me", text: data.reply }]);
     } catch (err) {
@@ -49,6 +61,30 @@ export default function ChatPage() {
       setMsgs(m => [...m, { from: "me", text: "My connection dropped for a sec, sorry! 😭" }]);
     }
   };
+
+  // POLLING FOR MANUAL REPLIES
+  useEffect(() => {
+    const poll = async () => {
+      try {
+        const res = await fetch("/api/chat/history");
+        const history = await res.json();
+        
+        // Find manual replies that aren't in our current msgs
+        const manualReplies = history.filter(h => h.isManual);
+        
+        setMsgs(prev => {
+          const newManuals = manualReplies.filter(mr => !prev.some(p => p.text === mr.text && p.from === "me"));
+          if (newManuals.length > 0) {
+            return [...prev, ...newManuals.map(nm => ({ from: "me", text: nm.text }))];
+          }
+          return prev;
+        });
+      } catch (e) {}
+    };
+
+    const interval = setInterval(poll, 3000); // Check every 3 seconds
+    return () => clearInterval(interval);
+  }, [msgs]);
 
   return (
     <div style={{ background: "var(--bg)", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
