@@ -326,6 +326,7 @@ export default function GalleryPage() {
                     letterSpacing: "0.05em",
                     color: "transparent",
                     WebkitTextStroke: "1px rgba(255,255,255,0.3)",
+                    textStroke: "1px rgba(255,255,255,0.3)",
                     fontStyle: "italic"
                   }}
                 >
@@ -415,6 +416,7 @@ export default function GalleryPage() {
                     letterSpacing: "0.05em",
                     color: "transparent",
                     WebkitTextStroke: "1px rgba(255,255,255,0.3)",
+                    textStroke: "1px rgba(255,255,255,0.3)",
                     fontStyle: "italic"
                   }}
                 >
