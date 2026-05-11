@@ -162,19 +162,33 @@ export default function SoulPage() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    const startMusic = () => {
-      if (audioRef.current && !isPlaying) {
-        audioRef.current.play().catch(() => {});
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    // Attempt immediate play (browsers may block this unless muted)
+    const playAttempt = () => {
+      audio.play().then(() => {
         setIsPlaying(true);
-      }
+      }).catch(() => {
+        // Fallback: wait for interaction
+        const startMusic = () => {
+          audio.play().then(() => {
+            setIsPlaying(true);
+          }).catch(() => {});
+        };
+        window.addEventListener("scroll", startMusic, { once: true });
+        window.addEventListener("click", startMusic, { once: true });
+        window.addEventListener("touchstart", startMusic, { once: true });
+        window.addEventListener("mousemove", startMusic, { once: true });
+      });
     };
-    window.addEventListener("scroll", startMusic, { once: true });
-    window.addEventListener("click", startMusic, { once: true });
+
+    playAttempt();
+
     return () => {
-      window.removeEventListener("scroll", startMusic);
-      window.removeEventListener("click", startMusic);
+      audio.pause();
     };
-  }, [isPlaying]);
+  }, []);
 
   return (
     <div className="bg-[#e5e5e5] min-h-screen selection:bg-black selection:text-white p-4 md:p-8 relative overflow-x-hidden">

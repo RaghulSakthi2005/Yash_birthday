@@ -96,16 +96,20 @@ export default function LetterPage() {
     // 1. Initial play attempt (muted)
     audio.volume = 0.45;
     audio.muted = true;
-    audio.play().catch(() => {
-      console.log("Autoplay blocked, waiting for interaction");
-    });
+    
+    const attemptPlay = () => {
+      audio.play().catch(() => {
+        // If even muted play fails, we wait for interaction
+      });
+    };
+
+    attemptPlay();
 
     // 2. Handler to unmute and sync state
     const handleUnmute = () => {
       if (audio.muted) {
         audio.muted = false;
         setIsMuted(false);
-        // Ensure it's playing (in case play() was blocked initially)
         audio.play().catch(() => {});
       }
     };
@@ -114,6 +118,7 @@ export default function LetterPage() {
     window.addEventListener("click", handleUnmute, { once: true });
     window.addEventListener("scroll", handleUnmute, { once: true });
     window.addEventListener("touchstart", handleUnmute, { once: true });
+    window.addEventListener("mousemove", handleUnmute, { once: true }); // Adding mousemove as a trigger
 
     // 4. Cleanup
     return () => {
