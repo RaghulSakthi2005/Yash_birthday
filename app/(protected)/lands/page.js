@@ -1,179 +1,167 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
-
 import initialLandsData from "@/data/lands.json";
 
 export default function LandsPage() {
-  const [active, setActive] = useState(null);
+  const [active, setActive] = useState(0);
   const [lands, setLands] = useState(initialLandsData);
-  const [isEditMode, setIsEditMode] = useState(false);
+  const [isScanning, setIsScanning] = useState(false);
 
-  const handleUpload = async (e, id) => {
-    const file = e.target.files[0];
-    if (!file) return;
-    const formData = new FormData();
-    formData.append("id", id);
-    formData.append("file", file);
-    
-    const res = await fetch("/api/lands", { method: "POST", body: formData });
-    if (res.ok) {
-      const data = await res.json();
-      setLands(prev => prev.map(l => l.id === id ? { ...data.land, img: `${data.land.img}?t=${Date.now()}` } : l));
-    }
-  };
-
-  const handlePositionChange = async (e, id) => {
-    const objectPosition = e.target.value;
-    setLands(prev => prev.map(l => l.id === id ? { ...l, objectPosition } : l));
-    
-    const formData = new FormData();
-    formData.append("id", id);
-    formData.append("objectPosition", objectPosition);
-    await fetch("/api/lands", { method: "POST", body: formData });
-  };
+  useEffect(() => {
+    setIsScanning(true);
+    const timer = setTimeout(() => setIsScanning(false), 800);
+    return () => clearTimeout(timer);
+  }, [active]);
 
   return (
-    <div style={{ background: "#06060f", minHeight: "100vh" }}>
-      {/* Hero */}
-      <div style={{ padding: "120px clamp(24px, 6vw, 80px) 60px", maxWidth: 1200, margin: "0 auto" }}>
-        <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-          className="label" style={{ color: "rgba(232,197,71,0.5)", marginBottom: 16 }}>
-          ✦ your world in letters ✦
-        </motion.p>
-        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }}
-          style={{ fontSize: "clamp(36px, 5vw, 68px)", fontWeight: 800, letterSpacing: "-0.03em",
-            color: "#fff", marginBottom: 20, lineHeight: 1.05 }}>
-          Letter of <span style={{ fontStyle: "italic", background: "linear-gradient(135deg, #4ade80, #22d3ee, #8ab4f8)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Yashh!!</span>
-        </motion.h1>
-        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
-          style={{ fontSize: 16, color: "rgba(245,240,232,0.45)", fontWeight: 300, maxWidth: 540 }}>
-          Seven letters. Seven pieces of you. Each one holds a story written just for you. Click any letter to explore.
-        </motion.p>
+    <div className="bg-[#05050a] min-h-screen selection:bg-gold selection:text-black overflow-hidden relative">
+      
+      {/* Background Satellite Blueprint */}
+      <div className="fixed inset-0 pointer-events-none opacity-20 z-0 scale-110">
+         <img src="/satellite_bg.png" alt="Blueprint" className="w-full h-full object-cover" />
       </div>
 
-      {/* Picture strip */}
-      <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}
-        style={{ position: "relative", margin: "0 0 60px", overflow: "hidden", borderRadius: 0, display: "flex", height: "clamp(240px, 35vw, 520px)" }}>
-        
-        {lands.map((land, i) => (
-          <div key={i} style={{ flex: 1, position: "relative", height: "100%" }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={land.img} alt={land.name} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: land.objectPosition || "center", transition: "object-position 0.3s ease" }} />
-            
-            {/* Edit Mode Controls */}
-            {isEditMode && (
-              <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.6)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 10, zIndex: 60, backdropFilter: "blur(4px)" }}>
-                <label className="btn-gold" style={{ cursor: "pointer", fontSize: 11, padding: "8px 16px", background: "rgba(232,197,71,0.2)", border: "1px solid #e8c547", color: "#fff", borderRadius: 100 }}>
-                  Upload
-                  <input type="file" accept="image/*" style={{ display: "none" }} onChange={(e) => handleUpload(e, land.id)} />
-                </label>
-                <select 
-                  value={land.objectPosition || "center"} 
-                  onChange={(e) => handlePositionChange(e, land.id)}
-                  style={{ background: "rgba(0,0,0,0.8)", color: "#fff", border: "1px solid rgba(255,255,255,0.2)", borderRadius: 4, padding: "6px 10px", fontSize: 11, outline: "none", cursor: "pointer", maxWidth: "90%" }}
-                >
-                  <option value="center">Center</option>
-                  <option value="top">Top</option>
-                  <option value="bottom">Bottom</option>
-                  <option value="left">Left</option>
-                  <option value="right">Right</option>
-                </select>
-              </div>
-            )}
+      {/* Header / GPS Readout */}
+      <header className="relative z-10 pt-20 px-8 md:px-20 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end gap-10">
+        <div className="space-y-4">
+          <div className="flex gap-4 items-center">
+             <div className="w-3 h-3 bg-[#4ade80] rounded-full animate-pulse" />
+             <span className="font-mono text-xs uppercase tracking-[0.5em] text-[#4ade80]">Global Positioning: Active</span>
           </div>
-        ))}
+          <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter text-white leading-none">
+            GEO_<span className="text-gold">YASHIKA</span>
+          </h1>
+          <p className="text-white/40 font-mono text-sm max-w-md uppercase tracking-tight">
+             Tracing the landscapes that mirror your soul. Seven letters. Seven unique territories across the globe.
+          </p>
+        </div>
+
+        <div className="border-2 border-white/10 bg-black/40 backdrop-blur-xl p-6 md:p-10 font-mono text-right min-w-[300px]">
+           <p className="text-[10px] text-white/30 mb-2">TARGET_COORDINATES</p>
+           <AnimatePresence mode="wait">
+             <motion.h2 
+               key={active}
+               initial={{ opacity: 0, x: 20 }}
+               animate={{ opacity: 1, x: 0 }}
+               className="text-2xl md:text-3xl text-gold font-bold"
+             >
+               {lands[active].place}
+             </motion.h2>
+           </AnimatePresence>
+        </div>
+      </header>
+
+      {/* Main Interactive Journey */}
+      <main className="relative z-10 py-20 px-8 md:px-20 max-w-7xl mx-auto">
         
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 40%, rgba(6,6,15,0.9) 100%)" }} />
-
-        {/* Letter overlays on the images */}
-        <div style={{ position: "absolute", inset: 0, display: "flex" }}>
-          {lands.map((land, i) => (
-            <div key={i} onClick={() => setActive(i)}
-              style={{ flex: 1, display: "flex", alignItems: "flex-end", justifyContent: "center",
-                paddingBottom: 24, cursor: "pointer", transition: "background 0.25s ease",
-                background: active === i ? `rgba(0,0,0,0.5)` : "transparent",
-                borderRight: i < 6 ? "1px solid rgba(255,255,255,0.08)" : "none",
-              }}>
-              <motion.div whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.95 }}
-                style={{ width: 44, height: 44, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center",
-                  background: active === i ? land.color : "rgba(255,255,255,0.12)",
-                  backdropFilter: "blur(8px)", color: active === i ? "#000" : "#fff",
-                  fontWeight: 800, fontSize: 20, border: `2px solid ${active === i ? land.color : "rgba(255,255,255,0.2)"}`,
-                  transition: "all 0.3s ease", boxShadow: active === i ? `0 0 24px ${land.color}66` : "none",
-                }}>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+          
+          {/* Letter Navigation */}
+          <div className="md:col-span-1 flex md:flex-col gap-4 justify-center">
+            {lands.map((land, i) => (
+              <motion.button
+                key={i}
+                onClick={() => setActive(i)}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className={`w-14 h-14 md:w-16 md:h-16 border-2 font-black text-2xl transition-all flex items-center justify-center
+                  ${active === i ? 'bg-gold border-gold text-black shadow-[0_0_30px_rgba(232,197,71,0.4)]' : 'border-white/10 text-white/40 hover:border-white/40'}
+                `}
+              >
                 {land.letter}
-              </motion.div>
-            </div>
-          ))}
+              </motion.button>
+            ))}
+          </div>
+
+          {/* Visual Display */}
+          <div className="md:col-span-6 relative aspect-square md:aspect-video border-4 border-white/5 bg-white/5 overflow-hidden group">
+             
+             {/* Scanning Effect Overlay */}
+             <AnimatePresence>
+               {isScanning && (
+                 <motion.div 
+                   initial={{ top: "-100%" }}
+                   animate={{ top: "100%" }}
+                   transition={{ duration: 0.8, ease: "linear" }}
+                   className="absolute inset-x-0 h-40 bg-gold/10 border-y-2 border-gold/50 z-20 pointer-events-none shadow-[0_0_100px_rgba(232,197,71,0.2)]"
+                 />
+               )}
+             </AnimatePresence>
+
+             <motion.img 
+               key={active}
+               src={lands[active].img} 
+               initial={{ scale: 1.2, opacity: 0 }}
+               animate={{ scale: 1, opacity: 1 }}
+               transition={{ duration: 1.2 }}
+               className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
+             />
+
+             {/* UI Overlays on Image */}
+             <div className="absolute top-6 left-6 font-mono text-[10px] text-white/50 space-y-1">
+                <p>SAT_V_09.4</p>
+                <p>ALT: 32,000 FT</p>
+                <p>STATUS: LOCKED</p>
+             </div>
+             
+             <div className="absolute bottom-6 right-6 font-black text-6xl text-white/10 italic">
+                {lands[active].letter}
+             </div>
+          </div>
+
+          {/* Context / Story */}
+          <div className="md:col-span-5 space-y-8">
+             <AnimatePresence mode="wait">
+               <motion.div
+                 key={active}
+                 initial={{ opacity: 0, y: 30 }}
+                 animate={{ opacity: 1, y: 0 }}
+                 exit={{ opacity: 0, y: -30 }}
+                 className="space-y-6"
+               >
+                 <div className="flex items-center gap-4">
+                    <span className="text-4xl">{lands[active].emoji}</span>
+                    <h3 className="text-3xl font-bold text-white uppercase tracking-tighter">
+                      {lands[active].name}
+                    </h3>
+                 </div>
+                 
+                 <div className="h-1 w-20 bg-gold" />
+                 
+                 <p className="text-xl md:text-2xl text-white/80 leading-relaxed font-light italic">
+                   "{lands[active].story}"
+                 </p>
+
+                 <div className="flex gap-4 pt-10">
+                    <Link href="/gallery" className="bg-white text-black px-8 py-3 font-black uppercase text-xs tracking-widest hover:bg-gold transition-all">
+                       Memories
+                    </Link>
+                    <Link href="/home" className="border-2 border-white/20 text-white px-8 py-3 font-black uppercase text-xs tracking-widest hover:bg-white hover:text-black transition-all">
+                       Portal
+                    </Link>
+                 </div>
+               </motion.div>
+             </AnimatePresence>
+          </div>
+
         </div>
-      </motion.div>
 
-      {/* Active land detail */}
-      <div style={{ padding: "0 clamp(24px, 6vw, 80px) 80px", maxWidth: 1200, margin: "0 auto" }}>
-        <AnimatePresence mode="wait">
-          {active !== null ? (
-            <motion.div key={active}
-              initial={{ opacity: 0, y: 24, scale: 0.97 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: -16 }}
-              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-              className="glass-card"
-              style={{ padding: "40px 44px", borderColor: `${lands[active].color}33`,
-                boxShadow: `0 0 60px ${lands[active].color}11` }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 20, marginBottom: 24 }}>
-                <span style={{ fontSize: 40 }}>{lands[active].emoji}</span>
-                <div>
-                  <p style={{ fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
-                    color: lands[active].color, marginBottom: 4, fontWeight: 600 }}>
-                    {lands[active].place}
-                  </p>
-                  <h3 style={{ fontSize: "clamp(20px, 3vw, 32px)", fontWeight: 700, color: "#fff", letterSpacing: "-0.02em" }}>
-                    {lands[active].name}
-                  </h3>
-                </div>
-              </div>
-              <p style={{ fontSize: 17, lineHeight: 1.85, color: "rgba(245,240,232,0.7)", fontWeight: 300, maxWidth: 600 }}>
-                {lands[active].story}
-              </p>
-            </motion.div>
-          ) : (
-            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-              style={{ textAlign: "center", color: "rgba(255,255,255,0.2)", fontSize: 14, letterSpacing: "0.15em",
-                textTransform: "uppercase", padding: "40px 0" }}>
-              ✦ click a letter to reveal its land ✦
-            </motion.p>
-          )}
-        </AnimatePresence>
+      </main>
 
-        <div style={{ marginTop: 40, textAlign: "center" }}>
-           <p style={{ fontSize: 13, fontStyle: "italic", color: "rgba(232,197,71,0.4)", letterSpacing: "0.05em", maxWidth: 700, margin: "0 auto" }}>
-             "if ur happy smiling around me without the self consiousness of the thirdd person around then seeing it makes me happy"
-           </p>
-        </div>
+      {/* Decorative GPS Footer */}
+      <footer className="fixed bottom-0 w-full p-8 font-mono text-[9px] text-white/20 flex justify-between uppercase tracking-[0.3em] pointer-events-none">
+         <span>Orbital Path 037 // Sector 6-9</span>
+         <span>System Status: Online // Yashika Geo-Tagging</span>
+      </footer>
 
-        <div style={{ marginTop: 60, paddingTop: 40, borderTop: "1px solid rgba(255,255,255,0.06)", display: "flex", gap: 16, flexWrap: "wrap" }}>
-          <Link href="/gallery" className="btn-gold">Memories 🖼</Link>
-          <Link href="/home" className="btn-ghost">← Back to Story</Link>
-        </div>
-      </div>
-
-      {/* Edit Toggle for Lands */}
-      <button 
-        onClick={() => setIsEditMode(!isEditMode)}
-        style={{ 
-          position: "fixed", bottom: 24, right: 24, zIndex: 100, 
-          background: isEditMode ? "#e8c547" : "rgba(255,255,255,0.05)", 
-          color: isEditMode ? "#000" : "#fff", 
-          border: "1px solid", borderColor: isEditMode ? "#e8c547" : "rgba(255,255,255,0.1)", 
-          borderRadius: "100px", padding: "10px 24px", cursor: "pointer", 
-          backdropFilter: "blur(10px)", fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600,
-          boxShadow: isEditMode ? "0 0 20px rgba(232,197,71,0.5)" : "none",
-          transition: "all 0.3s ease"
-        }}
-      >
-        {isEditMode ? "Finish Editing" : "Edit Lands"}
-      </button>
+      <style jsx>{`
+        @font-face {
+          font-family: 'Mono';
+          src: url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&display=swap');
+        }
+      `}</style>
     </div>
   );
 }
