@@ -1,0 +1,176 @@
+Downloading 87 songs...
+[1/87] Downloading: enkeyoo partha
+yt-dlp output: ['public/audio/Engeyo Paartha.m4a']
+[2/87] Downloading: ranjha
+yt-dlp output: ['public/audio/Ranjha (Lyrics) ｜ Shershaah ｜ Sidharth–Kiara ｜ B Praak ｜ Jasleen Royal ｜ Romy ｜ Anvita Dutt.m4a']
+[3/87] Downloading: Co2
+yt-dlp output: ['public/audio/Prateek Kuhad - Co2 (Official Audio).m4a']
+[4/87] Downloading: uyire un uyirena
+yt-dlp output: ['public/audio/Uyire Un Uyirena Song with Lyrics ｜ Zero ｜ Anirudh Ravichander ｜ Nivas K Prasanna ｜ Shiv Mohaa.m4a']
+[5/87] Downloading: athadi athadi
+yt-dlp output: ['public/audio/Anegan - Aathadi Aathadi Lyric ｜ Dhanush ｜ Harris Jayaraj.m4a']
+[6/87] Downloading: i wanna be yours
+yt-dlp output: ['public/audio/I Wanna Be Yours.m4a']
+[7/87] Downloading: aagayam theepitha
+yt-dlp output: ['public/audio/Agayam Theepiditha Official Full Video Song ｜ Madras ｜ Karthi, Catherine Tresa ｜ Santhosh Narayanan.m4a']
+[8/87] Downloading: thee illai
+yt-dlp output: ['public/audio/Engeyum Kaadhal - Thee Illai Song ｜ Lyrics ｜ Tamil.m4a']
+[9/87] Downloading: visiri
+yt-dlp output: ['public/audio/Visiri song lyrics ｜song by Sid Sriram and Shashaa Tirupati.m4a']
+[10/87] Downloading: Avalukena
+yt-dlp output: ['public/audio/Avalukena-Lyrics song.m4a']
+[11/87] Downloading: marakavillaiyae
+yt-dlp output: ['public/audio/Marakkavillayae Lyrical Video ｜ JERSEY ｜ Nani, Shraddha Srinath ｜ Anirudh.m4a']
+[12/87] Downloading: oxygen kaavan
+yt-dlp output: ['public/audio/Oxygen.m4a']
+[13/87] Downloading: naane varugiraen
+yt-dlp output: ['public/audio/OK Kanmani - Naane Varugiraen Lyric Video ｜ A.R. Rahman, Mani Ratnam.m4a']
+[14/87] Downloading: her
+yt-dlp output: ['public/audio/JVKE - her (official lyric video).m4a']
+[15/87] Downloading: adiyae azhagae
+yt-dlp output: ['public/audio/Official： Adiyae Azhagae Song with Lyrics ｜ Oru Naal Koothu ｜ Sean Roldan ｜ Justin Prabhakaran.m4a']
+[16/87] Downloading: unai serndhidavey
+yt-dlp output: ['public/audio/Maaveeran - Unai Serndhidavey Full Song Audio ｜ Ramcharan Tej, Kajal Agarwal.m4a']
+[17/87] Downloading: aathi ena nee
+yt-dlp output: ['public/audio/Aathi - Lyrical Song ｜ Kaththi ｜ Vijay ｜ Samantha ｜ Anirudh Ravichander ｜ A.R.Murugadoss.m4a']
+[18/87] Downloading: antartica
+yt-dlp output: ['public/audio/Antartica  ｜  Thuppakki Tamil Movie Audio Songs.m4a']
+[19/87] Downloading: kadhaipomaa
+yt-dlp output: ['public/audio/Oh My Kadavule - Kadhaippoma Lyric ｜ Ashok Selvan, Ritika Singh ｜ Leon James ｜ Sid Sriram.m4a']
+[20/87] Downloading: nallai allai
+yt-dlp output: ['public/audio/Kaatru Veliyidai - Nallai Allai ｜ Mani Ratnam, AR Rahman ｜ Karthi.m4a']
+[21/87] Downloading: kadhal kanave
+yt-dlp output: ['public/audio/Kadhal Kanave Official Full Song - Mundasupatti.m4a']
+[22/87] Downloading: poraada poraada
+yt-dlp output: ['public/audio/Poraada Poraada Song with Lyrics ｜ Aranmanai 2 ｜ Siddharth ｜ Trisha ｜ Hansika ｜ Hiphop Tamizha.m4a']
+[23/87] Downloading: va va vannillaa
+yt-dlp output: ['public/audio/Vaa Vaa Vaa Vannila.m4a']
+[24/87] Downloading: oruthi maelae
+yt-dlp output: ['public/audio/Jeeva - Oruthi Maelae Lyric ｜ Vishnu, Sri Divya ｜ D. Imman.m4a']
+[25/87] Downloading: yennodu va va
+yt-dlp output: ['public/audio/Neethaane En Ponvasantham - Yennodu Vaa Video ｜ Jiiva, Samantha.m4a']
+[26/87] Downloading: kaarkuzhal kadavaiye
+yt-dlp output: ['public/audio/VADACHENNAI - Kaarkuzhal Kadavaiye (Lyric Video) ｜ Dhanush ｜ Vetri Maaran ｜ Santhosh Narayanan.m4a']
+[27/87] Downloading: mudhal nee mudivum nee
+yt-dlp output: ['public/audio/Mudhal Nee Mudivum Nee  - Title Track Lyric ｜ Darbuka Siva ｜ Sid Sriram ｜ Thamarai ｜ Super Talkies.m4a']
+[28/87] Downloading: raanjhanaa
+yt-dlp output: ['public/audio/RAANJHANAA Title track ｜ AUDIO song ｜ Sonam Kapoor ｜ Dhanush ｜ A. R. Rahman ｜ Shiraz, Jaswinder.m4a']
+[29/87] Downloading: oru kan jaadai
+yt-dlp output: ['public/audio/Anjaan - Oru Kan Jaadai Lyric ｜ Suriya, Samantha ｜ Yuvan.m4a']
+[30/87] Downloading: thayya thayya tamil
+yt-dlp output: ['public/audio/Thayya Thayya ｜ 8D AUDIO ｜ Uyire 1998 ｜ use headphones.m4a']
+[31/87] Downloading: so baby (doctor)
+yt-dlp output: ['public/audio/so baby song ｜ lyrics ｜ Doctor ｜ anirudh ｜ Sivakarthikeyan.m4a']
+[32/87] Downloading: kadhalaada (reprise)
+yt-dlp output: ['public/audio/Vivegam - Kadhalaada Reprise Tamil Lyric - Anirudh ｜ Ajith Kumar ｜ Siva.m4a']
+[33/87] Downloading: theeratha vilayattu pillai
+yt-dlp output: ['public/audio/Theeratha Vilayattu Pillai - Theeratha Vilaiyattu Video ｜ Yuvanshankar Raja ｜ Vishal.m4a']
+[34/87] Downloading: vazhi parthirundhen
+yt-dlp output: ['public/audio/Think Premiere ｜ Vazhi Parthirundhen ｜ Attakathi ｜ Pa Ranjith ｜ Santhosh Narayanan ｜ Pradeep Kumar.m4a']
+[35/87] Downloading: nee kavithaigala
+yt-dlp output: ['public/audio/Maragatha Naanayam ｜ Nee Kavithaigala Song with Lyrics ｜ Aadhi, Nikki Galrani ｜ Dhibu Ninan Thomas.m4a']
+[36/87] Downloading: kadavule
+yt-dlp output: ['public/audio/Kadavule - Audio Song ｜ Kacheri Arambam ｜ Jiiva ｜ Poonam Bajwa ｜ D.Imman ｜ Star Hits.m4a']
+[37/87] Downloading: yellae lama
+yt-dlp output: ['public/audio/Yellae Lama (Original Motion Picture Soundtrack).m4a']
+[38/87] Downloading: mun andhi
+yt-dlp output: ['public/audio/7 Aum Arivu - Mun Andhi Tamil Lyric Tamil Lyric ｜ Suriya ｜ Harris.m4a']
+[39/87] Downloading: enna naan seiven
+yt-dlp output: ['public/audio/Meyaadha Maan ｜ Enna Naan Seiven Song with Lyrics ｜ Vaibhav, Priya, Indhuja ｜ Pradeep Kumar.m4a']
+[40/87] Downloading: humsafar
+yt-dlp output: ['public/audio/Humsafar Song ｜ Saiyaara ｜ Full Song Audio ｜ Sachet Tandon, Parampara Tandon, Irshad Kamil.m4a']
+[41/87] Downloading: enna sona from ok jaanu
+yt-dlp output: ['public/audio/Enna Sona (Official Video) ｜ OK Jaanu ｜ Arijit Singh ｜ Shraddha Kapoor ｜ Aditya Roy Kapoor.m4a']
+[42/87] Downloading: veesum velichathile
+yt-dlp output: ['public/audio/Veesum Velichathile - Audio Song ｜ Naan Ee ｜ Nani, Samantha ｜ S. S. Rajamouli ｜ M. M. Keeravani.m4a']
+[43/87] Downloading: kabira
+yt-dlp output: ['public/audio/Kabira (Encore) Yeh Jawaani Hai Deewani Song (Audio) ｜ Pritam ｜ Ranbir Kapoor, Deepika Padukone.m4a']
+[44/87] Downloading: sahiba
+yt-dlp output: ['public/audio/Sahiba (Full Audio) ： Aditya Rikhari, Ankita Chhetri ｜ T-Series.m4a']
+[45/87] Downloading: ravingu theevai
+yt-dlp output: ['public/audio/96 Songs ｜ Iravingu Theevai Song ｜ Vijay Sethupathi, Trisha ｜ Govind Vasantha ｜ C. Prem Kumar.m4a']
+[46/87] Downloading: kesariya
+yt-dlp output: ['public/audio/Arijit Singh ｜ Kesariya - Full Audio ｜ Brahmāstra ｜ Ranbir Kapoor ｜ Alia Bhatt ｜ Pritam ｜ Amitabh B.m4a']
+[47/87] Downloading: nee partha vixhigal
+yt-dlp output: ['public/audio/3 - Nee Paartha Vizhigal Tamil Lyric ｜ Dhanush, Shruti ｜ Anirudh.m4a']
+[48/87] Downloading: kannazhaga
+yt-dlp output: ['public/audio/3 - Kannazhaga Tamil Lyric ｜ Dhanush, Shruti ｜ Anirudh.m4a']
+[49/87] Downloading: nenjukkul peidhidum
+yt-dlp output: ['public/audio/Vaaranam Aayiram - Nenjukkul Peidhidum Song ( Lyrics ｜ Tamil ).m4a']
+[50/87] Downloading: idhazin oram
+yt-dlp output: ['public/audio/3 - Idhazhin Oram Tamil Lyric ｜ Dhanush, Shruti ｜ Anirudh.m4a']
+[51/87] Downloading: yaanji
+yt-dlp output: ['public/audio/Vikram Vedha Songs ｜ Yaanji Song with Lyrics ｜ R.Madhavan, Vijay Sethupathi ｜ Sam C.S ｜ Anirudh.m4a']
+[52/87] Downloading: naan pizhai
+yt-dlp output: ['public/audio/Kaathuvaakula Rendu Kaadhal - Naan Pizhai (Lyrics) ｜ VijaySethupathi, Anirudh Ravichander.m4a']
+[53/87] Downloading: sirikadhey
+yt-dlp output: ['public/audio/Remo - Sirikkadhey Music Video ｜ Anirudh Ravichander.m4a']
+[54/87] Downloading: thanagmey (naanum rowdy thaan)
+yt-dlp output: ['public/audio/Thangamey.m4a']
+[55/87] Downloading: mental mandhil
+yt-dlp output: ['public/audio/OK Kanmani - Mental Manadhil Lyric ｜ Dulquer｜ A. R. Rahman ｜ Super Hit Song.m4a']
+[56/87] Downloading: megamo aval
+yt-dlp output: ['public/audio/Meyaadha Maan ｜ Idhayam Love - Megamo Aval Song with Lyrics ｜ Vaibhav, Priya ｜ Santhosh Narayanan.m4a']
+[57/87] Downloading: vaseegara
+yt-dlp output: ['public/audio/Harris Jayaraj - Vaseegara (Lyrics).m4a']
+[58/87] Downloading: hosanna
+yt-dlp output: ['public/audio/Vinnaithaandi Varuvaayaa - Hosanna Tamil Lyric ｜ Rahman ｜ STR, Trisha.m4a']
+[59/87] Downloading: mazhai kuruvi
+yt-dlp output: ['public/audio/Chekka Chivantha Vaanam - Mazhai Kuruvi Lyric (Tamil) ｜ @ARRahman  ｜ Mani Ratnam ｜ Vairamuthu.m4a']
+[60/87] Downloading: new york nagaram
+yt-dlp output: ['public/audio/New York Nagaram (Lyrics Video) ｜ Sillunu Oru Kadhal ｜ Suriya ｜ A.R. Rahman ｜ Star Music X Lyrically.m4a']
+[61/87] Downloading: pookal pookkum
+yt-dlp output: ['public/audio/Pookal pookum tharunam - Madarasapattinam - lyrics.m4a']
+[62/87] Downloading: azhage azhage
+yt-dlp output: ['public/audio/Azhage Azhage II Saivam II Lyrical Video II  Full Song With Lyrics II Reworked by Ajori II AjosWorld.m4a']
+[63/87] Downloading: maruvaarthai
+yt-dlp output: ['public/audio/Maruvaarthai.m4a']
+[64/87] Downloading: kadhal kan kattudhe
+yt-dlp output: ['public/audio/Kadhal Kan Kattudhe - Kaaki Sattai ｜ Sivakarthikeyan ｜ Anirudh.m4a']
+[65/87] Downloading: yennai maatrum kadhale
+yt-dlp output: ['public/audio/Naanum Rowdy Dhaan - Yennai Maatrum Kadhale ｜ Lyric Video ｜ Sid Sriram, Anirudh ｜ Vignesh Shivan.m4a']
+[66/87] Downloading: thalli pogadhey
+yt-dlp output: ['public/audio/Thalli Pogathey.m4a']
+[67/87] Downloading: kaathalae kaathale
+yt-dlp output: ['public/audio/96 Songs｜ Kaathalae Kaathalae Song ｜ Vijay Sethupathi, Trisha ｜ Govind Vasantha ｜ C. Prem Kumar.m4a']
+[68/87] Downloading: po indru neeyagae
+yt-dlp output: ['']
+[69/87] Downloading: the life of ram
+yt-dlp output: ['public/audio/96 Songs ｜ The Life of Ram Song Lyrical ｜ Vijay Sethupathi, Trisha ｜ Govind Vasantha ｜ C. Prem Kumar.m4a']
+[70/87] Downloading: unakenna venum sollu
+yt-dlp output: ['public/audio/Unakkenna Venum Sollu ｜ Yennai Arindhaal ｜ Harris Jayaraj ｜  HQ Audio ｜.m4a']
+[71/87] Downloading: ennakenna yaarum illaiyae
+yt-dlp output: ['public/audio/Aakko - Enakenna Yaarum Illaye Lyric ｜ Anirudh Ravichander.m4a']
+[72/87] Downloading: kannaane kanne from nanum rowdy thaan
+yt-dlp output: ['public/audio/Kannaana Kanne (From ＂Naanum Rowdy Dhaan＂).m4a']
+[73/87] Downloading: kalasaala from osthi
+yt-dlp output: ['public/audio/kalasala kalasala _song osthi.m4a']
+[74/87] Downloading: appadi podu
+yt-dlp output: ['public/audio/Appadipodu Song ｜ Gilli ｜ Vijay ｜ Trisha ｜ Vidyasagar.m4a']
+[75/87] Downloading: where is the party
+yt-dlp output: ['public/audio/Silambattam - Where Is The Party Video Song ｜ Yuvanshankar Raja｜ STR ｜ Sana Khan.m4a']
+[76/87] Downloading: local boys from ethir neechal
+yt-dlp output: ['public/audio/Ethir Neechal - Local Boys Tamil Lyric ｜ Sivakarthikeyan ｜ Anirudh.m4a']
+[77/87] Downloading: katha;a kannala
+yt-dlp output: ['public/audio/Kathala Kannala.m4a']
+[78/87] Downloading: daddy mummy
+yt-dlp output: ['public/audio/Daddy Mummy.m4a']
+[79/87] Downloading: kannitheevu ponna
+yt-dlp output: ['public/audio/Kannitheevu Ponna ｜ Yuddham Sei ｜ High Quality Audio Song.m4a']
+[80/87] Downloading: karuppu perazhaga
+yt-dlp output: ['public/audio/𝗞𝗮𝗿𝘂𝗽𝗽𝘂 𝗣𝗲𝗿𝗮𝘇𝗵𝗮𝗴𝗮 (Lyrics) - Suchith x Darshana ｜ Thaman ｜ Kanchana ｜ Lawrence ⧸⧹ #KaruppuPerazhaga.m4a']
+[81/87] Downloading: nakku mukka
+yt-dlp output: ['public/audio/Nakka Mukka - Kadhalil Vizhunthen - Nakkhul - Sunaina - Vijay Antony - High Quality Audio.m4a']
+[82/87] Downloading: manmadha raasa
+yt-dlp output: ['public/audio/Manmatha rasa song Thiruda thirudi movie｜Manmatha rasa audio song｜Tamil latest kuthu songs.m4a']
+[83/87] Downloading: kattu sirukki
+yt-dlp output: ['public/audio/Raavanan - Kaattu Sirukki Tamil Lyric ｜ A.R. Rahman ｜ Vikram, Aishwarya Rai.m4a']
+[84/87] Downloading: vechikkava remix
+yt-dlp output: ['public/audio/Vechikava Unna Mattum Remix ｜ High Quality ｜ 24 Bit Song ｜ Yuvan Shankar Raja ｜ Silambarasan.m4a']
+[85/87] Downloading: machi open the bottle
+yt-dlp output: ['public/audio/Mankatha - Machi Open the Bottle Tamil Lyric ｜ Ajith Kumar, Trisha ｜ Yuvan.m4a']
+[86/87] Downloading: vada mapillai
+yt-dlp output: ['public/audio/Vaada Maappilley.m4a']
+[87/87] Downloading: nee marilyn monroe
+yt-dlp output: ['public/audio/Nee Marlin Manore.m4a']
+All downloads completed.

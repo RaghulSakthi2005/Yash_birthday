@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "id": 1778531061024,
+    "from": "them",
+    "text": "hi",
+    "timestamp": "2026-05-11T20:24:21.024Z",
+    "isManual": false
+  },
+  {
+    "id": 1778531061804,
+    "from": "me",
+    "text": "happy birthday in advance 🎉🎂. can't wait to celebrate u on the 15th",
+    "timestamp": "2026-05-11T20:24:21.804Z",
+    "isManual": false
+  },
+  {
+    "id": 1778531071481,
+    "from": "me",
+    "text": "yes",
+    "timestamp": "2026-05-11T20:24:31.481Z",
+    "isManual": true
+  },
+  {
+    "id": 1778531087492,
+    "from": "them",
+    "text": "then who u r to me",
+    "timestamp": "2026-05-11T20:24:47.492Z",
+    "isManual": false
+  },
+  {
+    "id": 1778531087987,
+    "from": "me",
+    "text": "your closest friend 🤗 & u know it! don't worry, i'm not going anywhere. ever.",
+    "timestamp": "2026-05-11T20:24:47.987Z",
+    "isManual": false
+  }
+]

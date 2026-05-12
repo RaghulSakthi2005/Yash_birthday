@@ -1,0 +1,153 @@
+Checking 99 songs for missing lyrics...
+Fetching slowly for: Enkeyoo Partha
+  -> SUCCESS! Found perfect lyrics (45 lines)!
+Fetching slowly for: Uyire Un Uyirena
+  -> SUCCESS! Found perfect lyrics (42 lines)!
+Fetching slowly for: Athadi Athadi
+  -> SUCCESS! Found perfect lyrics (83 lines)!
+Fetching slowly for: I Wanna Be Yours
+  -> Found song, but no synced lyrics.
+Fetching slowly for: Aagayam Theepitha
+  -> Not found on LRCLIB.
+Fetching slowly for: Thee Illai
+  -> SUCCESS! Found perfect lyrics (57 lines)!
+Fetching slowly for: Visiri
+  -> SUCCESS! Found perfect lyrics (49 lines)!
+Fetching slowly for: Avalukena
+  -> SUCCESS! Found perfect lyrics (62 lines)!
+Fetching slowly for: Marakavillaiyae
+  -> Not found on LRCLIB.
+Fetching slowly for: Oxygen Kaavan
+  -> Not found on LRCLIB.
+Fetching slowly for: Naane Varugiraen
+  -> Found song, but no synced lyrics.
+Fetching slowly for: Her
+  -> SUCCESS! Found perfect lyrics (32 lines)!
+Fetching slowly for: Adiyae Azhagae
+  -> SUCCESS! Found perfect lyrics (69 lines)!
+Fetching slowly for: Unai Serndhidavey
+  -> SUCCESS! Found perfect lyrics (9 lines)!
+Fetching slowly for: Aathi Ena Nee
+  -> Not found on LRCLIB.
+Fetching slowly for: Antartica
+  -> SUCCESS! Found perfect lyrics (23 lines)!
+Fetching slowly for: Kadhaipomaa
+  -> Not found on LRCLIB.
+Fetching slowly for: Nallai Allai
+  -> SUCCESS! Found perfect lyrics (30 lines)!
+Fetching slowly for: Kadhal Kanave
+  -> SUCCESS! Found perfect lyrics (37 lines)!
+Fetching slowly for: Poraada Poraada
+  -> SUCCESS! Found perfect lyrics (61 lines)!
+Fetching slowly for: Va Va Vannillaa
+  -> Not found on LRCLIB.
+Fetching slowly for: Oruthi Maelae
+  -> SUCCESS! Found perfect lyrics (44 lines)!
+Fetching slowly for: Yennodu Va Va
+  -> SUCCESS! Found perfect lyrics (48 lines)!
+Fetching slowly for: Kaarkuzhal Kadavaiye
+  -> SUCCESS! Found perfect lyrics (60 lines)!
+Fetching slowly for: Mudhal Nee Mudivum Nee
+  -> SUCCESS! Found perfect lyrics (46 lines)!
+Fetching slowly for: Oru Kan Jaadai
+  -> SUCCESS! Found perfect lyrics (48 lines)!
+Fetching slowly for: Thayya Thayya Tamil
+  -> SUCCESS! Found perfect lyrics (141 lines)!
+Fetching slowly for: So Baby (Doctor)
+  -> SUCCESS! Found perfect lyrics (64 lines)!
+Fetching slowly for: Kadhalaada (Reprise)
+  -> Found song, but no synced lyrics.
+Fetching slowly for: Theeratha Vilayattu Pillai
+  -> SUCCESS! Found perfect lyrics (65 lines)!
+Fetching slowly for: Vazhi Parthirundhen
+  -> Found song, but no synced lyrics.
+Fetching slowly for: Nee Kavithaigala
+  -> SUCCESS! Found perfect lyrics (71 lines)!
+Fetching slowly for: Kadavule
+  -> SUCCESS! Found perfect lyrics (60 lines)!
+Fetching slowly for: Yellae Lama
+  -> SUCCESS! Found perfect lyrics (93 lines)!
+Fetching slowly for: Enna Naan Seiven
+  -> SUCCESS! Found perfect lyrics (35 lines)!
+Fetching slowly for: Humsafar
+  -> ERROR: <urlopen error [Errno 104] Connection reset by peer>
+Fetching slowly for: Veesum Velichathile
+  -> SUCCESS! Found perfect lyrics (22 lines)!
+Fetching slowly for: Kabira
+  -> Found song, but no synced lyrics.
+Fetching slowly for: Sahiba
+  -> SUCCESS! Found perfect lyrics (34 lines)!
+Fetching slowly for: Ravingu Theevai
+  -> ERROR: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1033)>
+Fetching slowly for: Nee Partha Vixhigal
+  -> Not found on LRCLIB.
+Fetching slowly for: Nenjukkul Peidhidum
+  -> Found song, but no synced lyrics.
+Fetching slowly for: Idhazin Oram
+  -> SUCCESS! Found perfect lyrics (35 lines)!
+Fetching slowly for: Yaanji
+  -> ERROR: <urlopen error [Errno -3] Temporary failure in name resolution>
+Fetching slowly for: Naan Pizhai
+  -> ERROR: <urlopen error [Errno -3] Temporary failure in name resolution>
+Fetching slowly for: Sirikadhey
+  -> ERROR: <urlopen error [Errno -3] Temporary failure in name resolution>
+Fetching slowly for: Thanagmey (Naanum Rowdy Thaan)
+  -> Not found on LRCLIB.
+Fetching slowly for: Mental Mandhil
+  -> Not found on LRCLIB.
+Fetching slowly for: Megamo Aval
+  -> SUCCESS! Found perfect lyrics (43 lines)!
+Fetching slowly for: Mazhai Kuruvi
+  -> SUCCESS! Found perfect lyrics (85 lines)!
+Fetching slowly for: Azhage Azhage
+  -> SUCCESS! Found perfect lyrics (48 lines)!
+Fetching slowly for: Kadhal Kan Kattudhe
+  -> SUCCESS! Found perfect lyrics (41 lines)!
+Fetching slowly for: Yennai Maatrum Kadhale
+  -> SUCCESS! Found perfect lyrics (64 lines)!
+Fetching slowly for: Thalli Pogadhey
+  -> Not found on LRCLIB.
+Fetching slowly for: Kaathalae Kaathale
+  -> Not found on LRCLIB.
+Fetching slowly for: Po Indru Neeyagae
+  -> Not found on LRCLIB.
+Fetching slowly for: The Life Of Ram
+  -> SUCCESS! Found perfect lyrics (60 lines)!
+Fetching slowly for: Unakenna Venum Sollu
+  -> Not found on LRCLIB.
+Fetching slowly for: Ennakenna Yaarum Illaiyae
+  -> Not found on LRCLIB.
+Fetching slowly for: Kannaane Kanne From Nanum Rowdy Thaan
+  -> Not found on LRCLIB.
+Fetching slowly for: Kalasaala From Osthi
+  -> Not found on LRCLIB.
+Fetching slowly for: Appadi Podu
+  -> Found song, but no synced lyrics.
+Fetching slowly for: Where Is The Party
+  -> SUCCESS! Found perfect lyrics (40 lines)!
+Fetching slowly for: Local Boys From Ethir Neechal
+  -> SUCCESS! Found perfect lyrics (64 lines)!
+Fetching slowly for: Katha;A Kannala
+  -> Not found on LRCLIB.
+Fetching slowly for: Daddy Mummy
+  -> Found song, but no synced lyrics.
+Fetching slowly for: Kannitheevu Ponna
+  -> SUCCESS! Found perfect lyrics (55 lines)!
+Fetching slowly for: Karuppu Perazhaga
+  -> SUCCESS! Found perfect lyrics (85 lines)!
+Fetching slowly for: Nakku Mukka
+  -> Not found on LRCLIB.
+Fetching slowly for: Manmadha Raasa
+  -> Not found on LRCLIB.
+Fetching slowly for: Kattu Sirukki
+  -> SUCCESS! Found perfect lyrics (104 lines)!
+Fetching slowly for: Vechikkava Remix
+  -> SUCCESS! Found perfect lyrics (48 lines)!
+Fetching slowly for: Machi Open The Bottle
+  -> SUCCESS! Found perfect lyrics (64 lines)!
+Fetching slowly for: Vada Mapillai
+  -> Not found on LRCLIB.
+Fetching slowly for: Nee Marilyn Monroe
+  -> SUCCESS! Found perfect lyrics (71 lines)!
+
+Finished! Successfully synced 42 songs.

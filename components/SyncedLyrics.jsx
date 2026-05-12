@@ -54,9 +54,9 @@ export default function SyncedLyrics({ lyrics, currentTime }) {
         return (
           <div
             key={i}
-            className={`text-xl md:text-3xl lg:text-[44px] leading-[1.2] font-extrabold tracking-[-0.03em] transition-all duration-500 ease-out ${
+            className={`text-xl md:text-3xl lg:text-[44px] leading-[1.2] font-extrabold tracking-[-0.03em] transition-all duration-500 ease-out py-1 ${
               isActiveLine
-                ? "text-white opacity-100 drop-shadow-lg scale-[1.02] origin-left"
+                ? "opacity-100 scale-[1.02] origin-left " + (line.isHighlight ? "drop-shadow-[0_0_15px_rgba(232,121,249,0.4)]" : "text-white drop-shadow-lg")
                 : isPastLine
                 ? "text-white opacity-30"
                 : "text-white opacity-20"
@@ -80,19 +80,21 @@ export default function SyncedLyrics({ lyrics, currentTime }) {
                     className="inline-block mr-3 relative"
                     style={{ whiteSpace: "pre-wrap" }}
                   >
-                    <span className={isActiveLine ? "text-white/30" : ""}>
+                    <span className={isActiveLine ? (line.isHighlight ? "text-white/20" : "text-white/30") : ""}>
                       {word.text}
                     </span>
                     
                     {isActiveLine && (
                       <span
-                        className="absolute left-0 top-0 text-white overflow-hidden"
+                        className="absolute left-0 top-0 overflow-hidden"
                         style={{
                           width: `${fillPercentage}%`,
                           transition: "width 0.1s linear"
                         }}
                       >
-                        {word.text}
+                        <span className={line.isHighlight ? "bg-gradient-to-r from-fuchsia-400 via-pink-400 to-purple-500 text-transparent bg-clip-text" : "text-white"}>
+                          {word.text}
+                        </span>
                       </span>
                     )}
                   </span>
@@ -100,7 +102,7 @@ export default function SyncedLyrics({ lyrics, currentTime }) {
               })
             ) : (
               // Fallback for line-by-line rendering
-              <span className="block w-full" style={{ textShadow: isActiveLine ? "0 4px 24px rgba(255,255,255,0.3)" : "none" }}>
+              <span className={`block w-full ${isActiveLine && line.isHighlight ? "bg-gradient-to-r from-fuchsia-400 via-pink-400 to-purple-500 text-transparent bg-clip-text" : ""}`} style={{ textShadow: isActiveLine && !line.isHighlight ? "0 4px 24px rgba(255,255,255,0.3)" : "none" }}>
                 {line.text}
               </span>
             )}

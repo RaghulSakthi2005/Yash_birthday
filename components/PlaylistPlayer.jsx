@@ -58,6 +58,28 @@ export default function PlaylistPlayer({ playlistData }) {
     }
   };
 
+  const handleJumpToHighlight = () => {
+    if (!currentTrack.lyrics) return;
+    
+    // Find the next highlight line after currentTime
+    let nextHighlight = currentTrack.lyrics.find(line => line.isHighlight && line.time > currentTime + 1);
+    
+    // If no next highlight, wrap around to the first one
+    if (!nextHighlight) {
+      nextHighlight = currentTrack.lyrics.find(line => line.isHighlight);
+    }
+    
+    if (nextHighlight) {
+      const time = nextHighlight.time;
+      setCurrentTime(time);
+      if (audioRef.current) {
+        audioRef.current.currentTime = time;
+      }
+    }
+  };
+
+  const hasHighlights = currentTrack.lyrics?.some(line => line.isHighlight);
+
   return (
     <div className="fixed inset-0 w-full bg-[#0a0a0a] flex flex-col overflow-hidden font-sans selection:bg-white/20">
       
@@ -108,6 +130,16 @@ export default function PlaylistPlayer({ playlistData }) {
 
         {/* ── MIDDLE: LYRICS (MAIN FOCUS) ── */}
         <div className="flex-1 h-full relative flex flex-col min-h-0">
+          {hasHighlights && (
+            <div className="absolute top-8 right-8 z-40 lg:top-12 lg:right-12">
+              <button 
+                onClick={handleJumpToHighlight}
+                className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/10 text-white text-sm font-bold tracking-wide transition-all shadow-lg hover:scale-105 active:scale-95"
+              >
+                <span className="text-pink-400">✨</span> Jump to Highlight
+              </button>
+            </div>
+          )}
           <SyncedLyrics lyrics={currentTrack.lyrics} currentTime={currentTime} />
         </div>
 

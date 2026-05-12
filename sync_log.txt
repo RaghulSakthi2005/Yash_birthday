@@ -1,0 +1,8 @@
+An error occurred while searching for an LRC on Lrclib
+HTTPSConnectionPool(host='lrclib.net', port=443): Read timed out. (read timeout=10)
+An error occurred while searching for an LRC on NetEase
+HTTPSConnectionPool(host='music.163.com', port=443): Max retries exceeded with url: /api/search/pc?limit=10&type=1&offset=0&s=Uyire+Un+Uyirena (Caused by ConnectTimeoutError(<HTTPSConnection(host='music.163.com', port=443) at 0x7f315f8e1bd0>, 'Connection to music.163.com timed out. (connect timeout=2)'))
+An error occurred while searching for an LRC on NetEase
+HTTPSConnectionPool(host='music.163.com', port=443): Max retries exceeded with url: /api/search/pc?limit=10&type=1&offset=0&s=I+Wanna+Be+Yours (Caused by ConnectTimeoutError(<HTTPSConnection(host='music.163.com', port=443) at 0x7f315f8e1bd0>, 'Connection to music.163.com timed out. (connect timeout=2)'))
+An error occurred while searching for an LRC on NetEase
+HTTPSConnectionPool(host='music.163.com', port=443): Max retries exceeded with url: /api/search/pc?limit=10&type=1&offset=0&s=Aagayam+Theepitha (Caused by ConnectTimeoutError(<HTTPSConnection(host='music.163.com', port=443) at 0x7f315f8e1810>, 'Connection to music.163.com timed out. (connect timeout=2)'))
