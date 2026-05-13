@@ -4,7 +4,7 @@ const path = require('path');
 const galleryFile = path.join(__dirname, 'data', 'gallery.js');
 const videosDir = path.join(__dirname, 'public', 'gallery', 'videos');
 
-const folders = ['bullets', 'outings', 'natural', 'vlogs'];
+const folders = ['bullets', 'playing', 'natural', 'vlogs'];
 
 const config = {
   videoSeries: [
@@ -16,10 +16,10 @@ const config = {
       episodes: []
     },
     {
-      id: "outing",
-      title: "Outing",
-      thumbnail: "/gallery/thumbnails/thumb_outing_v2.jpg",
-      description: "City lights, cozy cafes, and endless conversations. Memories of us exploring new spaces, smiling at the little things, and simply being there for each other as friends.",
+      id: "playing",
+      title: "Playing",
+      thumbnail: "/gallery/thumbnails/thumb_playing_v2.jpg",
+      description: "Moments of pure joy and playfulness. From competitive games to silly laughter, these memories capture the lighthearted spirit that makes every second with you so much fun.",
       episodes: []
     },
     {
@@ -48,7 +48,7 @@ folders.forEach(folder => {
   // Sort files by creation time or alphabetically
   files.sort();
 
-  const seriesIndex = folder === 'bullets' ? 0 : folder === 'outings' ? 1 : folder === 'natural' ? 2 : 3;
+  const seriesIndex = folder === 'bullets' ? 0 : folder === 'playing' ? 1 : folder === 'natural' ? 2 : 3;
 
   files.forEach((file, idx) => {
     // Rename file to a cleaner name to avoid URL encoding issues

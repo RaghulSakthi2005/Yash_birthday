@@ -69,45 +69,45 @@ export const galleryConfig = {
       ]
     },
     {
-      "id": "outing",
-      "title": "Outing",
-      "thumbnail": "/gallery/thumbnails/thumb_outing_v2.jpg",
-      "description": "City lights, cozy cafes, and endless conversations. Memories of us exploring new spaces, smiling at the little things, and simply being there for each other as friends.",
+      "id": "playing",
+      "title": "Playing",
+      "thumbnail": "/gallery/thumbnails/thumb_playing_v2.jpg",
+      "description": "Moments of pure joy and playfulness. From competitive games to silly laughter, these memories capture the lighthearted spirit that makes every second with you so much fun.",
       "episodes": [
         {
           "id": 1,
           "title": "Memory 1",
-          "src": "/gallery/videos/outings/outings_1.mp4",
+          "src": "/gallery/videos/playing/playing_1.mp4",
           "duration": "0m 30s"
         },
         {
           "id": 2,
           "title": "Memory 2",
-          "src": "/gallery/videos/outings/outings_2.mp4",
+          "src": "/gallery/videos/playing/playing_2.mp4",
           "duration": "0m 30s"
         },
         {
           "id": 3,
           "title": "Memory 3",
-          "src": "/gallery/videos/outings/outings_3.mp4",
+          "src": "/gallery/videos/playing/playing_3.mp4",
           "duration": "0m 30s"
         },
         {
           "id": 4,
           "title": "Memory 4",
-          "src": "/gallery/videos/outings/outings_4.mp4",
+          "src": "/gallery/videos/playing/playing_4.mp4",
           "duration": "0m 30s"
         },
         {
           "id": 5,
           "title": "Memory 5",
-          "src": "/gallery/videos/outings/outings_5.mp4",
+          "src": "/gallery/videos/playing/playing_5.mp4",
           "duration": "0m 30s"
         },
         {
           "id": 6,
           "title": "Memory 6",
-          "src": "/gallery/videos/outings/outings_6.mp4",
+          "src": "/gallery/videos/playing/playing_6.mp4",
           "duration": "0m 30s"
         }
       ]
