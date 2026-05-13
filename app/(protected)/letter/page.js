@@ -24,7 +24,7 @@ const PARAGRAPHS = [
   "Not who you're becoming — who you already are, right now.",
   "She likes flowers, but she doesn't know she's a garden herself.",
   "can lose anything but not you and i afraid of losing u",
-  "நீ என் வாழ்க்கையில் வந்த பிறகு தான், நானாகவே வாழ ஆரம்பித்தேன். என் வாழ்வின் அழகிய மாற்றம் நீ!",
+  "She looks for the moon in the sky, unaware she herself is one.",
   "Happy Birthday.",
   "— Raghul",
 ];
@@ -35,13 +35,15 @@ const CinematicLine = ({ text, i }) => {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   
   const opacity = useTransform(scrollYProgress, [0.2, 0.38, 0.62, 0.78], [0, 1, 1, 0]);
-  const blurRaw = useTransform(scrollYProgress, [0.15, 0.38, 0.62, 0.85], [16, 0, 0, 16]);
-  const scale = useTransform(scrollYProgress, [0.1, 0.45, 0.55, 0.9], [0.92, 1, 1, 1.06]);
-  const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
-
   const isSignature = text.startsWith("— ");
   const isOpener = text === "Hey, Yashh!!.";
   const isHappy = text.startsWith("Happy");
+  const isMoon = text.includes("moon in the sky");
+
+  const blurRaw = useTransform(scrollYProgress, [0.15, 0.38, 0.62, 0.85], [16, 0, 0, 16]);
+  const filterVal = useTransform(blurRaw, b => `blur(${b}px)${isMoon ? " drop-shadow(0 4px 15px rgba(232,197,71,0.4))" : ""}`);
+  const scale = useTransform(scrollYProgress, [0.1, 0.45, 0.55, 0.9], [0.92, 1, 1, 1.06]);
+  const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
 
   return (
     <div ref={ref} style={{ 
@@ -51,25 +53,28 @@ const CinematicLine = ({ text, i }) => {
       <motion.p
         style={{
           opacity, scale, y,
-          filter: useTransform(blurRaw, b => `blur(${b}px)`),
+          filter: filterVal,
           fontFamily: isSignature || isOpener || isHappy ? "var(--font-heading)" : "var(--font-body)",
           fontSize: isOpener || isHappy
             ? "clamp(28px, 5vw, 52px)"
             : isSignature
             ? "clamp(20px, 3vw, 32px)"
             : "clamp(18px, 3.2vw, 34px)",
-          fontWeight: isOpener || isHappy ? 600 : isSignature ? 400 : 300,
-          fontStyle: isSignature || isOpener || isHappy ? "italic" : "normal",
-          color: isSignature
+          fontWeight: isMoon ? 500 : (isOpener || isHappy ? 600 : isSignature ? 400 : 300),
+          fontStyle: isSignature || isOpener || isHappy || isMoon ? "italic" : "normal",
+          color: isMoon ? undefined : isSignature
             ? "rgba(232,197,71,0.8)"
             : isOpener || isHappy
             ? "rgba(255,255,255,0.95)"
             : "rgba(255,255,255,0.8)",
+          background: isMoon ? "linear-gradient(135deg, #ffb7c5 0%, #ff6b81 40%, #e8c547 100%)" : undefined,
+          WebkitBackgroundClip: isMoon ? "text" : undefined,
+          WebkitTextFillColor: isMoon ? "transparent" : undefined,
           textAlign: "center",
           maxWidth: 860,
           lineHeight: 1.65,
           letterSpacing: isOpener ? "0.04em" : isSignature ? "0.08em" : "0.01em",
-          textShadow: isOpener || isHappy
+          textShadow: isMoon ? undefined : isOpener || isHappy
             ? "0 4px 40px rgba(255,255,255,0.25)"
             : "0 4px 20px rgba(255,255,255,0.1)"
         }}

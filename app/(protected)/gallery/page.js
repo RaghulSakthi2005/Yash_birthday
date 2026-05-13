@@ -81,8 +81,8 @@ const EpisodeCard = ({ ep, i }) => {
       whileHover={{ background: "rgba(255,255,255,0.05)", scale: 1.01, boxShadow: "0 10px 30px rgba(0,0,0,0.3)" }}
     >
       <div style={{ width: 160, height: 90, background: "#000", borderRadius: 8, overflow: "hidden", position: "relative", flexShrink: 0, boxShadow: "0 4px 15px rgba(0,0,0,0.5)" }}>
-        <video ref={videoRef} src={ep.src} muted loop playsInline className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-        <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none opacity-100 group-hover:opacity-0 transition-opacity duration-300 bg-black/20">
+        <video ref={videoRef} src={ep.src} muted loop playsInline className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110" />
+        <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none opacity-100 group-hover:opacity-0 transition-opacity duration-300 bg-black/10">
           <div className="w-8 h-8 rounded-full bg-black/60 backdrop-blur-sm border border-white/20 flex items-center justify-center">
             <svg className="w-4 h-4 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
           </div>
@@ -390,10 +390,8 @@ export default function GalleryPage() {
         </AnimatePresence>
 
         {(!selectedSeries) && (
-          <div style={{ marginTop: 60, paddingTop: 40, borderTop: "1px solid rgba(255,255,255,0.06)", display: "flex", gap: 16, flexWrap: "wrap", position: "relative", zIndex: 20 }}>
-            <Link href="/tree" className="btn-gold" style={{ padding: "16px 32px" }}>The Tree 🌳</Link>
-            <Link href="/letter" className="btn-ghost">Letter 💌</Link>
-            <Link href="/home" className="btn-ghost">← Story</Link>
+          <div style={{ marginTop: 60, paddingTop: 40, borderTop: "1px solid rgba(255,255,255,0.06)", display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center", position: "relative", zIndex: 20 }}>
+            <Link href="/tree" className="btn-gold" style={{ padding: "16px 32px" }}>Continue to The Tree 🌳</Link>
           </div>
         )}
       </div>

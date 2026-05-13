@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 import SyncedLyrics from "./SyncedLyrics";
 import { PlayIcon, PauseIcon, BackwardIcon, ForwardIcon, ListBulletIcon, XMarkIcon } from "@heroicons/react/24/solid";
 
@@ -104,16 +105,16 @@ export default function PlaylistPlayer({ playlistData }) {
         
         {/* ── MOBILE HEADER (Track Info) ── */}
         <div className="lg:hidden flex items-center gap-4 p-6 pt-10 relative z-20 bg-gradient-to-b from-black/40 to-transparent">
+          <button onClick={() => setIsPlaylistOpen(true)} className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+            <ListBulletIcon className="w-5 h-5 text-white" />
+          </button>
           <div className="w-14 h-14 rounded-xl overflow-hidden shadow-2xl flex-shrink-0">
             <img src={currentTrack.coverArt || "/images/placeholder.jpg"} alt="" className="w-full h-full object-cover" />
           </div>
-          <div className="flex-1 min-w-0">
+          <div className="flex-1 min-w-0 pr-20">
             <h2 className="text-lg font-bold text-white truncate">{currentTrack.title}</h2>
             <p className="text-xs text-white/50 font-medium truncate uppercase tracking-widest">{currentTrack.artist}</p>
           </div>
-          <button onClick={() => setIsPlaylistOpen(true)} className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
-            <ListBulletIcon className="w-5 h-5 text-white" />
-          </button>
         </div>
 
         {/* ── LEFT SIDE: ALBUM ART (DESKTOP) ── */}
@@ -130,23 +131,48 @@ export default function PlaylistPlayer({ playlistData }) {
 
         {/* ── MIDDLE: LYRICS (MAIN FOCUS) ── */}
         <div className="flex-1 h-full relative flex flex-col min-h-0">
-          {hasHighlights && (
-            <div className="absolute top-8 right-8 z-40 lg:top-12 lg:right-12">
+          <div className="hidden lg:flex absolute top-12 right-12 z-40 items-center gap-4">
+            {hasHighlights && (
               <button 
                 onClick={handleJumpToHighlight}
-                className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/10 text-white text-sm font-bold tracking-wide transition-all shadow-lg hover:scale-105 active:scale-95"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/10 text-white text-[15px] font-bold tracking-wide transition-all shadow-lg hover:scale-105 active:scale-95"
               >
                 <span className="text-pink-400">✨</span> Jump to Highlight
               </button>
-            </div>
-          )}
+            )}
+            <Link 
+              href="/chat"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-[rgba(232,197,71,0.9)] text-black hover:bg-[#e8c547] backdrop-blur-md border border-[#e8c547] text-[15px] font-bold tracking-wide transition-all shadow-[0_0_15px_rgba(232,197,71,0.3)] hover:scale-105 active:scale-95"
+            >
+              Continue to Chat 💬
+            </Link>
+          </div>
           <SyncedLyrics lyrics={currentTrack.lyrics} currentTime={currentTime} />
         </div>
 
         {/* ── BOTTOM CONTROL PANEL (MOBILE) ── */}
-        <div className="lg:hidden w-full p-6 pb-12 bg-black/60 backdrop-blur-3xl border-t border-white/5 relative z-30">
+        <div className="lg:hidden w-full p-5 pb-10 bg-black/60 backdrop-blur-3xl border-t border-white/5 relative z-30 flex flex-col gap-6">
+          
+          {/* Mobile Actions: Highlight & Chat */}
+          <div className="flex items-center justify-center gap-3 w-full px-2">
+            {hasHighlights && (
+              <button 
+                onClick={handleJumpToHighlight}
+                className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 text-white text-[13px] font-bold tracking-wide transition-all active:scale-95"
+              >
+                <span className="text-pink-400">✨</span> Highlight
+              </button>
+            )}
+            <Link 
+              href="/chat"
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-[rgba(232,197,71,0.9)] text-black border border-[#e8c547] text-[13px] font-bold tracking-wide transition-all active:scale-95 shadow-[0_0_15px_rgba(232,197,71,0.2)]"
+            >
+              To Chat 💬
+            </Link>
+          </div>
+
           {/* Progress / Seek Slider */}
-          <div className="mb-8 px-1">
+          <div className="w-full px-2">
              <input 
                type="range"
                min={0}
@@ -155,13 +181,13 @@ export default function PlaylistPlayer({ playlistData }) {
                onChange={handleSeek}
                className="w-full h-1.5 bg-white/10 rounded-full appearance-none cursor-pointer accent-white hover:accent-pink-400 transition-all"
              />
-             <div className="flex justify-between text-[10px] text-white/30 mt-4 font-bold tracking-widest uppercase">
+             <div className="flex justify-between text-[10px] text-white/30 mt-3 font-bold tracking-widest uppercase">
                <span>{formatTime(currentTime)}</span>
                <span>{formatTime(duration)}</span>
              </div>
           </div>
 
-          <div className="flex items-center justify-between gap-4 px-2">
+          <div className="flex items-center justify-between gap-4 px-4">
              <button onClick={prevTrack} className="w-12 h-12 flex items-center justify-center text-white/40 hover:text-white transition-all hover:scale-110 active:scale-95">
                <BackwardIcon className="w-8 h-8" />
              </button>
@@ -221,17 +247,17 @@ export default function PlaylistPlayer({ playlistData }) {
 
       {/* ── PLAYLIST OVERLAY ── */}
       <div 
-        className={`absolute inset-0 z-50 bg-black/80 backdrop-blur-2xl transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+        className={`fixed inset-0 z-[100] bg-black/80 backdrop-blur-2xl transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
           isPlaylistOpen ? "translate-y-0" : "translate-y-full"
         } flex flex-col`}
       >
-        <div className="flex items-center justify-between p-6 lg:p-10 border-b border-white/10">
+        <div className="flex items-center justify-between p-6 pt-12 lg:p-10 border-b border-white/10">
           <h3 className="text-2xl font-bold text-white tracking-tight">Up Next</h3>
           <button 
             onClick={() => setIsPlaylistOpen(false)}
-            className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+            className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors z-[110] shadow-lg cursor-pointer"
           >
-            <XMarkIcon className="w-6 h-6 text-white" />
+            <XMarkIcon className="w-7 h-7 text-white" />
           </button>
         </div>
         <div className="flex-1 overflow-y-auto p-4 lg:p-8 space-y-2">

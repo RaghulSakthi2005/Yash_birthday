@@ -197,6 +197,50 @@ export const galleryConfig = {
           "duration": "0m 30s"
         }
       ]
+    },
+    {
+      "id": "edits",
+      "title": "Edits",
+      "thumbnail": "/gallery/thumbnails/thumb_edits.jpg",
+      "description": "Cinematic highlights and creative edits of our favorite times. Every transition and every frame is crafted to celebrate the beautiful story we are building together.",
+      "episodes": [
+        {
+          "id": 1,
+          "title": "Memory 1",
+          "src": "/gallery/videos/vlogs/vlogs_1.mp4",
+          "duration": "0m 30s"
+        },
+        {
+          "id": 2,
+          "title": "Memory 2",
+          "src": "/gallery/videos/vlogs/vlogs_2.mp4",
+          "duration": "0m 30s"
+        },
+        {
+          "id": 3,
+          "title": "Memory 3",
+          "src": "/gallery/videos/vlogs/vlogs_3.mp4",
+          "duration": "0m 30s"
+        },
+        {
+          "id": 4,
+          "title": "Memory 4",
+          "src": "/gallery/videos/vlogs/vlogs_4.mp4",
+          "duration": "0m 30s"
+        },
+        {
+          "id": 5,
+          "title": "Memory 5",
+          "src": "/gallery/videos/vlogs/vlogs_5.mp4",
+          "duration": "0m 30s"
+        },
+        {
+          "id": 6,
+          "title": "Memory 6",
+          "src": "/gallery/videos/vlogs/vlogs_6.mp4",
+          "duration": "0m 30s"
+        }
+      ]
     }
   ]
 };

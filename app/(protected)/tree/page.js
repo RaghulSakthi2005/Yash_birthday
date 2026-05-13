@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function TreePage() {
   return (
@@ -26,6 +27,10 @@ export default function TreePage() {
         }}
         title="Birthday Tree"
       />
+      
+      <div style={{ position: "absolute", bottom: 40, left: 0, right: 0, display: "flex", justifyContent: "center", zIndex: 50, pointerEvents: "none" }}>
+        <Link href="/soul" style={{ pointerEvents: "auto", padding: "16px 40px", fontSize: "16px", borderRadius: "100px", background: "#e8c547", color: "#000", fontWeight: "700", textDecoration: "none", boxShadow: "0 10px 30px rgba(232,197,71,0.4)" }}>Continue to Soul ✨</Link>
+      </div>
     </div>
   );
 }

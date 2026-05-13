@@ -4050,8 +4050,224 @@
     "coverArt": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/cc/0f/2d/cc0f2d02-5ff1-10e7-eea2-76863a55dbad/887828031795.png/600x600bb.jpg",
     "lyrics": [
       {
-        "time": 0.0,
-        "text": "Enjoying I Wanna Be Yours..."
+        "time": 6.21,
+        "text": "I wanna be your vacuum cleaner",
+        "isHighlight": false
+      },
+      {
+        "time": 9.3,
+        "text": "Breathing in your dust",
+        "isHighlight": false
+      },
+      {
+        "time": 12.27,
+        "text": "I wanna be your Ford Cortina",
+        "isHighlight": false
+      },
+      {
+        "time": 15.17,
+        "text": "I will never rust",
+        "isHighlight": false
+      },
+      {
+        "time": 18.14,
+        "text": "If you like your coffee hot",
+        "isHighlight": false
+      },
+      {
+        "time": 21.02,
+        "text": "Let me be your coffee pot",
+        "isHighlight": false
+      },
+      {
+        "time": 23.98,
+        "text": "You call the shots, babe",
+        "isHighlight": false
+      },
+      {
+        "time": 26.11,
+        "text": "I just wanna be yours",
+        "isHighlight": false
+      },
+      {
+        "time": 29.63,
+        "text": "Secrets I have held in my heart",
+        "isHighlight": false
+      },
+      {
+        "time": 32.35,
+        "text": "Are harder to hide than I thought",
+        "isHighlight": false
+      },
+      {
+        "time": 35.55,
+        "text": "Maybe I just wanna be yours",
+        "isHighlight": false
+      },
+      {
+        "time": 38.21,
+        "text": "I wanna be yours",
+        "isHighlight": false
+      },
+      {
+        "time": 39.85,
+        "text": "I wanna be yours",
+        "isHighlight": false
+      },
+      {
+        "time": 42.78,
+        "text": "Wanna be yours",
+        "isHighlight": false
+      },
+      {
+        "time": 45.64,
+        "text": "Wanna be yours",
+        "isHighlight": true
+      },
+      {
+        "time": 48.86,
+        "text": "Wanna be yours",
+        "isHighlight": true
+      },
+      {
+        "time": 53.16,
+        "text": "Let me be your 'leccy meter",
+        "isHighlight": false
+      },
+      {
+        "time": 56.39,
+        "text": "And I'll never run out",
+        "isHighlight": false
+      },
+      {
+        "time": 58.73,
+        "text": "Let me be the portable heater",
+        "isHighlight": false
+      },
+      {
+        "time": 62.26,
+        "text": "That you'll get cold without",
+        "isHighlight": false
+      },
+      {
+        "time": 65.18,
+        "text": "I wanna be your setting lotion",
+        "isHighlight": false
+      },
+      {
+        "time": 67.85,
+        "text": "Hold your hair in deep devotion (I'll be)",
+        "isHighlight": false
+      },
+      {
+        "time": 70.76,
+        "text": "At least as deep as the Pacific Ocean",
+        "isHighlight": false
+      },
+      {
+        "time": 73.1,
+        "text": "Now I wanna be yours",
+        "isHighlight": false
+      },
+      {
+        "time": 76.67,
+        "text": "Secrets I have held in my heart",
+        "isHighlight": false
+      },
+      {
+        "time": 79.53,
+        "text": "Are harder to hide than I thought",
+        "isHighlight": false
+      },
+      {
+        "time": 82.4,
+        "text": "Maybe I just wanna be yours",
+        "isHighlight": false
+      },
+      {
+        "time": 85.17,
+        "text": "I wanna be yours",
+        "isHighlight": false
+      },
+      {
+        "time": 86.75,
+        "text": "I wanna be yours",
+        "isHighlight": false
+      },
+      {
+        "time": 89.63,
+        "text": "Wanna be yours",
+        "isHighlight": true
+      },
+      {
+        "time": 92.51,
+        "text": "Wanna be yours",
+        "isHighlight": true
+      },
+      {
+        "time": 95.56,
+        "text": "Wanna be yours",
+        "isHighlight": true
+      },
+      {
+        "time": 98.41,
+        "text": "Wanna be yours",
+        "isHighlight": false
+      },
+      {
+        "time": 101.67,
+        "text": "Wanna be yours",
+        "isHighlight": false
+      },
+      {
+        "time": 104.51,
+        "text": "Wanna be yours",
+        "isHighlight": false
+      },
+      {
+        "time": 107.56,
+        "text": "Wanna be yours",
+        "isHighlight": false
+      },
+      {
+        "time": 112.08,
+        "text": "I wanna be your vacuum cleaner",
+        "isHighlight": false
+      },
+      {
+        "time": 115.4,
+        "text": "Breathing in your dust",
+        "isHighlight": false
+      },
+      {
+        "time": 118.07,
+        "text": "I wanna be your Ford Cortina",
+        "isHighlight": false
+      },
+      {
+        "time": 121.2,
+        "text": "I will never rust",
+        "isHighlight": false
+      },
+      {
+        "time": 122.84,
+        "text": "I wanna be yours",
+        "isHighlight": false
+      },
+      {
+        "time": 125.51,
+        "text": "I wanna be yours",
+        "isHighlight": false
+      },
+      {
+        "time": 128.51,
+        "text": "I wanna be yours",
+        "isHighlight": false
+      },
+      {
+        "time": 131.58,
+        "text": "I wanna be yours",
+        "isHighlight": false
       }
     ]
   },
@@ -5492,8 +5708,314 @@
     "coverArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/61/6c/1a616c96-f9b1-589c-ec0f-3c0c8786bc1e/cover.jpg/600x600bb.jpg",
     "lyrics": [
       {
-        "time": 0.0,
-        "text": "Enjoying Adiyae Azhagae..."
+        "time": 25.78,
+        "text": "அடியே அழகே",
+        "isHighlight": false
+      },
+      {
+        "time": 28.26,
+        "text": "என் அழகே அடியே",
+        "isHighlight": false
+      },
+      {
+        "time": 31.96,
+        "text": "பேசாம நூறு நூறா",
+        "isHighlight": false
+      },
+      {
+        "time": 34.51,
+        "text": "கூறு போடாத",
+        "isHighlight": false
+      },
+      {
+        "time": 38.04,
+        "text": "வலியே வலியே",
+        "isHighlight": false
+      },
+      {
+        "time": 40.33,
+        "text": "என் ஒளியே ஒளியே",
+        "isHighlight": false
+      },
+      {
+        "time": 43.97,
+        "text": "நான் ஒன்னும் பூதம் இல்ல",
+        "isHighlight": false
+      },
+      {
+        "time": 46.51,
+        "text": "தூரம் ஓடாத",
+        "isHighlight": false
+      },
+      {
+        "time": 49.95,
+        "text": "காதோட நீ எரிச்ச",
+        "isHighlight": false
+      },
+      {
+        "time": 52.58,
+        "text": "வார்த்தை வந்து கீறுதே",
+        "isHighlight": false
+      },
+      {
+        "time": 55.63,
+        "text": "ஆனாலும் நீ தெளிச்ச",
+        "isHighlight": false
+      },
+      {
+        "time": 58.39,
+        "text": "காதல் உள்ள ஊறுதே",
+        "isHighlight": false
+      },
+      {
+        "time": 61.55,
+        "text": "வாயாடி பேயா",
+        "isHighlight": false
+      },
+      {
+        "time": 64.07,
+        "text": "என் தூக்கம் தூக்கி போற",
+        "isHighlight": false
+      },
+      {
+        "time": 74.11,
+        "text": "அடியே அழகே",
+        "isHighlight": false
+      },
+      {
+        "time": 76.48,
+        "text": "என் அழகே அடியே",
+        "isHighlight": false
+      },
+      {
+        "time": 79.97,
+        "text": "பேசாம நூறு நூறா",
+        "isHighlight": false
+      },
+      {
+        "time": 82.69,
+        "text": "கூறு போடாத",
+        "isHighlight": false
+      },
+      {
+        "time": 85.91,
+        "text": "வலியே வலியே",
+        "isHighlight": false
+      },
+      {
+        "time": 88.3,
+        "text": "என் ஒளியே ஒளியே",
+        "isHighlight": false
+      },
+      {
+        "time": 92.02,
+        "text": "நான் ஒன்னும் பூதம் இல்ல",
+        "isHighlight": true
+      },
+      {
+        "time": 94.79,
+        "text": "தூரம் ஓடாத",
+        "isHighlight": true
+      },
+      {
+        "time": 128.06,
+        "text": "போனா போறா தானா வருவா",
+        "isHighlight": false
+      },
+      {
+        "time": 131.02,
+        "text": "மெதப்புல திரிஞ்சேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 134.03,
+        "text": "வீராப்பெல்லாம் வீணா போச்சு",
+        "isHighlight": false
+      },
+      {
+        "time": 136.85,
+        "text": "பொசுக்குன்னு உடைஞ்சேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 140.2,
+        "text": "உன் சுக பார்வை",
+        "isHighlight": false
+      },
+      {
+        "time": 143.11,
+        "text": "உரசுது மேல",
+        "isHighlight": false
+      },
+      {
+        "time": 146.15,
+        "text": "சிரிக்கிற ஓசை",
+        "isHighlight": false
+      },
+      {
+        "time": 148.7,
+        "text": "சரிக்கிது ஆள",
+        "isHighlight": false
+      },
+      {
+        "time": 151.54,
+        "text": "தீத்தூவி...",
+        "isHighlight": false
+      },
+      {
+        "time": 154.63,
+        "text": "தீத்தூவி போனா",
+        "isHighlight": false
+      },
+      {
+        "time": 156.98,
+        "text": "அவ வேணும் நானும் வாழ",
+        "isHighlight": false
+      },
+      {
+        "time": 184.91,
+        "text": "ஏனோ உன்ன",
+        "isHighlight": false
+      },
+      {
+        "time": 186.53,
+        "text": "பார்த்தா உள்ள",
+        "isHighlight": false
+      },
+      {
+        "time": 188.02,
+        "text": "சுருக்குனு வருது",
+        "isHighlight": false
+      },
+      {
+        "time": 190.93,
+        "text": "ஆனா கிட்ட",
+        "isHighlight": false
+      },
+      {
+        "time": 192.41,
+        "text": "நீயா வந்தா",
+        "isHighlight": false
+      },
+      {
+        "time": 193.84,
+        "text": "மனசு அங்க விழுது",
+        "isHighlight": false
+      },
+      {
+        "time": 197.08,
+        "text": "எதுக்கு இந்த கோபம்",
+        "isHighlight": false
+      },
+      {
+        "time": 200.0,
+        "text": "நடிச்சது போதும்",
+        "isHighlight": true
+      },
+      {
+        "time": 203.08,
+        "text": "மறைச்சி நீ பார்த்தும்",
+        "isHighlight": true
+      },
+      {
+        "time": 205.98,
+        "text": "வெளுக்குது சாயம்",
+        "isHighlight": true
+      },
+      {
+        "time": 208.05,
+        "text": "ஹெ நேத்தே",
+        "isHighlight": false
+      },
+      {
+        "time": 209.74,
+        "text": "நான் தோத்தேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 211.19,
+        "text": "அட இதுதானா",
+        "isHighlight": false
+      },
+      {
+        "time": 212.44,
+        "text": "உன் வேகம்",
+        "isHighlight": false
+      },
+      {
+        "time": 221.01,
+        "text": "அடியே அழகே",
+        "isHighlight": false
+      },
+      {
+        "time": 224.19,
+        "text": "அழகே அடியே",
+        "isHighlight": false
+      },
+      {
+        "time": 226.95,
+        "text": "பேசாம நூறு நூறா",
+        "isHighlight": false
+      },
+      {
+        "time": 229.52,
+        "text": "கூறு போடாத",
+        "isHighlight": false
+      },
+      {
+        "time": 232.92,
+        "text": "வலியே வலியே",
+        "isHighlight": false
+      },
+      {
+        "time": 235.84,
+        "text": "ஒளியே ஒளியே",
+        "isHighlight": false
+      },
+      {
+        "time": 238.98,
+        "text": "நான் ஒன்னும் பூதம் இல்ல",
+        "isHighlight": false
+      },
+      {
+        "time": 241.44,
+        "text": "தூரம் ஓடாத",
+        "isHighlight": false
+      },
+      {
+        "time": 245.28,
+        "text": "காதோட நீ எரிச்ச",
+        "isHighlight": false
+      },
+      {
+        "time": 247.34,
+        "text": "வார்த்தை வந்து கீறுதே",
+        "isHighlight": false
+      },
+      {
+        "time": 250.44,
+        "text": "ஆனாலும் நீ தெளிச்ச",
+        "isHighlight": false
+      },
+      {
+        "time": 253.59,
+        "text": "காதல் உள்ள ஊறுதே",
+        "isHighlight": false
+      },
+      {
+        "time": 256.59,
+        "text": "வாயாடி பேயா",
+        "isHighlight": false
+      },
+      {
+        "time": 259.25,
+        "text": "என் தூக்கம் தூக்கி போற",
+        "isHighlight": false
+      },
+      {
+        "time": 277.74,
+        "text": "அடியே அழகே...",
+        "isHighlight": false
       }
     ]
   },
@@ -8770,8 +9292,154 @@
     "coverArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/25/40/6f/25406f61-50f4-13c2-5247-f7a07cebef4d/886446583303.jpg/600x600bb.jpg",
     "lyrics": [
       {
-        "time": 0.0,
-        "text": "Enjoying Kadhalaada (Reprise)..."
+        "time": 18.39,
+        "text": "Kadhalaada kadhalaada kaathirundhene",
+        "isHighlight": false
+      },
+      {
+        "time": 24.61,
+        "text": "Aasai noolil paasa pookkal korthirundhene",
+        "isHighlight": false
+      },
+      {
+        "time": 31.46,
+        "text": "Seiyaadha maadhavam neeye",
+        "isHighlight": false
+      },
+      {
+        "time": 35.25,
+        "text": "Poiyadha perarul neeye",
+        "isHighlight": false
+      },
+      {
+        "time": 38.76,
+        "text": "Oyadha thenmazhai adhai yendhave",
+        "isHighlight": false
+      },
+      {
+        "time": 42.92,
+        "text": "Pudhu boomi seivome",
+        "isHighlight": false
+      },
+      {
+        "time": 47.55,
+        "text": "Unnodu vaazhvadhu aanandhame",
+        "isHighlight": false
+      },
+      {
+        "time": 50.33,
+        "text": "Ovvoru pozhuthilum perinbame",
+        "isHighlight": false
+      },
+      {
+        "time": 54.42,
+        "text": "Theeradha thevaigal aanandhame",
+        "isHighlight": false
+      },
+      {
+        "time": 57.84,
+        "text": "Illaigal ingillai perinbame",
+        "isHighlight": false
+      },
+      {
+        "time": 77.41,
+        "text": "Thaai yennum thanga deivam",
+        "isHighlight": true
+      },
+      {
+        "time": 78.51,
+        "text": "Maraatha anbin vadhanam",
+        "isHighlight": true
+      },
+      {
+        "time": 80.31,
+        "text": "Paaraalum penmaikulle",
+        "isHighlight": true
+      },
+      {
+        "time": 82.02,
+        "text": "Thaai enra unmai malarum",
+        "isHighlight": true
+      },
+      {
+        "time": 83.83,
+        "text": "Neengatha nesam thannai",
+        "isHighlight": false
+      },
+      {
+        "time": 85.49,
+        "text": "Thoongatha thaimai thalugum",
+        "isHighlight": false
+      },
+      {
+        "time": 87.28,
+        "text": "Seiyendhum thottil aagi",
+        "isHighlight": false
+      },
+      {
+        "time": 89.07,
+        "text": "Thaai konda thyagam valarum",
+        "isHighlight": false
+      },
+      {
+        "time": 91.25,
+        "text": "Thaai yennum thanga deivam",
+        "isHighlight": false
+      },
+      {
+        "time": 92.9,
+        "text": "Maraatha anbin vadhanam",
+        "isHighlight": true
+      },
+      {
+        "time": 94.83,
+        "text": "Paaraalum penmaikulle",
+        "isHighlight": true
+      },
+      {
+        "time": 96.54,
+        "text": "Thaai enra unmai malarum",
+        "isHighlight": true
+      },
+      {
+        "time": 98.46,
+        "text": "Neengatha nesam thannai",
+        "isHighlight": true
+      },
+      {
+        "time": 100.39,
+        "text": "Thoongatha thaimai thalugum",
+        "isHighlight": false
+      },
+      {
+        "time": 102.28,
+        "text": "Seiyendhum thottil aagi",
+        "isHighlight": false
+      },
+      {
+        "time": 104.1,
+        "text": "Thaai konda thyagam valarum",
+        "isHighlight": false
+      },
+      {
+        "time": 106.09,
+        "text": "Unnodu vazhvadhu aanandhame",
+        "isHighlight": false
+      },
+      {
+        "time": 113.06,
+        "text": "Unnodu vazhvadhu aanandhame",
+        "isHighlight": false
+      },
+      {
+        "time": 120.74,
+        "text": "Unnodu unnodu vazhvadhu",
+        "isHighlight": false
+      },
+      {
+        "time": 128.9,
+        "text": "Unnodu vazhvadhu aanandhame",
+        "isHighlight": false
       }
     ]
   },
@@ -9117,8 +9785,74 @@
     "coverArt": "https://is1-ssl.mzstatic.com/image/thumb/Music30/v4/b4/5b/e1/b45be117-6149-1e16-c390-ca0524b039db/cover.jpg/600x600bb.jpg",
     "lyrics": [
       {
-        "time": 0.0,
-        "text": "Enjoying Vazhi Parthirundhen..."
+        "time": 26.74,
+        "text": "வழி பார்த்திருந்தேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 29.61,
+        "text": "உன் தடம் தோன்றுமென்றேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 34.67,
+        "text": "என் விழி மூடவில்லை",
+        "isHighlight": false
+      },
+      {
+        "time": 37.32,
+        "text": "பார்வை இடம் மாறவில்லை",
+        "isHighlight": false
+      },
+      {
+        "time": 40.03,
+        "text": "பல யுகம் தாண்டி வந்தேன்",
+        "isHighlight": true
+      },
+      {
+        "time": 42.64,
+        "text": "உன் முகம் காட்டு பெண்ணே",
+        "isHighlight": true
+      },
+      {
+        "time": 48.26,
+        "text": "வழி பார்த்திருந்தேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 50.67,
+        "text": "உன் தடம் தோன்றுமென்றேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 90.79,
+        "text": "நொடி ஒவ்வொன்றும்",
+        "isHighlight": false
+      },
+      {
+        "time": 92.48,
+        "text": "உன்னை தேடி வாழ்கிறதே",
+        "isHighlight": true
+      },
+      {
+        "time": 99.12,
+        "text": "சில்லென்ற காற்று என்னை கடிக்கின்றதே",
+        "isHighlight": false
+      },
+      {
+        "time": 103.82,
+        "text": "காத்திருக்கும் நேரம் மிகவும் சுடுகின்றதே",
+        "isHighlight": false
+      },
+      {
+        "time": 109.18,
+        "text": "என் இமை மூடா கண்கள்",
+        "isHighlight": false
+      },
+      {
+        "time": 111.78,
+        "text": "உன் நிழல் பார்க்க துடிக்கின்றதே",
+        "isHighlight": false
       }
     ]
   },
@@ -10846,8 +11580,244 @@
     "coverArt": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/62/d6/74/62d67432-0670-631f-db6a-d4bac3adae4b/8902894353328_cover.jpg/600x600bb.jpg",
     "lyrics": [
       {
-        "time": 0.0,
-        "text": "Enjoying Kabira..."
+        "time": 20.85,
+        "text": "गुरु-गोबिंद दो खड़े, काके लागो पाय?",
+        "isHighlight": false
+      },
+      {
+        "time": 30.73,
+        "text": "गुरु-गोबिंद दो खड़े, काके लागो पाय?",
+        "isHighlight": false
+      },
+      {
+        "time": 40.45,
+        "text": "बलिहारी गुरु, आपने गोबिंद दियो बताय",
+        "isHighlight": false
+      },
+      {
+        "time": 48.25,
+        "text": "कबीरा, गोबिंद दियो बताय",
+        "isHighlight": false
+      },
+      {
+        "time": 64.9,
+        "text": "बड़ा हुआ तो क्या हुआ जैसे पेड़ खजूर?",
+        "isHighlight": false
+      },
+      {
+        "time": 74.67,
+        "text": "बड़ा हुआ तो क्या हुआ जैसे पेड़ खजूर?",
+        "isHighlight": false
+      },
+      {
+        "time": 84.67,
+        "text": "पंथी को छाया नहीं, फल लागे अति दूर",
+        "isHighlight": false
+      },
+      {
+        "time": 92.51,
+        "text": "कबीरा, फल लागे अति दूर",
+        "isHighlight": false
+      },
+      {
+        "time": 109.09,
+        "text": "ऐसी बानी बोलिए मन का आपा खोय",
+        "isHighlight": false
+      },
+      {
+        "time": 118.95,
+        "text": "ऐसी बानी बोलिए मन का आपा खोय",
+        "isHighlight": false
+      },
+      {
+        "time": 128.62,
+        "text": "औरन को सीतल करे, आपहुँ सीतल होय",
+        "isHighlight": false
+      },
+      {
+        "time": 136.33,
+        "text": "कबीरा, आपहुँ सीतल होय",
+        "isHighlight": false
+      },
+      {
+        "time": 153.01,
+        "text": "बुरा जो देखन मैं चला, बुरा ना मिलिया कोय",
+        "isHighlight": false
+      },
+      {
+        "time": 162.97,
+        "text": "बुरा जो देखन मैं चला, बुरा ना मिलिया कोय",
+        "isHighlight": false
+      },
+      {
+        "time": 172.79,
+        "text": "जो मन खोजा आपना, मुझसे बुरा ना कोय, कबीरा",
+        "isHighlight": false
+      },
+      {
+        "time": 182.6,
+        "text": "मुझसे बुरा ना कोय",
+        "isHighlight": false
+      },
+      {
+        "time": 197.29,
+        "text": "माटी कहे कुम्हार से, \"तू क्या रौंदे मोय?\"",
+        "isHighlight": true
+      },
+      {
+        "time": 207.12,
+        "text": "माटी कहे कुम्हार से, \"तू क्या रौंदे मोय?\"",
+        "isHighlight": false
+      },
+      {
+        "time": 216.84,
+        "text": "एक दिन ऐसा आएगा, मैं रौंदूँगी तोय, कबीरा",
+        "isHighlight": false
+      },
+      {
+        "time": 226.58,
+        "text": "मैं रौंदूँगी तोय\"",
+        "isHighlight": false
+      },
+      {
+        "time": 241.36,
+        "text": "काल करे सो आज कर, आज करे सो अब",
+        "isHighlight": false
+      },
+      {
+        "time": 251.05,
+        "text": "काल करे सो आज कर, आज करे सो अब",
+        "isHighlight": false
+      },
+      {
+        "time": 260.7,
+        "text": "पल में परलय होएगी, बहुरी करेगा कब, कबीरा?",
+        "isHighlight": false
+      },
+      {
+        "time": 270.69,
+        "text": "बहुरी करेगा कब?",
+        "isHighlight": false
+      },
+      {
+        "time": 285.42,
+        "text": "माया मरी, ना मन मरा, मर-मर गए शरीर",
+        "isHighlight": false
+      },
+      {
+        "time": 295.39,
+        "text": "माया मरी, ना मन मरा, मर-मर गए शरीर",
+        "isHighlight": false
+      },
+      {
+        "time": 305.06,
+        "text": "आस्था-तृष्णा ना मरी कह गए दास कबीर",
+        "isHighlight": false
+      },
+      {
+        "time": 312.73,
+        "text": "रे बंधु, कह गए दास कबीर",
+        "isHighlight": false
+      },
+      {
+        "time": 329.41,
+        "text": "पोथी पढ़-पढ़ जग मुआ, पंडित भया ना कोय",
+        "isHighlight": false
+      },
+      {
+        "time": 339.32,
+        "text": "पोथी पढ़-पढ़ जग मुआ, पंडित भया ना कोय",
+        "isHighlight": false
+      },
+      {
+        "time": 349.29,
+        "text": "ढाई अक्षर प्रेम का पढ़े सो पंडित होय, कबीरा",
+        "isHighlight": false
+      },
+      {
+        "time": 358.98,
+        "text": "पढ़े सो पंडित होय",
+        "isHighlight": true
+      },
+      {
+        "time": 373.46,
+        "text": "दुख में सुमिरन सब करें, सुख में करे ना कोय",
+        "isHighlight": false
+      },
+      {
+        "time": 383.44,
+        "text": "दुख में सुमिरन सब करें, सुख में करे ना कोय",
+        "isHighlight": false
+      },
+      {
+        "time": 393.32,
+        "text": "जो सुख में सुमिरन करे तो दुख काहे होय, कबीरा?",
+        "isHighlight": false
+      },
+      {
+        "time": 403.05,
+        "text": "तो दुख काहे होय?",
+        "isHighlight": false
+      },
+      {
+        "time": 417.61,
+        "text": "मेरा मुझमें कुछ नहीं, जो कुछ है, सो तेरा",
+        "isHighlight": false
+      },
+      {
+        "time": 427.49,
+        "text": "मेरा मुझमें कुछ नहीं, जो कुछ है, सो तेरा",
+        "isHighlight": false
+      },
+      {
+        "time": 437.27,
+        "text": "तेरा तुझको सौंपते क्या लागे है मेरा, कबीरा?",
+        "isHighlight": false
+      },
+      {
+        "time": 447.09,
+        "text": "क्या लागे है मेरा?",
+        "isHighlight": false
+      },
+      {
+        "time": 461.75,
+        "text": "जाति ना पूछो साधु की, पूछ लीजियो ज्ञान",
+        "isHighlight": false
+      },
+      {
+        "time": 471.68,
+        "text": "जाति ना पूछो साधु की, पूछ लीजियो ज्ञान",
+        "isHighlight": false
+      },
+      {
+        "time": 481.23,
+        "text": "मोल करो तलवार का, पड़ी रहन दो म्यान",
+        "isHighlight": false
+      },
+      {
+        "time": 489.16,
+        "text": "कबीरा, पड़ी रहन दो म्यान",
+        "isHighlight": false
+      },
+      {
+        "time": 505.96,
+        "text": "निंदक नियरे राखिए, आँगन कुटी छवाय",
+        "isHighlight": false
+      },
+      {
+        "time": 515.41,
+        "text": "निंदक नियरे राखिए, आँगन कुटी छवाय",
+        "isHighlight": false
+      },
+      {
+        "time": 525.26,
+        "text": "बिन पानी, साबुन बिन, निर्मल करे सुहाय",
+        "isHighlight": false
+      },
+      {
+        "time": 533.35,
+        "text": "कबीरा, निर्मल करे सुहाय",
+        "isHighlight": false
       }
     ]
   },
@@ -11307,8 +12277,169 @@
     "coverArt": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ed/89/b9/ed89b928-7a65-1bd3-4cc6-30653b84cdbb/886445292183.jpg/600x600bb.jpg",
     "lyrics": [
       {
-        "time": 0.0,
-        "text": "Enjoying Nenjukkul Peidhidum..."
+        "time": 21.96,
+        "text": "நெஞ்சுக்குள் பெய்திடும் மாமழை",
+        "isHighlight": false
+      },
+      {
+        "time": 26.37,
+        "text": "நீருக்குள் மூழ்கிடும் தாமரை",
+        "isHighlight": false
+      },
+      {
+        "time": 30.27,
+        "text": "சட்டென்று மாறுது வானிலை",
+        "isHighlight": false
+      },
+      {
+        "time": 34.23,
+        "text": "பெண்ணே உன் மேல் பிழை",
+        "isHighlight": false
+      },
+      {
+        "time": 38.91,
+        "text": "நில்லாமல் வீசிடும் பேரலை",
+        "isHighlight": false
+      },
+      {
+        "time": 42.83,
+        "text": "நெஞ்சுக்குள் நீந்திடும் தாரகை",
+        "isHighlight": false
+      },
+      {
+        "time": 46.9,
+        "text": "பொன்வண்ணம் சூடிய காரிகை",
+        "isHighlight": false
+      },
+      {
+        "time": 51.02,
+        "text": "பெண்ணே நீ காஞ்சனை",
+        "isHighlight": false
+      },
+      {
+        "time": 54.43,
+        "text": "ஓ ஷாந்தி ஷாந்தி ஓ ஷாந்தி",
+        "isHighlight": false
+      },
+      {
+        "time": 58.64,
+        "text": "என் உயிரை உயிரை நீ ஏந்தி",
+        "isHighlight": false
+      },
+      {
+        "time": 62.74,
+        "text": "ஏன் சென்றாய் சென்றாய் எனை தாண்டி",
+        "isHighlight": false
+      },
+      {
+        "time": 66.92,
+        "text": "இனி நீதான் எந்தன் அந்தாதி",
+        "isHighlight": true
+      },
+      {
+        "time": 105.56,
+        "text": "ஏதோ ஒன்று என்னை ஈர்க்க",
+        "isHighlight": false
+      },
+      {
+        "time": 109.58,
+        "text": "மூக்கின் நுனி மர்மம் சேர்க்க",
+        "isHighlight": false
+      },
+      {
+        "time": 113.66,
+        "text": "கள்ளத்தனம் ஏதும் இல்லா",
+        "isHighlight": false
+      },
+      {
+        "time": 117.49,
+        "text": "புன்னகையோ மோகமில்லா",
+        "isHighlight": false
+      },
+      {
+        "time": 122.17,
+        "text": "நீ நின்ற இடமென்றால் விலையேறி போகாதோ",
+        "isHighlight": false
+      },
+      {
+        "time": 126.25,
+        "text": "நீ செல்லும் வழியெல்லாம் பனிக்கட்டி ஆகாதோ",
+        "isHighlight": false
+      },
+      {
+        "time": 130.38,
+        "text": "என்னோடு வா வீடு வரைக்கும்",
+        "isHighlight": false
+      },
+      {
+        "time": 134.54,
+        "text": "என் வீட்டை பார் என்னை பிடிக்கும்",
+        "isHighlight": false
+      },
+      {
+        "time": 138.12,
+        "text": "இவள் யாரோ யாரோ தெரியாதே",
+        "isHighlight": false
+      },
+      {
+        "time": 142.22,
+        "text": "இவள் பின்னால் நெஞ்சே போகாதே",
+        "isHighlight": true
+      },
+      {
+        "time": 146.38,
+        "text": "இது பொய்யோ மெய்யோ தெரியாதே",
+        "isHighlight": true
+      },
+      {
+        "time": 150.47,
+        "text": "இவள் பின்னால் நெஞ்சே போகாதே",
+        "isHighlight": false
+      },
+      {
+        "time": 154.64,
+        "text": "போகாதே...",
+        "isHighlight": false
+      },
+      {
+        "time": 157.76,
+        "text": "நெஞ்சுக்குள் பெய்திடும் மாமழை",
+        "isHighlight": false
+      },
+      {
+        "time": 161.35,
+        "text": "நீருக்குள் மூழ்கிடும் தாமரை",
+        "isHighlight": false
+      },
+      {
+        "time": 165.44,
+        "text": "சட்டென்று மாறுது வானிலை",
+        "isHighlight": false
+      },
+      {
+        "time": 169.6,
+        "text": "பெண்ணே உன் மேல் பிழை",
+        "isHighlight": false
+      },
+      {
+        "time": 174.36,
+        "text": "நில்லாமல் வீசிடும் பேரலை",
+        "isHighlight": false
+      },
+      {
+        "time": 178.41,
+        "text": "நெஞ்சுக்குள் நீந்திடும் தாரகை",
+        "isHighlight": false
+      },
+      {
+        "time": 182.57,
+        "text": "பொன்வண்ணம் சூடிய காரிகை",
+        "isHighlight": false
+      },
+      {
+        "time": 186.93,
+        "text": "பெண்ணே நீ காஞ்சனை",
+        "isHighlight": false
       }
     ]
   },
@@ -11504,8 +12635,254 @@
     "coverArt": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/97/a3/f8/97a3f8a6-5121-0187-2e3c-f7eb5dbd4c28/cover.jpg/600x600bb.jpg",
     "lyrics": [
       {
-        "time": 0.0,
-        "text": "Enjoying Yaanji..."
+        "time": 22.31,
+        "text": "யாஞ்சி யாஞ்சி ஏன் நெஞ்சில் வந்து வந்து நிக்குற ஏன்",
+        "isHighlight": false
+      },
+      {
+        "time": 36.13,
+        "text": "என்ன சாஞ்சி சாஞ்சி நீ பார்த்து உன்னில் சிக்க வைக்குற ஏன்",
+        "isHighlight": false
+      },
+      {
+        "time": 47.22,
+        "text": "கனாவென முளைக்கிறாய்",
+        "isHighlight": false
+      },
+      {
+        "time": 50.93,
+        "text": "இமை அனைக்கையில் நான்",
+        "isHighlight": false
+      },
+      {
+        "time": 54.51,
+        "text": "வினா வென வலைகிறேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 57.94,
+        "text": "உனை நினைக்கையில்",
+        "isHighlight": false
+      },
+      {
+        "time": 61.88,
+        "text": "ஓ நெஞ்சாத்தியே நெஞ்சாத்தியே",
+        "isHighlight": false
+      },
+      {
+        "time": 66.51,
+        "text": "நீதானடி என் வாழ்க்கையே",
+        "isHighlight": false
+      },
+      {
+        "time": 69.98,
+        "text": "ஓ ஹோ ஓ",
+        "isHighlight": false
+      },
+      {
+        "time": 71.49,
+        "text": "நீ என்பதே நான் என்கிற நீயே",
+        "isHighlight": false
+      },
+      {
+        "time": 76.35,
+        "text": "ஓ நெஞ்சாத்தியே(நெஞ்சாத்தியே), நெஞ்சாத்தியே",
+        "isHighlight": false
+      },
+      {
+        "time": 80.74,
+        "text": "நீதானடி என் வாழ்க்கையே",
+        "isHighlight": false
+      },
+      {
+        "time": 83.99,
+        "text": "ஓ ஹோ ஓ",
+        "isHighlight": false
+      },
+      {
+        "time": 86.54,
+        "text": "நீ என்பதே நான் என்கிற நீயே",
+        "isHighlight": false
+      },
+      {
+        "time": 94.61,
+        "text": "யாஞ்சி ஏன்...",
+        "isHighlight": false
+      },
+      {
+        "time": 119.99,
+        "text": "மென்மையாய் மெல்ல நகரும் எந்தன் நாட்குறிப்பில்",
+        "isHighlight": false
+      },
+      {
+        "time": 123.65,
+        "text": "பண்மையாய் நீ வந்து சேரும் மாயம் என்ன",
+        "isHighlight": true
+      },
+      {
+        "time": 127.22,
+        "text": "என்னவோ செய்கிறாய் நீ என் ஆயுள்",
+        "isHighlight": true
+      },
+      {
+        "time": 130.52,
+        "text": "எல்லைகள் போல் ஆகிறாய்",
+        "isHighlight": false
+      },
+      {
+        "time": 133.24,
+        "text": "ஓ ஹோ ஓ",
+        "isHighlight": false
+      },
+      {
+        "time": 134.78,
+        "text": "காந்தமாய் என்னை ஈர்க்கும் உந்தன் அன்பு இன்று",
+        "isHighlight": false
+      },
+      {
+        "time": 138.34,
+        "text": "சாந்தமாய் என்னை கட்டி போடும் ஜாலம் என்ன",
+        "isHighlight": false
+      },
+      {
+        "time": 141.88,
+        "text": "கேட்கிறேன் கூரடி பெண்மையே",
+        "isHighlight": false
+      },
+      {
+        "time": 145.04,
+        "text": "வாழ்க்க போகும் தூரம் நீயும் நானும் போக வேணும்",
+        "isHighlight": false
+      },
+      {
+        "time": 148.54,
+        "text": "எந்தன் நெஞ்சில் கோடி ஆசை தோன்றுது",
+        "isHighlight": false
+      },
+      {
+        "time": 151.89,
+        "text": "நீ எந்தன் பாதி என்றும்",
+        "isHighlight": false
+      },
+      {
+        "time": 154.39,
+        "text": "நானும் உந்தன் மீதி என்றும்",
+        "isHighlight": false
+      },
+      {
+        "time": 155.85,
+        "text": "காதல் காதுக்குள்ள வந்து ஓடுது",
+        "isHighlight": false
+      },
+      {
+        "time": 165.24,
+        "text": "யாஞ்சி...",
+        "isHighlight": false
+      },
+      {
+        "time": 183.31,
+        "text": "ஓ ஹோ ஓ... உன் விரல் என்னை செல்லமாக தீண்டும் நேரம்",
+        "isHighlight": false
+      },
+      {
+        "time": 189.13,
+        "text": "என் நிழல் உன்னை ஒட்டிக்கொள்ளும் ரொம்ப நேரம்",
+        "isHighlight": false
+      },
+      {
+        "time": 193.26,
+        "text": "போர்வையில் நூல் என சேர்ந்து கொண்டோமே எப்போதும் கண் மூடியே",
+        "isHighlight": false
+      },
+      {
+        "time": 200.45,
+        "text": "பிரம்மனால் ஆன பொம்மலாட்டம் பூமி மீது",
+        "isHighlight": false
+      },
+      {
+        "time": 203.85,
+        "text": "நூலினால் ஆடும் பொம்மையாக நீயும் நானும்",
+        "isHighlight": true
+      },
+      {
+        "time": 207.5,
+        "text": "ஆடுவோம், சாடுவோம், மீழுவோம்",
+        "isHighlight": true
+      },
+      {
+        "time": 210.76,
+        "text": "ஏதோ ராகம் நெஞ்சுக்குள்ள வந்து வந்து",
+        "isHighlight": false
+      },
+      {
+        "time": 214.3,
+        "text": "உன் பேரை சொல்லி சொல்லி பாடுது",
+        "isHighlight": false
+      },
+      {
+        "time": 217.59,
+        "text": "என் ரத்த செல்கள் உன்ன கண்ட பின்பு கொடிகள் ஏந்தி",
+        "isHighlight": false
+      },
+      {
+        "time": 221.56,
+        "text": "உன்ன முத்தம் செய்ய சொல்லி கூவுது",
+        "isHighlight": false
+      },
+      {
+        "time": 227.58,
+        "text": "யாஞ்சி...",
+        "isHighlight": false
+      },
+      {
+        "time": 229.07,
+        "text": "ஓ ஹோ ஓ",
+        "isHighlight": false
+      },
+      {
+        "time": 230.92,
+        "text": "ஓ நெஞ்சாத்தியே நெஞ்சாத்தியே",
+        "isHighlight": false
+      },
+      {
+        "time": 235.02,
+        "text": "நீதானடி என் வாழ்க்கையே",
+        "isHighlight": false
+      },
+      {
+        "time": 238.27,
+        "text": "ஓ ஹோ ஓ",
+        "isHighlight": false
+      },
+      {
+        "time": 239.96,
+        "text": "நீ என்பதே நான் என்கிற நீயே",
+        "isHighlight": false
+      },
+      {
+        "time": 245.04,
+        "text": "ஓ நெஞ்சாத்தியே நெஞ்சாத்தியே",
+        "isHighlight": false
+      },
+      {
+        "time": 249.56,
+        "text": "நீதானடி என் வாழ்க்கையே",
+        "isHighlight": false
+      },
+      {
+        "time": 252.71,
+        "text": "ஓ ஹோ ஓ",
+        "isHighlight": false
+      },
+      {
+        "time": 254.66,
+        "text": "நீ என்பதே நான் என்கிற நீயே",
+        "isHighlight": false
+      },
+      {
+        "time": 259.98,
+        "text": "யாஞ்சி ஏன்...",
+        "isHighlight": false
       }
     ]
   },
@@ -11517,8 +12894,154 @@
     "coverArt": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4e/e9/4b/4ee94b14-f19d-14a4-6439-b129d8f79cf3/196872484045.jpg/600x600bb.jpg",
     "lyrics": [
       {
-        "time": 0.0,
-        "text": "Enjoying Naan Pizhai..."
+        "time": 19.93,
+        "text": "நான் பிழை நீ மழலை",
+        "isHighlight": false
+      },
+      {
+        "time": 24.72,
+        "text": "எனக்குள் நீ இருந்தால் அது தவறே இல்லை",
+        "isHighlight": false
+      },
+      {
+        "time": 29.17,
+        "text": "நீ இலை நான் பருவ மழை",
+        "isHighlight": false
+      },
+      {
+        "time": 33.99,
+        "text": "சிறு சிறு துளியாய் விழும் தருணம் இல்லை",
+        "isHighlight": false
+      },
+      {
+        "time": 39.21,
+        "text": "ஆழியில் இருந்து அலசி எடுத்தேனே",
+        "isHighlight": false
+      },
+      {
+        "time": 43.81,
+        "text": "அடைக்கலம் அமைக்க தகுந்தவன் தானே",
+        "isHighlight": false
+      },
+      {
+        "time": 47.12,
+        "text": "அடி அழகா சிரிச்ச முகமே",
+        "isHighlight": false
+      },
+      {
+        "time": 51.92,
+        "text": "நான் நெனச்சா தோணும் இடமே",
+        "isHighlight": false
+      },
+      {
+        "time": 56.8,
+        "text": "அடி அழகா சிரிச்ச முகமே நெனச்சா தோணும் இடமே",
+        "isHighlight": false
+      },
+      {
+        "time": 62.09,
+        "text": "நான் பிறந்த தினமே கெடச்ச வரமே, oh...",
+        "isHighlight": false
+      },
+      {
+        "time": 67.46,
+        "text": "நான் பிழை நீ மழலை",
+        "isHighlight": true
+      },
+      {
+        "time": 72.56,
+        "text": "எனக்குள் நீ இருந்தால் அது தவறே இல்லை",
+        "isHighlight": true
+      },
+      {
+        "time": 77.05,
+        "text": "நீ இலை நான் பருவ மழை",
+        "isHighlight": false
+      },
+      {
+        "time": 81.71,
+        "text": "சிறு சிறு துளியாய் விழும் தருணம் இல்லை",
+        "isHighlight": false
+      },
+      {
+        "time": 143.68,
+        "text": "அவள் விழி மொழியை படிக்கும் மாணவன் ஆனேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 148.42,
+        "text": "அவள் நடைமுறையை ரசிக்கும் ரசிகனும் ஆனேன், oh...",
+        "isHighlight": false
+      },
+      {
+        "time": 157.92,
+        "text": "அவன் அருகினிலே கனல் மேல் பனி துளி ஆனேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 162.65,
+        "text": "அவன் அணுகயிலே நீர் தொடும் தாமரை ஆனேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 167.54,
+        "text": "அவளோடிருக்கும் ஒரு வித சிநேகிதன் ஆனேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 172.11,
+        "text": "அவளுக்கு பிடித்த ஒரு வகை சேவகன் ஆனேன்",
+        "isHighlight": true
+      },
+      {
+        "time": 176.95,
+        "text": "ஆழியில் இருந்து அலசி எடுத்தேனே",
+        "isHighlight": true
+      },
+      {
+        "time": 182.18,
+        "text": "அடைக்கலம் அமைக்க தகுந்தவன் தானே",
+        "isHighlight": false
+      },
+      {
+        "time": 185.53,
+        "text": "அடி அழகா சிரிச்ச முகமே",
+        "isHighlight": false
+      },
+      {
+        "time": 190.56,
+        "text": "நான் நெனச்சா தோணும் இடமே",
+        "isHighlight": false
+      },
+      {
+        "time": 195.15,
+        "text": "அடி அழகா சிரிச்ச முகமே நெனச்சா தோணும் இடமே",
+        "isHighlight": false
+      },
+      {
+        "time": 200.29,
+        "text": "நான் பிறந்த தினமே கெடச்ச வரமே, oh...",
+        "isHighlight": false
+      },
+      {
+        "time": 205.92,
+        "text": "நான் பிழை நீ மழலை",
+        "isHighlight": false
+      },
+      {
+        "time": 210.56,
+        "text": "எனக்குள் நீ இருந்தால் அது தவறே இல்லை",
+        "isHighlight": false
+      },
+      {
+        "time": 215.27,
+        "text": "நீ இலை நான் பருவ மழை",
+        "isHighlight": false
+      },
+      {
+        "time": 219.95,
+        "text": "சிறு சிறு துளியாய் விழும் தருணம் இல்லை",
+        "isHighlight": false
       }
     ]
   },
@@ -13231,8 +14754,49 @@
     "coverArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/75/84/9e/75849e51-7489-9e7f-07d2-eb31e7658c37/cover.jpg/600x600bb.jpg",
     "lyrics": [
       {
-        "time": 0.0,
-        "text": "Enjoying Kaathalae Kaathale..."
+        "time": 30.72,
+        "text": "ஆ... கொஞ்சும் பூரணமே வா",
+        "isHighlight": false
+      },
+      {
+        "time": 43.53,
+        "text": "நீ... கொஞ்சும் ஏழிசையே",
+        "isHighlight": false
+      },
+      {
+        "time": 55.61,
+        "text": "பஞ்சவர்ண பூதம்",
+        "isHighlight": false
+      },
+      {
+        "time": 60.44,
+        "text": "நெஞ்சம் நிறையுதே",
+        "isHighlight": true
+      },
+      {
+        "time": 65.98,
+        "text": "காண்பதெல்லாம் காதலடி",
+        "isHighlight": true
+      },
+      {
+        "time": 144.11,
+        "text": "காதலே காதலே தனி பெருந்துணையே",
+        "isHighlight": true
+      },
+      {
+        "time": 149.08,
+        "text": "கூடவா கூடவா போதும் போதும்",
+        "isHighlight": true
+      },
+      {
+        "time": 154.28,
+        "text": "காதலே காதலே வாழ்வின் நீளம்",
+        "isHighlight": false
+      },
+      {
+        "time": 159.35,
+        "text": "போகலாம் போகவா நீ...",
+        "isHighlight": false
       }
     ]
   },
@@ -13592,8 +15156,254 @@
     "coverArt": "https://is1-ssl.mzstatic.com/image/thumb/Video112/v4/20/a9/d5/20a9d5fd-908d-0d8a-e701-4406ea4767fd/pr_source.lsr/600x600bb.jpg",
     "lyrics": [
       {
-        "time": 0.0,
-        "text": "Enjoying Kannaane Kanne From Nanum Rowdy Thaan..."
+        "time": 0.12,
+        "text": "கண்ணான கண்ணே",
+        "isHighlight": false
+      },
+      {
+        "time": 4.89,
+        "text": "நீ கலங்காதடி",
+        "isHighlight": false
+      },
+      {
+        "time": 8.46,
+        "text": "கண்ணான கண்ணே",
+        "isHighlight": false
+      },
+      {
+        "time": 14.72,
+        "text": "கண்ணான கண்ணே",
+        "isHighlight": false
+      },
+      {
+        "time": 16.63,
+        "text": "நீ கலங்காதடி",
+        "isHighlight": false
+      },
+      {
+        "time": 19.15,
+        "text": "நீ கலங்காதடி",
+        "isHighlight": false
+      },
+      {
+        "time": 24.1,
+        "text": "யார் போனா...",
+        "isHighlight": false
+      },
+      {
+        "time": 25.71,
+        "text": "யார் போனா என்ன",
+        "isHighlight": false
+      },
+      {
+        "time": 28.04,
+        "text": "யார் போனா...",
+        "isHighlight": false
+      },
+      {
+        "time": 29.1,
+        "text": "யார் போனா...",
+        "isHighlight": false
+      },
+      {
+        "time": 30.24,
+        "text": "யார் போனா என்ன",
+        "isHighlight": false
+      },
+      {
+        "time": 32.42,
+        "text": "நான் இருப்பேனடி",
+        "isHighlight": false
+      },
+      {
+        "time": 35.67,
+        "text": "நீ கலங்காதடி",
+        "isHighlight": false
+      },
+      {
+        "time": 67.21,
+        "text": "ஒரு கணம் ஒரு போதும் பிரியகூடாதே",
+        "isHighlight": false
+      },
+      {
+        "time": 70.43,
+        "text": "என் உயிரே என் உயிரே நீ அழுக கூடாதே",
+        "isHighlight": false
+      },
+      {
+        "time": 74.52,
+        "text": "நீ கண்ட கனவு எதுமே கலையகூடாதே",
+        "isHighlight": false
+      },
+      {
+        "time": 77.63,
+        "text": "நான் இருக்கும் நாள் வரைக்கும் நீ அழுக கூடாதே",
+        "isHighlight": true
+      },
+      {
+        "time": 81.91,
+        "text": "கிடச்சத இழக்குறதும்",
+        "isHighlight": true
+      },
+      {
+        "time": 83.84,
+        "text": "இழந்தது கிடைக்குறதும்",
+        "isHighlight": false
+      },
+      {
+        "time": 85.88,
+        "text": "அதுக்கு பழகுறதும் நியாயம்தானடி",
+        "isHighlight": false
+      },
+      {
+        "time": 89.4,
+        "text": "குடுத்தத எடுக்குறதும்",
+        "isHighlight": false
+      },
+      {
+        "time": 91.38,
+        "text": "வேற ஒன்ன குடுக்குறதும்",
+        "isHighlight": false
+      },
+      {
+        "time": 93.38,
+        "text": "நடந்தத மறக்குறதும் வழக்கம் தானடி",
+        "isHighlight": false
+      },
+      {
+        "time": 96.45,
+        "text": "கண்ணான கண்ணே நீ கலங்காதடி",
+        "isHighlight": false
+      },
+      {
+        "time": 99.94,
+        "text": "என் உயிரோட ஆதாரம் நீ தானடி",
+        "isHighlight": false
+      },
+      {
+        "time": 103.69,
+        "text": "கண்ணான கண்ணே நீ கலங்காதடி",
+        "isHighlight": false
+      },
+      {
+        "time": 107.44,
+        "text": "யார் போனா என்ன நான் இருப்பேனடி",
+        "isHighlight": false
+      },
+      {
+        "time": 141.11,
+        "text": "என் விரல் இடுக்குல உன் விரல் கெடக்கணும்",
+        "isHighlight": false
+      },
+      {
+        "time": 144.59,
+        "text": "நசுங்குற அளவுக்கு இறுக்கி நான் புடிக்கணும்",
+        "isHighlight": false
+      },
+      {
+        "time": 148.35,
+        "text": "நான் கண்ண தொரக்கையில் உன் முகம் தெரியணும்",
+        "isHighlight": false
+      },
+      {
+        "time": 151.82,
+        "text": "உசுருள்ள வரைக்குமே உனக்கு என்ன புடிக்கணும்",
+        "isHighlight": false
+      },
+      {
+        "time": 155.62,
+        "text": "கடல் அலை போல உன் கால் தொட்டு உரசி",
+        "isHighlight": false
+      },
+      {
+        "time": 159.44,
+        "text": "கடல் உள்ள போறவன் நான் இல்லடி",
+        "isHighlight": false
+      },
+      {
+        "time": 163.18,
+        "text": "கடல் மண்ண போல உன் காலோட ஒட்டி",
+        "isHighlight": true
+      },
+      {
+        "time": 166.84,
+        "text": "கரை தாண்டும் வரை நான் இருப்பேனடி",
+        "isHighlight": true
+      },
+      {
+        "time": 170.48,
+        "text": "கண்ணான கண்ணே நீ கலங்காதடி",
+        "isHighlight": false
+      },
+      {
+        "time": 173.74,
+        "text": "என் உயிரோட ஆதாரம் நீதானடி",
+        "isHighlight": false
+      },
+      {
+        "time": 177.54,
+        "text": "கண்ணான கண்ணே நீ கலங்காதடி",
+        "isHighlight": false
+      },
+      {
+        "time": 181.19,
+        "text": "யார் போனா என்ன நான் இருப்பேனடி",
+        "isHighlight": false
+      },
+      {
+        "time": 215.39,
+        "text": "ஒரு கணம் ஒரு போதும் பிரியகூடாதே",
+        "isHighlight": false
+      },
+      {
+        "time": 218.25,
+        "text": "என் உயிரே என் உயிரே நீ அழுக கூடாதே",
+        "isHighlight": false
+      },
+      {
+        "time": 222.04,
+        "text": "நீ கண்ட கனவு எதுமே கலையகூடாதே",
+        "isHighlight": false
+      },
+      {
+        "time": 225.41,
+        "text": "நான் இருக்கும் நாள் வரைக்கும் நீ அழுக கூடாதே",
+        "isHighlight": false
+      },
+      {
+        "time": 244.73,
+        "text": "நித்தம் நித்தம் நீ ஒடஞ்சா",
+        "isHighlight": false
+      },
+      {
+        "time": 246.16,
+        "text": "ஒட்ட வைக்க நான் இருக்கேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 248.15,
+        "text": "கிட்ட வச்சு பாத்துக்கவே உயிரே வாழுரேண்டி",
+        "isHighlight": false
+      },
+      {
+        "time": 251.45,
+        "text": "பெத்தவங்க போனா என்ன",
+        "isHighlight": false
+      },
+      {
+        "time": 253.3,
+        "text": "சத்தமில்லா உன் உலகில்",
+        "isHighlight": false
+      },
+      {
+        "time": 255.36,
+        "text": "நித்தம் ஒரு முத்தம் வைக்கத்தான்",
+        "isHighlight": false
+      },
+      {
+        "time": 257.21,
+        "text": "உயிர் வாழுரேண்டி",
+        "isHighlight": false
       }
     ]
   },
@@ -13618,8 +15428,284 @@
     "coverArt": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/58/2c/ed/582ced72-3b52-f003-b002-59b35eed1cb9/8904337276478.jpg/600x600bb.jpg",
     "lyrics": [
       {
-        "time": 0.0,
-        "text": "Enjoying Appadi Podu..."
+        "time": 22.97,
+        "text": "அப்புடி போடு போடு போடு",
+        "isHighlight": false
+      },
+      {
+        "time": 25.96,
+        "text": "அசத்தி போடு கண்ணாலே",
+        "isHighlight": false
+      },
+      {
+        "time": 28.77,
+        "text": "இப்புடி போடு போடு போடு",
+        "isHighlight": false
+      },
+      {
+        "time": 32.96,
+        "text": "இழுத்து போடு கையாலே",
+        "isHighlight": false
+      },
+      {
+        "time": 34.72,
+        "text": "உன்னோட ஊருக்குதான் உப்பு மூட்ட ஏறிக்கிறேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 37.41,
+        "text": "உன்னோட கண்ண பொத்தி கண்ணாமூச்சி ஆட வரேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 40.35,
+        "text": "இந்த நடை போதுமா இன்னும் கொஞ்சம் வேணுமா",
+        "isHighlight": false
+      },
+      {
+        "time": 44.54,
+        "text": "இந்த நடை போதுமா இன்னும் கொஞ்சம் வேணுமா",
+        "isHighlight": false
+      },
+      {
+        "time": 51.58,
+        "text": "ஏ இந்த நடை போதுமா இன்னும் கொஞ்சம் வேணுமா",
+        "isHighlight": false
+      },
+      {
+        "time": 57.45,
+        "text": "அப்புடி போடு போடு போடு",
+        "isHighlight": false
+      },
+      {
+        "time": 60.39,
+        "text": "அசத்தி போடு கண்ணாலே",
+        "isHighlight": false
+      },
+      {
+        "time": 63.22,
+        "text": "இப்புடி போடு போடு போடு",
+        "isHighlight": false
+      },
+      {
+        "time": 66.79,
+        "text": "இழுத்து போடு கையாலே",
+        "isHighlight": false
+      },
+      {
+        "time": 94.83,
+        "text": "என் மனசில நீ நினைக்கிறியே ஏ அழகா",
+        "isHighlight": false
+      },
+      {
+        "time": 100.58,
+        "text": "என் கனவில நீ முழிக்கிறியே",
+        "isHighlight": false
+      },
+      {
+        "time": 102.85,
+        "text": "ஏ அடடா என் உதட்டுல நீ இனிக்கிறியே",
+        "isHighlight": false
+      },
+      {
+        "time": 105.13,
+        "text": "இது நிஜம் தானா",
+        "isHighlight": false
+      },
+      {
+        "time": 109.57,
+        "text": "என் உசுருல நீ துடிக்கிறியே",
+        "isHighlight": false
+      },
+      {
+        "time": 110.97,
+        "text": "ஏ அழகி என் வயசுல நீ படுத்திறியே",
+        "isHighlight": true
+      },
+      {
+        "time": 113.45,
+        "text": "ஏ மெதுவா என் கழுத்துல நீ மனக்கிரியே இது அதுதானா",
+        "isHighlight": true
+      },
+      {
+        "time": 118.06,
+        "text": "உன்ன பாத்த சந்தோஷத்தில்",
+        "isHighlight": false
+      },
+      {
+        "time": 123.26,
+        "text": "ரெண்டு மடங்கா பூத்திருந்தேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 125.55,
+        "text": "உன்ன தொட்ட அச்சத்தில",
+        "isHighlight": false
+      },
+      {
+        "time": 129.06,
+        "text": "மூணு தடதான் வேர்த்திருந்தேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 131.72,
+        "text": "உன்னோட கன்னங்களை காக்காகடி நான் கடிக்க",
+        "isHighlight": false
+      },
+      {
+        "time": 134.69,
+        "text": "என்னோடே காது பக்கம் செல்லகடி நீ கடிக்க",
+        "isHighlight": false
+      },
+      {
+        "time": 137.14,
+        "text": "இந்த வயசு போதுமா இன்னும் கொஞ்சம் வேணுமா",
+        "isHighlight": false
+      },
+      {
+        "time": 141.55,
+        "text": "இந்த வயசு போதுமா இன்னும் கொஞ்சம் வேணுமா",
+        "isHighlight": false
+      },
+      {
+        "time": 151.54,
+        "text": "ஹோய் அப்புடி போடு போடு போடு",
+        "isHighlight": false
+      },
+      {
+        "time": 160.98,
+        "text": "அசத்தி போடு கண்ணாலே",
+        "isHighlight": false
+      },
+      {
+        "time": 161.94,
+        "text": "இப்புடி போடு போடு போடு",
+        "isHighlight": false
+      },
+      {
+        "time": 164.42,
+        "text": "இழுத்து போடு கையாலே",
+        "isHighlight": false
+      },
+      {
+        "time": 171.94,
+        "text": "திக்க வைக்கிற தினர வைக்கிறியே",
+        "isHighlight": false
+      },
+      {
+        "time": 199.7,
+        "text": "நீ மெதுவா விக்க வைக்கிற வேர்க்க வைக்கிறியே",
+        "isHighlight": false
+      },
+      {
+        "time": 203.38,
+        "text": "நீ என்னதான் வத்த வைக்கிற வதங்க வைக்கிறியே இது சரிதானா",
+        "isHighlight": false
+      },
+      {
+        "time": 205.47,
+        "text": "சிக்க வைக்கிற செவக்க வைக்கிறியே",
+        "isHighlight": false
+      },
+      {
+        "time": 211.02,
+        "text": "நீ ஜோரா சொக்க வைக்கிற சொழல வைக்கிறியே",
+        "isHighlight": true
+      },
+      {
+        "time": 213.53,
+        "text": "நீ அழகா பத்த வைக்கிற பதற வைக்கிறியே இது முறை தானா",
+        "isHighlight": true
+      },
+      {
+        "time": 220.22,
+        "text": "ஒத்த பார்வை நெஞ்சுக்குள்ளே",
+        "isHighlight": false
+      },
+      {
+        "time": 222.81,
+        "text": "ஊசி நூலும் கோர்க்குதடி",
+        "isHighlight": false
+      },
+      {
+        "time": 225.59,
+        "text": "தெத்து பல்லு சிரிப்பில் எல்லாம்",
+        "isHighlight": false
+      },
+      {
+        "time": 228.91,
+        "text": "பத்து நிலவு தெறிக்குதடி",
+        "isHighlight": false
+      },
+      {
+        "time": 232.03,
+        "text": "தை தைநு ஆடிகிட்டு உன்னோடு நானும் வரேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 234.57,
+        "text": "நை நைநு பேசிகிட்டு உன் கூட சேர்ந்து வரேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 237.25,
+        "text": "இந்த ஆட்டம் போதுமா இன்னும் கொஞ்சம் வேணுமா",
+        "isHighlight": false
+      },
+      {
+        "time": 240.02,
+        "text": "இந்த ஆட்டம் போதுமா இன்னும் கொஞ்சம் வேணுமா",
+        "isHighlight": false
+      },
+      {
+        "time": 248.22,
+        "text": "ஏ இந்த ஆட்டம் போதுமா இன்னும் கொஞ்சம் வேணுமா",
+        "isHighlight": false
+      },
+      {
+        "time": 254.48,
+        "text": "ஹோய் அப்புடி போடு போடு போடு",
+        "isHighlight": false
+      },
+      {
+        "time": 257.5,
+        "text": "அசத்தி போடு கண்ணாலே",
+        "isHighlight": false
+      },
+      {
+        "time": 260.2,
+        "text": "இப்புடி போடு போடு போடு",
+        "isHighlight": false
+      },
+      {
+        "time": 262.93,
+        "text": "இழுத்து போடு கையாலே",
+        "isHighlight": false
+      },
+      {
+        "time": 266.16,
+        "text": "உன்னோட ஊருக்குதான் உப்பு மூட்ட ஏறிக்கிறேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 271.86,
+        "text": "உன்னோட கண்ண பொத்தி கண்ணாமூச்சி ஆட வரேன்",
+        "isHighlight": false
+      },
+      {
+        "time": 278.49,
+        "text": "இந்த நடை போதுமா இன்னும் கொஞ்சம் வேணுமா",
+        "isHighlight": false
+      },
+      {
+        "time": 280.33,
+        "text": "இந்த நடை போதுமா இன்னும் கொஞ்சம் வேணுமா",
+        "isHighlight": false
+      },
+      {
+        "time": 282.88,
+        "text": "ஏ இந்த நடை போதுமா இன்னும் கொஞ்சம் வேணுமா",
+        "isHighlight": false
       }
     ]
   },
@@ -14182,8 +16268,359 @@
     "coverArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/8f/d1/19/8fd119bf-6414-cb06-d88c-b6363fc63f0e/8902894357319_cover.jpg/600x600bb.jpg",
     "lyrics": [
       {
-        "time": 0.0,
-        "text": "Enjoying Daddy Mummy..."
+        "time": 16.96,
+        "text": "E come be like say I no dey hustle",
+        "isHighlight": false
+      },
+      {
+        "time": 18.84,
+        "text": "E come be like say I no dey grind",
+        "isHighlight": false
+      },
+      {
+        "time": 21.22,
+        "text": "Wetin them dey do I dey do am double",
+        "isHighlight": false
+      },
+      {
+        "time": 22.84,
+        "text": "Why e be say na me come dey behind",
+        "isHighlight": false
+      },
+      {
+        "time": 25.17,
+        "text": "Come be like say I no get grace",
+        "isHighlight": false
+      },
+      {
+        "time": 26.85,
+        "text": "The more I dey think am I fit just craze",
+        "isHighlight": false
+      },
+      {
+        "time": 29.95,
+        "text": "Abi there comot my grace",
+        "isHighlight": false
+      },
+      {
+        "time": 31.8,
+        "text": "Abi there remove am",
+        "isHighlight": false
+      },
+      {
+        "time": 33.37,
+        "text": "We suppose ball like migos",
+        "isHighlight": false
+      },
+      {
+        "time": 34.8,
+        "text": "And Life suppose sweet pass mikos",
+        "isHighlight": false
+      },
+      {
+        "time": 37.39,
+        "text": "Accounts no suppose be zero",
+        "isHighlight": false
+      },
+      {
+        "time": 38.87,
+        "text": "And boy suppose soft like pilo",
+        "isHighlight": false
+      },
+      {
+        "time": 41.58,
+        "text": "Mumsi call I no fit chest bill",
+        "isHighlight": false
+      },
+      {
+        "time": 43.67,
+        "text": "Emotionally I'm stressing",
+        "isHighlight": false
+      },
+      {
+        "time": 45.83,
+        "text": "Body no gree raise up for s*xing",
+        "isHighlight": false
+      },
+      {
+        "time": 47.63,
+        "text": "Monalisa dey bed room she's vexing",
+        "isHighlight": false
+      },
+      {
+        "time": 49.98,
+        "text": "Yeee",
+        "isHighlight": false
+      },
+      {
+        "time": 50.76,
+        "text": "But me I'm grinding (Erekeke)",
+        "isHighlight": false
+      },
+      {
+        "time": 52.55,
+        "text": "My mind on the money (Erekeke)",
+        "isHighlight": false
+      },
+      {
+        "time": 54.56,
+        "text": "Gat to get this for mummy (Erekeke)",
+        "isHighlight": false
+      },
+      {
+        "time": 56.31,
+        "text": "Gat to get this for Daddy (Erekeke)",
+        "isHighlight": false
+      },
+      {
+        "time": 58.56,
+        "text": "Ye",
+        "isHighlight": false
+      },
+      {
+        "time": 59.28,
+        "text": "Me I'm grinding (Erekeke)",
+        "isHighlight": false
+      },
+      {
+        "time": 60.77,
+        "text": "My mind on the money (Erekeke)",
+        "isHighlight": true
+      },
+      {
+        "time": 62.86,
+        "text": "Gat to get this for mummy (Erekeke)",
+        "isHighlight": true
+      },
+      {
+        "time": 64.93,
+        "text": "Gat to get this for daddy (Erekeke)",
+        "isHighlight": true
+      },
+      {
+        "time": 67.54,
+        "text": "Yeee",
+        "isHighlight": false
+      },
+      {
+        "time": 76.7,
+        "text": "Everybody wants to smile",
+        "isHighlight": false
+      },
+      {
+        "time": 79.18,
+        "text": "Nobody really likes to frown",
+        "isHighlight": false
+      },
+      {
+        "time": 80.75,
+        "text": "And every mother wants to go out there",
+        "isHighlight": false
+      },
+      {
+        "time": 83.19,
+        "text": "And say that boy is mine",
+        "isHighlight": false
+      },
+      {
+        "time": 85.74,
+        "text": "H a p p y",
+        "isHighlight": false
+      },
+      {
+        "time": 86.98,
+        "text": "Gege",
+        "isHighlight": false
+      },
+      {
+        "time": 87.62,
+        "text": "Me I just wanna be happy (Happy)",
+        "isHighlight": false
+      },
+      {
+        "time": 89.76,
+        "text": "Leave life with no stressing (Stressing)",
+        "isHighlight": false
+      },
+      {
+        "time": 91.65,
+        "text": "And me I just want more blessing (Blessing)",
+        "isHighlight": false
+      },
+      {
+        "time": 93.87,
+        "text": "Me I wan pull up in a Porsche",
+        "isHighlight": false
+      },
+      {
+        "time": 95.63,
+        "text": "I wan chop life",
+        "isHighlight": false
+      },
+      {
+        "time": 96.85,
+        "text": "And I no wan get boss",
+        "isHighlight": false
+      },
+      {
+        "time": 97.63,
+        "text": "I wan bless popsi",
+        "isHighlight": false
+      },
+      {
+        "time": 98.73,
+        "text": "Take care of momsi",
+        "isHighlight": false
+      },
+      {
+        "time": 100.04,
+        "text": "Brothers and sisters dey send dem something",
+        "isHighlight": false
+      },
+      {
+        "time": 102.1,
+        "text": "Ye",
+        "isHighlight": false
+      },
+      {
+        "time": 102.7,
+        "text": "Me and baby we steady be balling",
+        "isHighlight": false
+      },
+      {
+        "time": 105.41,
+        "text": "Chee",
+        "isHighlight": false
+      },
+      {
+        "time": 106.42,
+        "text": "And on this success story we never returning",
+        "isHighlight": false
+      },
+      {
+        "time": 110.03,
+        "text": "That's why I'm grinding (Erekeke)",
+        "isHighlight": true
+      },
+      {
+        "time": 112.19,
+        "text": "My mind on the money (Erekeke)",
+        "isHighlight": true
+      },
+      {
+        "time": 114.49,
+        "text": "Gat to get this for mummy (Erekeke)",
+        "isHighlight": true
+      },
+      {
+        "time": 116.37,
+        "text": "Gat to get this for daddy (Erekeke)",
+        "isHighlight": false
+      },
+      {
+        "time": 118.45,
+        "text": "Ye",
+        "isHighlight": false
+      },
+      {
+        "time": 119.2,
+        "text": "Me I'm grinding (Erekeke)",
+        "isHighlight": false
+      },
+      {
+        "time": 120.64,
+        "text": "My mind on the money (Erekeke)",
+        "isHighlight": false
+      },
+      {
+        "time": 122.84,
+        "text": "Gat to get this for mummy (Erekeke)",
+        "isHighlight": false
+      },
+      {
+        "time": 124.77,
+        "text": "Gat to get this for daddy (Erekeke)",
+        "isHighlight": false
+      },
+      {
+        "time": 127.49,
+        "text": "Yeee",
+        "isHighlight": false
+      },
+      {
+        "time": 128.48,
+        "text": "Go mummy",
+        "isHighlight": false
+      },
+      {
+        "time": 129.21,
+        "text": "Go daddy",
+        "isHighlight": false
+      },
+      {
+        "time": 130.4,
+        "text": "Go mummy",
+        "isHighlight": false
+      },
+      {
+        "time": 131.46,
+        "text": "Go daddy",
+        "isHighlight": false
+      },
+      {
+        "time": 132.74,
+        "text": "Go mummy",
+        "isHighlight": false
+      },
+      {
+        "time": 134.29,
+        "text": "Go daddy",
+        "isHighlight": false
+      },
+      {
+        "time": 134.9,
+        "text": "Go mummy",
+        "isHighlight": false
+      },
+      {
+        "time": 136.03,
+        "text": "Ye",
+        "isHighlight": false
+      },
+      {
+        "time": 136.71,
+        "text": "Oya mummy give them mummy give them",
+        "isHighlight": false
+      },
+      {
+        "time": 138.57,
+        "text": "Daddy give them daddy give them",
+        "isHighlight": false
+      },
+      {
+        "time": 140.8,
+        "text": "Mummy give them mummy give them",
+        "isHighlight": false
+      },
+      {
+        "time": 143.07,
+        "text": "Daddy give them daddy give them",
+        "isHighlight": false
+      },
+      {
+        "time": 145.39,
+        "text": "Chee",
+        "isHighlight": false
+      },
+      {
+        "time": 149.55,
+        "text": "It's ur boy Kaptain",
+        "isHighlight": false
+      },
+      {
+        "time": 151.81,
+        "text": "You understand naaa",
+        "isHighlight": false
       }
     ]
   },

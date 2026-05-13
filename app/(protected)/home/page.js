@@ -300,7 +300,7 @@ export default function StoryPage() {
         {/* Background Video */}
         <FadingVideo
           src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_094631_d30ab262-45ee-4b7d-99f3-5d5848c8ef13.mp4"
-          className="absolute inset-0 w-full h-full object-cover z-0"
+          className="absolute inset-0 w-full h-full object-contain z-0"
         />
 
         {/* Hero content layer */}
@@ -323,8 +323,9 @@ export default function StoryPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.9 }}
-              style={{ fontSize: "clamp(32px, 5vw, 64px)", fontWeight: 300, lineHeight: 1.1,
-                letterSpacing: "0.02em", color: "#fff", margin: "0 auto 8px", fontFamily: "var(--font-heading)" }}
+              style={{ fontSize: "clamp(32px, 5vw, 64px)", fontWeight: 500, lineHeight: 1.1,
+                letterSpacing: "0.02em", color: "#e8c547", margin: "0 auto 8px", fontFamily: "var(--font-heading)",
+                textShadow: "0 4px 20px rgba(0,0,0,0.8), 0 2px 10px rgba(0,0,0,0.6)" }}
             >
               Twenty years of
             </motion.h1>
@@ -334,9 +335,9 @@ export default function StoryPage() {
               className="font-heading italic"
               style={{ fontSize: "clamp(36px, 8vw, 100px)", fontWeight: 800, lineHeight: 1.05,
                 letterSpacing: "-0.04em",
-                background: "linear-gradient(135deg, #fff 0%, #fde8d8 40%, #e8c547 100%)",
+                background: "linear-gradient(135deg, #ffb7c5 0%, #ff6b81 40%, #e8c547 100%)",
                 WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
-                textShadow: "0 10px 40px rgba(232,197,71,0.3)",
+                filter: "drop-shadow(0 4px 15px rgba(0,0,0,0.8)) drop-shadow(0 2px 5px rgba(0,0,0,0.6))",
                 display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "0.2em" }}
             >
               {"being extraordinary".split(" ").map((word, wordIndex) => (
@@ -361,7 +362,7 @@ export default function StoryPage() {
             initial={{ opacity: 0, y: 10 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ delay: 1.8, duration: 1 }}
-            style={{ fontSize: "clamp(14px, 3vw, 17px)", color: "rgba(245,240,232,0.6)", fontWeight: 300, marginBottom: 48, letterSpacing: "0.02em", maxWidth: 500, padding: "0 8px", fontFamily: "var(--font-body)" }}>
+            style={{ fontSize: "clamp(14px, 3vw, 17px)", color: "#f5f0e8", fontWeight: 400, marginBottom: 48, letterSpacing: "0.02em", maxWidth: 500, padding: "0 8px", fontFamily: "var(--font-body)", textShadow: "0 2px 10px rgba(0,0,0,0.8)" }}>
             A story written in moments, memories, and magic.
           </motion.p>
 

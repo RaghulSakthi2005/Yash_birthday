@@ -156,9 +156,8 @@ export default function LandsPage() {
            </p>
         </div>
 
-        <div style={{ marginTop: 60, paddingTop: 40, borderTop: "1px solid rgba(255,255,255,0.06)", display: "flex", gap: 16, flexWrap: "wrap" }}>
-          <Link href="/gallery" className="btn-gold">Memories 🖼</Link>
-          <Link href="/home" className="btn-ghost">← Back to Story</Link>
+        <div style={{ marginTop: 60, paddingTop: 40, borderTop: "1px solid rgba(255,255,255,0.06)", display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
+          <Link href="/playlist" className="btn-gold">Continue to Playlist 🎵</Link>
         </div>
       </div>
 
