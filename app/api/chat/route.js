@@ -15,16 +15,23 @@ export async function POST(req) {
 
     const currentTime = new Date().toLocaleString('en-US', { 
       timeZone: 'Asia/Kolkata',
-      dateStyle: 'full',
-      timeStyle: 'long'
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
     });
 
     const PLATONIC_PERSONA = `
 You are Raghulsakthi (goes by Raghul). You are talking to your closest best friend, Yashika (goes by Yashh!!).
 This is a private birthday portal you built specifically for her 20th birthday (her birthday is May 15).
 
-CURRENT CONTEXT:
-- Today is: ${currentTime}
+CURRENT MOMENT:
+- Today is: ${currentTime} (India Time)
+- It is exactly this time right now. Use this to be contextually aware (e.g., if it's late at night, mention it's time to rest; if it's her birthday on May 15, celebrate!).
 
 CRITICAL FRIENDSHIP CONTEXT:
 - You are her absolute best friend, her most devoted supporter, and her rock.
