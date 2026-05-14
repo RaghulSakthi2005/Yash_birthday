@@ -260,7 +260,7 @@ export default function PlaylistPlayer({ playlistData }) {
             <XMarkIcon className="w-7 h-7 text-white" />
           </button>
         </div>
-        <div className="flex-1 overflow-y-auto p-4 lg:p-8 space-y-2">
+        <div className="flex-1 overflow-y-auto p-4 lg:p-10 space-y-6 lg:space-y-8 pb-32">
           {playlistData.map((track, index) => (
             <button
               key={track.id || index}
@@ -269,28 +269,45 @@ export default function PlaylistPlayer({ playlistData }) {
                 setIsPlaying(true);
                 setIsPlaylistOpen(false);
               }}
-              className={`w-full flex items-center text-left p-4 rounded-2xl transition-colors hover:bg-white/5 ${
-                index === currentTrackIndex ? "bg-white/10" : ""
+              className={`group w-full flex items-center text-left p-4 lg:p-6 rounded-[28px] transition-all duration-500 ease-out ${
+                index === currentTrackIndex 
+                  ? "bg-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] backdrop-blur-xl border border-white/20" 
+                  : "hover:bg-white/5 border border-transparent hover:translate-x-2"
               }`}
             >
-              <div className="w-12 h-12 rounded-lg overflow-hidden shrink-0 mr-4 shadow-md bg-white/5 relative">
+              <div className="w-20 h-20 lg:w-28 lg:h-28 rounded-2xl overflow-hidden shrink-0 mr-6 lg:mr-8 shadow-2xl bg-white/5 relative group-hover:scale-105 transition-transform duration-700">
                 {track.coverArt ? (
-                  <img src={track.coverArt} alt="" className="w-full h-full object-cover" />
+                  <img src={track.coverArt} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center text-xl">🎵</div>
+                  <div className="w-full h-full flex items-center justify-center text-3xl">🎵</div>
                 )}
                 {index === currentTrackIndex && isPlaying && (
-                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                    <div className="w-3 h-3 bg-white rounded-full animate-pulse" />
+                  <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] flex items-center justify-center">
+                    <div className="flex gap-1 items-end h-6">
+                      <div className="w-1 bg-white animate-[music-bar_0.8s_ease-in-out_infinite] rounded-full" />
+                      <div className="w-1 bg-white animate-[music-bar_1.2s_ease-in-out_infinite] rounded-full" />
+                      <div className="w-1 bg-white animate-[music-bar_0.5s_ease-in-out_infinite] rounded-full" />
+                      <div className="w-1 bg-white animate-[music-bar_1s_ease-in-out_infinite] rounded-full" />
+                    </div>
                   </div>
                 )}
               </div>
               <div className="flex-1 overflow-hidden">
-                <p className={`font-bold truncate ${index === currentTrackIndex ? "text-white" : "text-white/80"}`}>
+                <p className={`text-xl lg:text-3xl font-black tracking-tight truncate mb-1 lg:mb-2 ${index === currentTrackIndex ? "text-white" : "text-white/60 group-hover:text-white"}`}>
                   {track.title}
                 </p>
-                <p className="text-sm text-white/40 truncate">{track.artist}</p>
+                <p className={`text-xs lg:text-sm font-bold uppercase tracking-[0.2em] ${index === currentTrackIndex ? "text-white/40" : "text-white/20 group-hover:text-white/40"}`}>
+                  {track.artist}
+                </p>
               </div>
+              
+              {index === currentTrackIndex && (
+                 <div className="ml-4 shrink-0">
+                    <div className="px-4 py-1.5 rounded-full bg-white text-black text-[10px] lg:text-[11px] font-black uppercase tracking-widest shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                      Playing
+                    </div>
+                 </div>
+              )}
             </button>
           ))}
         </div>
